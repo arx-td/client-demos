@@ -9,11 +9,11 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
   :root{
-    --bg:#17130e;--bg2:#1f1a13;--panel:#25201a;--panel2:#2c261e;
-    --amber:#d99a34;--amber-d:#b87d1f;--amber-sec:#2e2413;--amber-deep:#241c0f;
-    --blue:#3a9fd4;--blue-d:#2079ab;
-    --ink:#f4eee2;--muted:#aca090;--soft:#847a6b;--line:#352d22;
-    --gold:#f5c518;--radius:16px;
+    --blue:#2079ab;--blue-d:#155a84;--blue-l:#e6f1f8;--blue-ll:#f2f8fb;
+    --amber:#c98a24;--amber-d:#a06d18;--amber-l:#f7efdf;
+    --navy:#16283a;--navy2:#1e3547;
+    --ink:#182633;--muted:#5a6b78;--soft:#8996a2;--line:#e3e9ef;
+    --bg:#ffffff;--bg2:#f4f7f9;--gold:#f5b301;--radius:16px;
   }
   *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
   html{scroll-behavior:smooth;overflow-x:hidden;}
@@ -24,17 +24,19 @@
   img{display:block;}
   .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.4px;text-transform:uppercase;padding:14px 26px;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
-  .btn-amber{background:var(--amber);color:#26190a;}
-  .btn-amber:hover{background:var(--amber-d);color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--amber);}
-  .btn-blue{background:var(--blue);color:#08222f;}
-  .btn-blue:hover{background:var(--blue-d);color:#fff;transform:translateY(-2px);}
-  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
-  .btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
+  .btn-blue{background:var(--blue);color:#fff;}
+  .btn-blue:hover{background:var(--blue-d);transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--blue);}
+  .btn-amber{background:var(--amber);color:#fff;}
+  .btn-amber:hover{background:var(--amber-d);transform:translateY(-2px);}
+  .btn-line{background:#fff;color:var(--ink);border-color:var(--line);}
+  .btn-line:hover{border-color:var(--blue);color:var(--blue-d);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
+  .btn-outline:hover{background:#fff;color:var(--blue-d);}
   .sec{padding:92px 0;}
-  .eyebrow{font-family:'Archivo';font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:inline-block;}
-  .h2{font-size:clamp(28px,4vw,44px);color:#fff;}
-  .h2 .a{color:var(--amber);}
+  .eyebrow{font-family:'Archivo';font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:var(--navy);}
   .h2 .b{color:var(--blue);}
+  .h2 .a{color:var(--amber);}
   .center{text-align:center;}
   .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;text-transform:none;font-family:'Inter';font-weight:400;letter-spacing:0;}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
@@ -42,175 +44,173 @@
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
 
   /* TOP BAR */
-  .topbar{background:#100d09;border-bottom:1px solid var(--line);font-size:13px;}
+  .topbar{background:var(--navy);color:#c4d0dc;font-size:13px;}
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
-  .topbar a,.topbar span{color:var(--muted);display:inline-flex;align-items:center;gap:7px;}
-  .topbar a:hover{color:var(--amber);}
+  .topbar a,.topbar span{color:#c4d0dc;display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:#fff;}
   .topbar .r{display:flex;gap:22px;}
   .topbar i{color:var(--amber);}
 
   /* HEADER */
-  header{position:sticky;top:0;z-index:70;background:rgba(23,19,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 20px -14px rgba(0,0,0,.3);}
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;}
   .logo img{height:60px;width:auto;}
   nav.main{display:flex;align-items:center;gap:24px;margin-left:auto;margin-right:26px;}
-  nav.main a{font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#eae3d5;}
-  nav.main a:hover{color:var(--amber);}
-  .burger{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
-  nav.mobile{display:none;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px;}
-  nav.mobile a{padding:12px 0;font-family:'Archivo';font-weight:700;text-transform:uppercase;font-size:14px;border-bottom:1px solid var(--line);}
+  nav.main a{font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:var(--navy);}
+  nav.main a:hover{color:var(--blue);}
+  .burger{display:none;background:none;border:0;color:var(--navy);font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Archivo';font-weight:700;text-transform:uppercase;font-size:14px;border-bottom:1px solid var(--line);color:var(--navy);}
 
   /* HERO */
-  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;background:url('img/w14.jpg') center/cover;transform:scale(1.05);animation:kb 20s ease-in-out infinite alternate;}
-  @keyframes kb{to{transform:scale(1.15);}}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,14,9,.95) 0%,rgba(18,14,9,.8) 45%,rgba(18,14,9,.45) 100%);}
-  .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding:64px 24px;width:100%;}
-  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:40px;margin-bottom:22px;}
-  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;}
-  .rate-badge b{font-size:14px;}
-  .rate-badge .stars{color:var(--gold);font-size:13px;letter-spacing:1px;}
-  .hero h1{font-size:clamp(36px,5.6vw,66px);color:#fff;line-height:.98;}
+  .hero{background:linear-gradient(160deg,var(--blue-ll),#e4eef5 70%,#dbe8f1);position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;right:-140px;top:-100px;width:480px;height:480px;background:radial-gradient(circle,rgba(32,121,171,.16),transparent 65%);}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:70px 24px 78px;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:40px;margin-bottom:22px;box-shadow:0 10px 26px -14px rgba(0,0,0,.2);}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;border:1px solid var(--line);}
+  .rate-badge b{font-size:14px;color:var(--navy);}
+  .rate-badge .stars{color:var(--gold);font-size:12px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(34px,5vw,58px);color:var(--navy);line-height:1.02;}
+  .hero h1 .b{color:var(--blue);}
   .hero h1 .a{color:var(--amber);}
-  .hero .slogan{font-family:'Archivo';font-weight:700;font-size:clamp(15px,1.9vw,20px);color:var(--amber);margin-top:16px;letter-spacing:.5px;}
-  .hero p.sub{margin-top:14px;font-size:17px;color:#e2dccf;max-width:520px;text-transform:none;}
+  .hero .slogan{font-family:'Archivo';font-weight:700;font-size:clamp(15px,1.8vw,19px);color:var(--amber-d);margin-top:14px;letter-spacing:.3px;}
+  .hero p.sub{margin-top:14px;font-size:17px;color:var(--muted);max-width:500px;text-transform:none;}
   .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
-  .quote-card{background:rgba(30,24,17,.75);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);}
-  .quote-card h3{font-size:21px;color:#fff;}
-  .quote-card p{color:var(--muted);font-size:13.5px;margin:6px 0 16px;text-transform:none;font-family:'Inter';}
-  .qbtn{display:flex;align-items:center;gap:13px;width:100%;background:var(--amber);color:#26190a;border:0;border-radius:11px;padding:15px 16px;font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:14px;cursor:pointer;transition:.18s;margin-bottom:10px;letter-spacing:.4px;}
-  .qbtn .ic{width:34px;height:34px;border-radius:8px;background:rgba(38,25,10,.16);display:flex;align-items:center;justify-content:center;font-size:15px;}
-  .qbtn:hover{background:var(--amber-d);color:#fff;transform:translateY(-2px);}
-  .qbtn.alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);}
-  .qbtn.alt:hover{border-color:var(--amber);color:var(--amber);}
-  .qbtn.alt .ic{background:rgba(255,255,255,.08);}
-  .qbtn-row{display:flex;gap:12px;}
-  .qbtn-row .qbtn{margin-bottom:0;justify-content:center;font-size:12.5px;padding:12px 10px;}
+  .hero-visual{position:relative;}
+  .hero-img{border-radius:22px;overflow:hidden;box-shadow:0 34px 70px -30px rgba(20,40,60,.5);height:440px;}
+  .hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:kb 18s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.14);}}
+  .quote-card{position:absolute;left:-24px;bottom:-28px;background:#fff;border-radius:16px;padding:18px;box-shadow:0 26px 50px -20px rgba(20,40,60,.4);width:290px;border:1px solid var(--line);}
+  .quote-card h3{font-size:16px;color:var(--navy);margin-bottom:12px;}
+  .qbtn{display:flex;align-items:center;gap:11px;width:100%;background:var(--blue);color:#fff;border:0;border-radius:10px;padding:12px 14px;font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:13px;cursor:pointer;transition:.18s;margin-bottom:9px;letter-spacing:.3px;}
+  .qbtn:hover{background:var(--blue-d);transform:translateY(-1px);}
+  .qbtn.a{background:var(--amber);}.qbtn.a:hover{background:var(--amber-d);}
+  .qbtn.o{background:#fff;color:var(--navy);border:1.5px solid var(--line);}
+  .qbtn.o:hover{border-color:var(--blue);color:var(--blue-d);}
+  .qbtn i{width:20px;text-align:center;}
 
   /* MARQUEE */
-  .marquee{background:var(--amber-sec);border-top:1px solid rgba(217,154,52,.25);border-bottom:1px solid rgba(217,154,52,.25);overflow:hidden;white-space:nowrap;}
-  .marquee .track{display:inline-flex;align-items:center;animation:scroll 32s linear infinite;padding:15px 0;}
+  .marquee{background:var(--blue);overflow:hidden;white-space:nowrap;}
+  .marquee .track{display:inline-flex;align-items:center;animation:scroll 32s linear infinite;padding:14px 0;}
   .marquee:hover .track{animation-play-state:paused;}
   @keyframes scroll{to{transform:translateX(-50%);}}
-  .marquee .it{display:inline-flex;align-items:center;gap:9px;padding:0 24px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;color:#ecd9b6;text-transform:uppercase;}
-  .marquee .it i{color:var(--amber);font-size:13px;}
+  .marquee .it{display:inline-flex;align-items:center;gap:9px;padding:0 24px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;color:#fff;text-transform:uppercase;}
+  .marquee .it i{color:#bfe0f2;font-size:13px;}
 
   /* ABOUT */
   .about .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;}
-  .about h2{font-size:clamp(26px,3.4vw,40px);color:#fff;}
+  .about h2{font-size:clamp(26px,3.4vw,40px);color:var(--navy);}
   .about p{color:var(--muted);margin-top:16px;text-transform:none;}
   .trust-row{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
-  .tchip{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
-  .tchip i{color:var(--amber);font-size:18px;}
-  .tchip b{font-family:'Archivo';text-transform:uppercase;font-size:13px;color:#fff;}
+  .tchip{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+  .tchip i{color:var(--blue);font-size:18px;}
+  .tchip b{font-family:'Archivo';text-transform:uppercase;font-size:13px;color:var(--navy);}
   .grid-img{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  .grid-img .gi{border-radius:14px;overflow:hidden;height:210px;}
+  .grid-img .gi{border-radius:14px;overflow:hidden;height:210px;box-shadow:0 16px 34px -22px rgba(0,0,0,.4);}
   .grid-img .gi img{width:100%;height:100%;object-fit:cover;transition:.4s;}
   .grid-img .gi:hover img{transform:scale(1.07);}
   .grid-img .gi:nth-child(1){margin-top:24px;}
   .grid-img .gi:nth-child(4){margin-top:-24px;}
 
   /* STATS */
-  .stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stats{background:var(--navy);}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:44px 24px;}
   .stat{display:flex;gap:16px;align-items:center;}
-  .stat .si{width:56px;height:56px;border-radius:12px;background:var(--amber-sec);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  .stat .si{width:56px;height:56px;border-radius:12px;background:rgba(32,121,171,.22);color:#5cb0e0;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
   .stat .sn{font-family:'Archivo';font-weight:900;font-size:30px;color:#fff;line-height:1;}
-  .stat .sl{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+  .stat .sl{font-size:12.5px;color:#9fb0c0;text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
 
   /* MATERIALS */
-  .materials{background:var(--amber-deep);}
-  .mat-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .mat{border-radius:var(--radius);overflow:hidden;position:relative;height:300px;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.08);}
-  .mat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s;z-index:1;}
-  .mat::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,14,9,.96) 8%,rgba(18,14,9,.35) 60%,rgba(18,14,9,.15));z-index:2;transition:.3s;}
-  .mat:hover img{transform:scale(1.09);}
-  .mat:hover::after{background:linear-gradient(to top,rgba(18,14,9,.97) 12%,rgba(46,36,19,.5) 70%);}
-  .mat .body{position:relative;z-index:3;padding:24px;width:100%;}
-  .mat .si{width:52px;height:52px;border-radius:12px;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;transition:.3s;}
-  .mat:hover .si{transform:translateY(-4px);}
-  .mat h3{font-size:20px;color:#fff;}
-  .mat p{color:#d8cdb9;font-size:14px;margin-top:6px;text-transform:none;font-family:'Inter';opacity:0;max-height:0;transition:.35s;}
-  .mat:hover p{opacity:1;max-height:80px;}
+  .materials{background:var(--bg2);}
+  .mat-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .mat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.22s;}
+  .mat:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(20,40,60,.35);border-color:#cfe0ee;}
+  .mat .pic{height:200px;position:relative;overflow:hidden;}
+  .mat .pic img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .mat:hover .pic img{transform:scale(1.08);}
+  .mat .si{position:absolute;left:18px;bottom:-22px;width:52px;height:52px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 10px 22px -8px rgba(0,0,0,.4);border:3px solid #fff;}
+  .mat:nth-child(even) .si{background:var(--amber);}
+  .mat .body{padding:30px 22px 24px;}
+  .mat h3{font-size:19px;color:var(--navy);}
+  .mat p{color:var(--muted);font-size:14px;margin-top:7px;text-transform:none;font-family:'Inter';}
 
   /* DELIVERY */
   .delivery{background:linear-gradient(120deg,var(--blue-d),var(--blue));color:#fff;}
   .del-grid{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .del{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:26px 20px;text-align:center;transition:.2s;}
+  .del{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:26px 20px;text-align:center;transition:.2s;}
   .del:hover{background:rgba(255,255,255,.16);transform:translateY(-4px);}
   .del i{font-size:32px;color:#fff;margin-bottom:14px;}
   .del b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:#fff;}
-  .del span{font-size:13px;color:#e6f3fb;text-transform:none;}
+  .del span{font-size:13px;color:#e6f2fa;text-transform:none;}
 
   /* WHY */
   .why-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .wc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s;text-align:center;}
-  .wc:hover{border-color:var(--amber);transform:translateY(-4px);background:var(--panel2);}
-  .wc .wi{width:64px;height:64px;border-radius:50%;background:var(--amber-sec);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
-  .wc:nth-child(even) .wi{background:rgba(58,159,212,.16);color:var(--blue);}
-  .wc b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:#fff;letter-spacing:.3px;}
+  .wc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s;text-align:center;}
+  .wc:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(20,40,60,.3);}
+  .wc .wi{width:64px;height:64px;border-radius:50%;background:var(--blue-l);color:var(--blue-d);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
+  .wc:nth-child(even) .wi{background:var(--amber-l);color:var(--amber-d);}
+  .wc b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:var(--navy);letter-spacing:.3px;}
   .wc span{font-size:13.5px;color:var(--muted);text-transform:none;}
 
   /* REVIEWS */
-  .reviews{position:relative;background:url('img/w6.jpg') center/cover fixed;}
-  .reviews::after{content:"";position:absolute;inset:0;background:rgba(18,14,9,.92);}
-  .reviews .wrap{position:relative;z-index:2;}
+  .reviews{background:var(--bg2);}
   .rev-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .rc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;}
-  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--amber);opacity:.18;font-family:Georgia;line-height:1;}
+  .rc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;box-shadow:0 14px 30px -24px rgba(0,0,0,.3);}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--blue);opacity:.16;font-family:Georgia;line-height:1;}
   .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
-  .rc p{margin:12px 0 16px;font-size:14.5px;color:#e2dccf;text-transform:none;font-family:'Inter';}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#38424d;text-transform:none;font-family:'Inter';}
   .rc .who{display:flex;align-items:center;gap:12px;}
-  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo';}
-  .rc:nth-child(even) .av{background:var(--blue);color:#08222f;}
-  .rc .who b{font-family:'Archivo';text-transform:uppercase;font-size:14px;color:#fff;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo';}
+  .rc:nth-child(even) .av{background:var(--amber);}
+  .rc .who b{font-family:'Archivo';text-transform:uppercase;font-size:14px;color:var(--navy);}
   .rc .who small{color:var(--soft);display:block;text-transform:none;}
   .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;text-transform:none;}
 
   /* GALLERY */
   .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
-  .gal-grid .gc{border-radius:12px;overflow:hidden;position:relative;}
+  .gal-grid .gc{border-radius:12px;overflow:hidden;position:relative;box-shadow:0 12px 26px -20px rgba(0,0,0,.4);}
   .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
   .gal-grid .gc:hover img{transform:scale(1.08);}
   .gal-grid .big{grid-column:span 2;grid-row:span 2;}
 
   /* PROCESS */
-  .process{background:var(--bg2);}
   .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .pc{text-align:center;position:relative;}
-  .pc .pin{width:84px;height:84px;border-radius:50%;background:var(--amber-sec);border:2px solid var(--amber);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;position:relative;}
-  .pc .num{position:absolute;top:-4px;right:calc(50% - 52px);width:28px;height:28px;border-radius:50%;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;font-size:13px;}
-  .pc h3{font-size:19px;color:#fff;}
+  .pc .pin{width:84px;height:84px;border-radius:50%;background:var(--blue-l);border:2px solid var(--blue);color:var(--blue-d);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;position:relative;}
+  .pc .num{position:absolute;top:-4px;right:calc(50% - 52px);width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;font-size:13px;}
+  .pc h3{font-size:19px;color:var(--navy);}
   .pc p{color:var(--muted);font-size:14px;margin-top:8px;text-transform:none;font-family:'Inter';max-width:280px;margin:8px auto 0;}
 
   /* CTA */
-  .cta-band{background:linear-gradient(120deg,var(--amber-deep),var(--amber-sec));border-top:1px solid rgba(217,154,52,.2);}
+  .cta-band{background:linear-gradient(120deg,var(--navy),var(--navy2));}
   .cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:52px 24px;flex-wrap:wrap;}
   .cta-band h2{font-size:clamp(22px,3vw,34px);color:#fff;}
-  .cta-band p{color:#d8cdb9;margin-top:6px;text-transform:none;}
+  .cta-band p{color:#9fb0c0;margin-top:6px;text-transform:none;}
   .cta-band .acts{display:flex;gap:14px;flex-wrap:wrap;}
 
   /* FOOTER */
-  footer{background:#100d09;padding:60px 0 26px;border-top:1px solid var(--line);}
+  footer{background:var(--navy);padding:60px 0 26px;color:#9fb0c0;}
   footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
-  footer .logo img{height:64px;margin-bottom:16px;}
-  footer p.fd{color:var(--muted);font-size:14px;max-width:280px;text-transform:none;}
+  footer .logo-box{display:inline-block;background:#fff;padding:12px 16px;border-radius:12px;margin-bottom:16px;}
+  footer .logo-box img{height:56px;}
+  footer p.fd{color:#9fb0c0;font-size:14px;max-width:280px;text-transform:none;}
   footer h4{font-family:'Archivo';text-transform:uppercase;color:#fff;font-size:14px;margin-bottom:16px;letter-spacing:.5px;}
-  footer a{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;margin-bottom:11px;}
+  footer a{display:flex;align-items:center;gap:9px;color:#9fb0c0;font-size:14px;margin-bottom:11px;}
   footer a:hover{color:var(--amber);}
   footer a i{color:var(--amber);width:16px;text-align:center;}
-  .fbar{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--soft);text-transform:none;}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7a8a99;text-transform:none;}
   .fbar a{color:var(--amber);display:inline;}
   .fsoc{display:flex;gap:12px;}
-  .fsoc a{width:38px;height:38px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
-  .fsoc a:hover{background:var(--amber);color:#26190a;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--amber);}
 
   @media(max-width:960px){
     nav.main{display:none;}
     .burger{display:block;}
     nav.mobile.open{display:flex;}
     .hero .wrap,.about .wrap{grid-template-columns:1fr;}
-    .quote-card{max-width:460px;}
+    .hero-visual{order:-1;margin-bottom:40px;}
+    .quote-card{position:static;width:100%;margin-top:16px;}
     .mat-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
     .del-grid{grid-template-columns:1fr 1fr;}
     .stats .wrap{grid-template-columns:1fr 1fr;gap:26px;}
@@ -253,7 +253,7 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-amber">Get a Quote</a>
+    <a href="#contact" class="btn btn-blue">Get a Quote</a>
     <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
   </div>
   <nav class="mobile" id="mnav">
@@ -269,7 +269,6 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
   <div class="wrap">
     <div>
       <div class="rate-badge">
@@ -277,21 +276,21 @@
         <b>4.8 Rating</b>
         <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
       </div>
-      <h1>Your San Marcos <span class="a">Stone &amp; Soil</span> Yard</h1>
+      <h1>Your San Marcos <span class="b">Stone</span> &amp; <span class="a">Soil</span> Yard</h1>
       <div class="slogan">Family Owned &amp; Locally Operated.</div>
       <p class="sub">Soil, mulch, gravel, river rock, flagstone, boulders and more — huge selection, honest bulk pricing, and fast delivery across Central Texas.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-amber"><i class="fa-solid fa-paper-plane"></i> Get a Quote</a>
-        <a href="tel:+15126180696" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+        <a href="#contact" class="btn btn-blue"><i class="fa-solid fa-paper-plane"></i> Get a Quote</a>
+        <a href="tel:+15126180696" class="btn btn-line"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
       </div>
     </div>
-    <div class="quote-card">
-      <h3>Get Your Materials</h3>
-      <p>Pick the way that works best for you:</p>
-      <a href="#contact" class="qbtn"><span class="ic"><i class="fa-solid fa-bolt"></i></span> Get a Fast Quote</a>
-      <div class="qbtn-row">
-        <a href="tel:+15126180696" class="qbtn alt"><i class="fa-solid fa-phone"></i> Call Us</a>
-        <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="qbtn alt"><i class="fa-solid fa-location-arrow"></i> Directions</a>
+    <div class="hero-visual">
+      <div class="hero-img"><img src="img/w14.jpg" alt="Landscape Junction material yard in San Marcos" /></div>
+      <div class="quote-card">
+        <h3>Get Your Materials</h3>
+        <a href="#contact" class="qbtn"><i class="fa-solid fa-bolt"></i> Get a Fast Quote</a>
+        <a href="tel:+15126180696" class="qbtn a"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+        <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="qbtn o"><i class="fa-solid fa-location-arrow"></i> Get Directions</a>
       </div>
     </div>
   </div>
@@ -318,15 +317,15 @@
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Family Owned &amp; Locally Operated</span>
-      <h2>The Hill Country's landscape <span style="color:var(--amber)">material yard</span></h2>
+      <h2>The Hill Country's landscape <span style="color:var(--blue)">material yard</span></h2>
       <p>Landscape Junction is your one-stop Central Texas source for bulk landscape materials. Whether you're building a patio, refreshing your beds or filling a whole yard, we've got the soil, stone, mulch and gravel to get it done — at honest, fair prices.</p>
-      <p>As a <strong style="color:#fff">family-owned, locally operated</strong> yard, we know Hill Country landscapes inside out. Load up at our San Marcos yard, or let us deliver straight to your project.</p>
+      <p>As a <strong style="color:var(--navy)">family-owned, locally operated</strong> yard, we know Hill Country landscapes inside out. Load up at our San Marcos yard, or let us deliver straight to your project.</p>
       <div class="trust-row">
         <div class="tchip"><i class="fa-solid fa-people-roof"></i><b>Family Owned</b></div>
         <div class="tchip"><i class="fa-solid fa-truck-fast"></i><b>Bulk Delivery</b></div>
         <div class="tchip"><i class="fa-solid fa-tags"></i><b>Fair Prices</b></div>
       </div>
-      <a href="#materials" class="btn btn-amber" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Browse Materials</a>
+      <a href="#materials" class="btn btn-blue" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Browse Materials</a>
     </div>
     <div class="grid-img reveal">
       <div class="gi"><img src="img/w5.jpg" alt="Chopped stone" /></div>
@@ -352,16 +351,16 @@
   <div class="wrap center">
     <div class="reveal">
       <span class="eyebrow">What We Stock</span>
-      <h2 class="h2">Bulk landscape <span class="a">materials</span></h2>
+      <h2 class="h2">Bulk landscape <span class="b">materials</span></h2>
       <p class="lead">Everything you need to build, plant and beautify — priced by the bag, scoop or truckload.</p>
     </div>
     <div class="mat-grid" style="text-align:left;">
-      <div class="mat reveal"><img src="img/w2.jpg" alt="Soil and compost"><div class="body"><div class="si"><i class="fa-solid fa-trowel"></i></div><h3>Soil &amp; Compost</h3><p>Rich topsoil, garden mixes and compost for healthy beds and lawns.</p></div></div>
-      <div class="mat reveal"><img src="img/w1.jpg" alt="Mulch"><div class="body"><div class="si"><i class="fa-solid fa-leaf"></i></div><h3>Mulch</h3><p>Hardwood, cedar and colored mulch to protect beds and add curb appeal.</p></div></div>
-      <div class="mat reveal"><img src="img/w4.jpg" alt="Gravel and river rock"><div class="body"><div class="si"><i class="fa-solid fa-mound"></i></div><h3>Gravel &amp; River Rock</h3><p>Decorative gravel, pea gravel, base rock and smooth river rock.</p></div></div>
-      <div class="mat reveal"><img src="img/w7.jpg" alt="Flagstone and patio stone"><div class="body"><div class="si"><i class="fa-solid fa-cubes"></i></div><h3>Flagstone &amp; Patio Stone</h3><p>Chopped stone, flagstone and patio stone for walls, paths and patios.</p></div></div>
-      <div class="mat reveal"><img src="img/w6.jpg" alt="Boulders and slabs"><div class="body"><div class="si"><i class="fa-solid fa-mountain"></i></div><h3>Boulders &amp; Slabs</h3><p>Statement boulders, slabs and large stone for standout landscapes.</p></div></div>
-      <div class="mat reveal"><img src="img/w10.jpg" alt="Blocks and pavers"><div class="body"><div class="si"><i class="fa-solid fa-layer-group"></i></div><h3>Blocks, Sod &amp; More</h3><p>Retaining blocks, pavers, sod, firewood, cement and weed fabric.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w2.jpg" alt="Soil and compost"><div class="si"><i class="fa-solid fa-trowel"></i></div></div><div class="body"><h3>Soil &amp; Compost</h3><p>Rich topsoil, garden mixes and compost for healthy beds and lawns.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w1.jpg" alt="Mulch"><div class="si"><i class="fa-solid fa-leaf"></i></div></div><div class="body"><h3>Mulch</h3><p>Hardwood, cedar and colored mulch to protect beds and add curb appeal.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w4.jpg" alt="Gravel and river rock"><div class="si"><i class="fa-solid fa-mound"></i></div></div><div class="body"><h3>Gravel &amp; River Rock</h3><p>Decorative gravel, pea gravel, base rock and smooth river rock.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w7.jpg" alt="Flagstone and patio stone"><div class="si"><i class="fa-solid fa-cubes"></i></div></div><div class="body"><h3>Flagstone &amp; Patio Stone</h3><p>Chopped stone, flagstone and patio stone for walls, paths and patios.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w6.jpg" alt="Boulders and slabs"><div class="si"><i class="fa-solid fa-mountain"></i></div></div><div class="body"><h3>Boulders &amp; Slabs</h3><p>Statement boulders, slabs and large stone for standout landscapes.</p></div></div>
+      <div class="mat reveal"><div class="pic"><img src="img/w10.jpg" alt="Blocks and pavers"><div class="si"><i class="fa-solid fa-layer-group"></i></div></div><div class="body"><h3>Blocks, Sod &amp; More</h3><p>Retaining blocks, pavers, sod, firewood, cement and weed fabric.</p></div></div>
     </div>
   </div>
 </section>
@@ -370,9 +369,9 @@
 <section class="sec delivery" id="delivery">
   <div class="wrap center">
     <div class="reveal">
-      <span class="eyebrow" style="color:#e6f3fb;">How You Get It</span>
+      <span class="eyebrow" style="color:#d6ecf7;">How You Get It</span>
       <h2 class="h2">Delivered or loaded — <span style="color:#fff">your way</span></h2>
-      <p class="lead" style="color:#e6f3fb;">Take it with you or let us bring it to your project. Fast, easy and hassle-free.</p>
+      <p class="lead" style="color:#e6f2fa;">Take it with you or let us bring it to your project. Fast, easy and hassle-free.</p>
     </div>
     <div class="del-grid">
       <div class="del reveal"><i class="fa-solid fa-truck"></i><b>Dump Truck Delivery</b><span>Bulk soil, mulch &amp; gravel delivered by the load.</span></div>
@@ -388,7 +387,7 @@
   <div class="wrap center">
     <div class="reveal">
       <span class="eyebrow">Why Choose Us</span>
-      <h2 class="h2">The Hill Country's <span class="a">favorite</span> stone yard</h2>
+      <h2 class="h2">The Hill Country's <span class="b">favorite</span> stone yard</h2>
       <p class="lead">Huge selection, honest pricing, and a family team that knows Central Texas landscapes.</p>
     </div>
     <div class="why-grid">
@@ -424,7 +423,7 @@
   <div class="wrap center">
     <div class="reveal">
       <span class="eyebrow">Our Yard</span>
-      <h2 class="h2">Stone &amp; material <span class="a">gallery</span></h2>
+      <h2 class="h2">Stone &amp; material <span class="b">gallery</span></h2>
       <p class="lead">A look at just some of the stone, soil and materials waiting for you at our San Marcos yard.</p>
     </div>
     <div class="gal-grid reveal">
@@ -440,7 +439,7 @@
 </section>
 
 <!-- PROCESS -->
-<section class="sec process">
+<section class="sec materials">
   <div class="wrap center">
     <div class="reveal">
       <span class="eyebrow">Easy As 1-2-3</span>
@@ -463,8 +462,8 @@
       <p>Call, visit or message us for a fast quote — delivery available across Central Texas.</p>
     </div>
     <div class="acts">
-      <a href="tel:+15126180696" class="btn btn-ghost" style="color:#fff;"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
-      <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="btn btn-amber"><i class="fa-solid fa-location-arrow"></i> Get Directions</a>
+      <a href="tel:+15126180696" class="btn btn-outline" style="color:#fff;"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+      <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="btn btn-blue"><i class="fa-solid fa-location-arrow"></i> Get Directions</a>
     </div>
   </div>
 </section>
@@ -474,7 +473,7 @@
   <div class="wrap">
     <div class="cols">
       <div>
-        <div class="logo"><img src="img/logo.png" alt="Landscape Junction" /></div>
+        <div class="logo-box"><img src="img/logo.png" alt="Landscape Junction" /></div>
         <p class="fd">Family owned &amp; locally operated landscape material yard in San Marcos, TX. Stone, soil, mulch, gravel &amp; more — with delivery across Central Texas.</p>
       </div>
       <div>
