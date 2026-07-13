@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abdullah Rahim — Live Website Demos</title>
+<meta name="description" content="Live website demos by Abdullah Rahim — modern, responsive websites for local service businesses. WordPress & front-end developer." />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+  :root{
+    --bg:#0b1020;--bg2:#111834;--card:#141c3a;--line:#26304f;
+    --ink:#eef2ff;--muted:#9aa6c4;--accent:#f5c518;--accent2:#4f7cff;--white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Manrope',-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans','Manrope',sans-serif;overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:15px;padding:13px 24px;border-radius:40px;cursor:pointer;transition:.18s;white-space:nowrap;border:2px solid transparent;}
+  .btn-accent{background:var(--accent);color:#241f00;}
+  .btn-accent:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(245,197,24,.5);}
+  .btn-ghost{border-color:var(--line);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:14px;}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;}
+  .brand .dot{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#0b1020;font-weight:800;font-family:'Plus Jakarta Sans';}
+  .brand span{color:var(--accent);}
+
+  .hero{position:relative;overflow:hidden;padding:74px 0 40px;text-align:center;background:radial-gradient(900px 400px at 50% -10%,rgba(79,124,255,.22),transparent 60%);}
+  .hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(245,197,24,.12);border:1px solid rgba(245,197,24,.3);color:var(--accent);font-weight:700;font-size:13px;padding:7px 16px;border-radius:30px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(30px,5vw,52px);font-weight:800;line-height:1.1;}
+  .hero h1 .g{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero p{color:var(--muted);font-size:17px;max-width:600px;margin:16px auto 0;}
+  .hero .meta{margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:600;}
+  .hero .meta b{color:var(--ink);}
+
+  .grid{padding:30px 0 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .demo{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;}
+  .demo:hover{transform:translateY(-6px);border-color:var(--accent2);box-shadow:0 26px 50px -24px rgba(0,0,0,.7);}
+  .demo .thumb{height:172px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;}
+  .demo .thumb.t-green{background:linear-gradient(135deg,#0f3d1c,#2f9e44);}
+  .demo .thumb.t-navy{background:linear-gradient(135deg,#0a2540,#c0392b);}
+  .demo .thumb.t-blue{background:linear-gradient(135deg,#0b2b52,#1d64c9);}
+  .demo .thumb .emoji{position:absolute;top:14px;right:16px;font-size:52px;opacity:.5;}
+  .demo .thumb .tag{background:rgba(0,0,0,.4);backdrop-filter:blur(4px);color:#fff;font-size:12px;font-weight:700;padding:6px 13px;border-radius:30px;}
+  .demo .body{padding:22px;display:flex;flex-direction:column;flex:1;}
+  .demo .cat{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);}
+  .demo h3{font-size:20px;margin:6px 0 8px;}
+  .demo p{color:var(--muted);font-size:14.5px;flex:1;}
+  .demo .foot{margin-top:18px;display:flex;gap:10px;}
+  .demo .foot .btn{flex:1;justify-content:center;font-size:14px;padding:12px 16px;}
+
+  .note{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin-bottom:40px;color:var(--muted);font-size:14.5px;}
+  .note b{color:var(--ink);}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:14px;}
+  footer a{color:var(--accent);font-weight:700;}
+
+  @media(max-width:860px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr;}.hero{padding:52px 0 24px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="brand"><span class="dot">A</span> Abdullah<span>Rahim</span></a>
+    <a href="https://abdullahrahim.com" target="_blank" class="btn btn-ghost">Visit abdullahrahim.com</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="pill">🚀 Live Website Demos</span>
+    <h1>Modern Websites That <span class="g">Win Local Customers</span></h1>
+    <p>Real, working homepage demos I built for local service businesses — fully responsive, fast, and ready to turn visitors into calls. Click any demo to explore it live.</p>
+    <div class="meta">
+      <span>✅ <b>Mobile-responsive</b></span>
+      <span>⚡ <b>Fast &amp; modern</b></span>
+      <span>📞 <b>Built to get calls</b></span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="grid">
+
+    <a class="demo" href="rangers-demo/">
+      <div class="thumb t-green"><span class="emoji">🌱</span><span class="tag">Lawn Care &amp; Landscaping</span></div>
+      <div class="body">
+        <div class="cat">Landscaping</div>
+        <h3>Rangers Lawn Care</h3>
+        <p>Fresh green homepage for a 5-star lawn care &amp; landscaping company — services, gallery, reviews and a quote form.</p>
+        <div class="foot"><span class="btn btn-accent">View Live Demo →</span></div>
+      </div>
+    </a>
+
+    <a class="demo" href="medrano-demo/">
+      <div class="thumb t-navy"><span class="emoji">🔧</span><span class="tag">Plumbing · Bilingual</span></div>
+      <div class="body">
+        <div class="cat">Plumbing</div>
+        <h3>Medrano Plumbing</h3>
+        <p>Navy &amp; red plumbing site with "Hablamos Español," WhatsApp button, services and click-to-call for an Austin family business.</p>
+        <div class="foot"><span class="btn btn-accent">View Live Demo →</span></div>
+      </div>
+    </a>
+
+    <a class="demo" href="mendez-demo/">
+      <div class="thumb t-blue"><span class="emoji">🚰</span><span class="tag">Plumbing Services</span></div>
+      <div class="body">
+        <div class="cat">Plumbing</div>
+        <h3>Mendez Plumbing</h3>
+        <p>Clean, modern plumbing homepage with logo, trust bar, service cards and a strong call-to-action layout.</p>
+        <div class="foot"><span class="btn btn-accent">View Live Demo →</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    💡 <b>Note for clients:</b> These are demo homepages using placeholder photos. Your real website would use your own logo, real job photos, and connect the contact form straight to your phone &amp; inbox — and we can build every page you need.
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Designed &amp; built by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim</a> — WordPress &amp; Front-End Developer · <a href="https://abdullahrahim.com" target="_blank">abdullahrahim.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

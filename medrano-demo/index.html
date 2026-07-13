@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Medrano Plumbing — Austin, TX | Family-Owned Plumbers · 20+ Years</title>
+<meta name="description" content="Medrano Plumbing — family-owned, licensed & insured plumbers in Austin, TX. 20+ years experience. Water heaters, drains, leaks, repipes. Se habla español." />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+  :root{
+    --blue:#13579e;
+    --blue-dark:#0a3a6b;
+    --navy:#082647;
+    --red:#e0342a;
+    --red-dark:#b5261d;
+    --ink:#16202e;
+    --muted:#5b6b7b;
+    --line:#e5ebf2;
+    --bg:#f5f8fc;
+    --white:#fff;
+    --radius:16px;
+    --shadow:0 18px 40px -18px rgba(10,58,107,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  *{max-width:100%;}
+  .wrap,header .wrap,.hero .wrap,.strip .wrap,.services .wrap,.why .wrap,.gallery .wrap,.contact .wrap,.band .wrap,footer .wrap{max-width:1180px;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Manrope',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--white);line-height:1.55;overflow-x:hidden;width:100%;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans','Manrope',sans-serif;}
+  h1,h2,h3,p{overflow-wrap:break-word;word-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{margin:0 auto;padding:0 22px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:15px;padding:14px 24px;border-radius:40px;cursor:pointer;border:2px solid transparent;transition:.18s;white-space:nowrap;}
+  .btn-red{background:var(--red);color:#fff;}
+  .btn-red:hover{background:var(--red-dark);transform:translateY(-2px);}
+  .btn-blue{background:var(--blue);color:#fff;}
+  .btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);}
+  .btn-green{background:#25d366;color:#063d1b;}
+  .btn-green:hover{filter:brightness(1.05);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);}
+  .btn-outline{background:#fff;color:var(--blue-dark);border-color:var(--line);}
+  .sec{padding:78px 0;}
+  .eyebrow{display:inline-block;color:var(--red);font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+  .h-title{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:var(--navy);line-height:1.12;}
+  .h-title .u{color:var(--red);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:650px;margin:14px auto 0;}
+
+  .topbar{background:var(--navy);color:#cfe0f2;font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar b{color:#fff;}
+  .topbar .tb-r{display:flex;gap:18px;align-items:center;}
+  .es-badge{background:var(--red);color:#fff;font-weight:800;font-size:11px;padding:2px 9px;border-radius:20px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo .badge{width:48px;height:48px;flex-shrink:0;}
+  .logo-img{height:56px;width:auto;flex-shrink:0;}
+  .logo .wm .n1{font-weight:800;font-size:19px;color:var(--blue-dark);letter-spacing:.3px;line-height:1;}
+  .logo .wm .n1 span{color:var(--red);}
+  .logo .wm .n2{font-size:9.5px;letter-spacing:2.5px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-top:3px;}
+  nav.main{display:flex;align-items:center;gap:28px;}
+  nav.main a{font-weight:700;font-size:15px;}
+  nav.main a:hover{color:var(--blue);}
+  .header-cta{display:flex;align-items:center;gap:14px;}
+  .header-phone{font-weight:800;color:var(--blue-dark);font-size:16px;white-space:nowrap;}
+  .header-phone small{display:block;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;}
+  .burger span{width:26px;height:3px;background:var(--navy);border-radius:3px;}
+  nav.mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:12px 22px 20px;}
+  nav.mobile a{padding:11px 0;font-weight:700;border-bottom:1px solid var(--line);}
+
+  .hero{position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--blue-dark) 55%,var(--blue) 100%);color:#fff;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(224,52,42,.4),transparent 65%);}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.4px,transparent 1.4px);background-size:26px 26px;opacity:.5;}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:74px 22px 84px;}
+  .hero .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:7px 15px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:20px;}
+  .hero h1{font-size:clamp(32px,4.6vw,54px);font-weight:800;line-height:1.08;}
+  .hero h1 .y{color:#ffd23f;}
+  .hero p.sub{margin-top:18px;font-size:17.5px;opacity:.94;max-width:520px;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-trust{margin-top:30px;display:flex;gap:22px;flex-wrap:wrap;}
+  .hero-trust .t{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;}
+  .hero-trust .t .ic{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .hero-card{background:#fff;border-radius:22px;padding:8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);color:var(--ink);}
+  .hero-card .pic{border-radius:16px;height:270px;background:linear-gradient(135deg,rgba(19,87,158,.16),rgba(224,52,42,.12)),repeating-linear-gradient(45deg,#eef3f9,#eef3f9 18px,#e6eef7 18px,#e6eef7 36px);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
+  .hero-card .pic .wrench{font-size:96px;opacity:.35;position:absolute;top:20px;right:24px;}
+  .hero-card .pic .cap{background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:8px 16px;border-radius:30px;margin-bottom:16px;}
+  .hero-card .meta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px 14px 10px;}
+  .hero-card .meta>div{display:flex;align-items:center;gap:8px;min-width:0;}
+  .hero-card .meta .stars{color:#ffb400;font-size:14px;letter-spacing:1.5px;flex-shrink:0;}
+  .hero-card .meta .rev{font-size:11.5px;color:var(--navy);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hero-card .meta .btn{flex-shrink:0;}
+  .float-badge{position:absolute;left:-18px;bottom:34px;background:var(--red);color:#fff;border-radius:14px;padding:12px 16px;font-weight:800;box-shadow:var(--shadow);z-index:3;}
+  .float-badge b{display:block;font-size:24px;font-family:'Plus Jakarta Sans';}
+  .float-badge span{font-size:11px;opacity:.9;}
+
+  .strip{background:#fff;border-bottom:1px solid var(--line);}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:22px;text-align:center;}
+  .strip .s .n{font-family:'Plus Jakarta Sans';font-weight:800;font-size:24px;color:var(--blue-dark);}
+  .strip .s .l{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+
+  .services{background:var(--bg);}
+  .cards{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:.2s;position:relative;overflow:hidden;}
+  .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--blue),var(--red));transform:scaleX(0);transform-origin:left;transition:.25s;}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;}
+  .card:hover::before{transform:scaleX(1);}
+  .card .ic{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .card:nth-child(even) .ic{background:linear-gradient(135deg,var(--red),var(--red-dark));}
+  .card .ic svg{width:28px;height:28px;fill:#fff;}
+  .card h3{font-size:18px;color:var(--navy);margin-bottom:7px;}
+  .card p{font-size:14.5px;color:var(--muted);}
+
+  .why .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;}
+  .why-visual{border-radius:20px;height:400px;background:linear-gradient(135deg,rgba(8,38,71,.9),rgba(19,87,158,.55)),repeating-linear-gradient(45deg,#dfe8f2,#dfe8f2 22px,#d5e0ee 22px,#d5e0ee 44px);position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .why-visual .tag{position:absolute;left:24px;bottom:24px;color:#fff;}
+  .why-visual .tag b{font-family:'Plus Jakarta Sans';font-size:34px;display:block;}
+  .why-visual .big-wrench{position:absolute;font-size:180px;color:rgba(255,255,255,.12);right:-10px;top:20px;}
+  .why-list{margin-top:22px;display:grid;gap:16px;}
+  .why-item{display:flex;gap:14px;align-items:flex-start;}
+  .why-item .tick{width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;}
+  .why-item b{display:block;font-size:16.5px;color:var(--navy);}
+  .why-item span{font-size:14px;color:var(--muted);}
+
+  .gallery{background:var(--navy);color:#fff;}
+  .gallery .h-title{color:#fff;}
+  .gallery .lead{color:#b9cbe0;}
+  .grid-g{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .gitem{border-radius:14px;height:210px;overflow:hidden;position:relative;background:linear-gradient(135deg,rgba(19,87,158,.35),rgba(224,52,42,.28)),repeating-linear-gradient(45deg,#0e3560,#0e3560 20px,#0c2f55 20px,#0c2f55 40px);display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.08);}
+  .gitem span{background:rgba(8,38,71,.8);padding:8px 14px;margin:14px;border-radius:30px;font-size:12.5px;font-weight:700;}
+
+  .rev-grid{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rev-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 10px 26px -18px rgba(10,58,107,.3);}
+  .rev-card .stars{color:#ffb400;letter-spacing:2px;font-size:15px;}
+  .rev-card p{margin:12px 0 16px;font-size:15px;}
+  .rev-card .who{display:flex;align-items:center;gap:12px;}
+  .rev-card .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--red));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;}
+  .rev-card .who b{font-size:14.5px;color:var(--navy);}
+  .rev-card .who small{color:var(--muted);}
+
+  .band{background:linear-gradient(135deg,var(--red-dark),var(--red));color:#fff;}
+  .band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 22px;flex-wrap:wrap;}
+  .band h2{font-size:clamp(22px,3vw,32px);}
+  .band p{opacity:.95;margin-top:6px;}
+
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .cinfo .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+  .cinfo .row .ic{width:46px;height:46px;border-radius:12px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .cinfo .row b{display:block;color:var(--navy);font-size:16px;}
+  .cinfo .row span{color:var(--muted);font-size:14.5px;}
+  form.cform{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:28px;}
+  form.cform h3{color:var(--navy);margin-bottom:16px;font-size:20px;}
+  form.cform .f{margin-bottom:14px;}
+  form.cform input,form.cform textarea,form.cform select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:#fff;}
+  form.cform input:focus,form.cform textarea:focus{outline:2px solid var(--blue);border-color:transparent;}
+  form.cform .btn-red{width:100%;justify-content:center;border:0;}
+
+  footer{background:var(--navy);color:#b9cbe0;padding:56px 0 24px;}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;}
+  footer h4{color:#fff;font-size:15px;margin-bottom:16px;}
+  footer a{display:block;color:#b9cbe0;font-size:14px;margin-bottom:9px;}
+  footer a:hover{color:#fff;}
+  footer .flogo .n1{color:#fff;font-weight:800;font-size:18px;}
+  footer .flogo .n1 span{color:#ff6a5f;}
+  footer p.desc{font-size:14px;margin-top:12px;max-width:280px;}
+  .footbar{border-top:1px solid rgba(255,255,255,.12);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;}
+  .footbar a{display:inline;color:#ffd23f;}
+
+  @media(max-width:920px){
+    nav.main,.header-phone{display:none;}
+    .burger{display:flex;}
+    header .wrap{height:64px;}
+    .logo-img{height:44px;}
+    .logo .wm .n1{font-size:16px;}
+    .logo .wm .n2{display:none;}
+    .header-cta{gap:8px;}
+    .topbar .wrap{height:auto;padding:8px 22px;font-size:12px;}
+    .topbar .tb-r{gap:12px;}
+    .hero .wrap{display:block;padding:44px 22px 52px;}
+    .hero .wrap>div{min-width:0;width:100%;max-width:100%;}
+    .hero-card{max-width:100%;margin-top:26px;}
+    .float-badge{left:14px;top:48px;bottom:auto;padding:10px 14px;}
+    .float-badge b{font-size:20px;}
+    .why .wrap,.contact .wrap{grid-template-columns:1fr;}
+    .cards,.grid-g,.rev-grid{grid-template-columns:1fr 1fr;}
+    .strip .wrap{grid-template-columns:1fr 1fr;gap:18px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+    nav.mobile.open{display:flex;}
+  }
+  @media(max-width:560px){
+    .cards,.grid-g,.rev-grid,footer .cols{grid-template-columns:1fr;}
+    .sec{padding:52px 0;}
+    .topbar .wrap>div:first-child{display:none;}
+    .topbar .wrap{justify-content:center;}
+    .hero h1{font-size:30px;}
+    .hero p.sub{font-size:15.5px;}
+    .hero-cta .btn{flex:1 1 100%;justify-content:center;}
+    .band .wrap{flex-direction:column;align-items:flex-start;}
+    .btn{font-size:14.5px;padding:13px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="wrap">
+    <div>👨‍👩‍👧 Family-Owned · 20+ Years · Licensed &amp; Insured <span class="es-badge">Hablamos Español</span></div>
+    <div class="tb-r">
+      <a href="tel:+15129472383">📞 <b>+1 (512) 947-2383</b></a>
+      <span>🕒 Mon–Fri 7am–7pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <svg class="badge" viewBox="0 0 100 100" aria-label="Medrano Plumbing logo">
+        <circle cx="50" cy="50" r="48" fill="#0a3a6b"/>
+        <circle cx="50" cy="50" r="40" fill="#fff"/>
+        <path d="M32 30 L46 44 M68 30 L54 44" stroke="#e0342a" stroke-width="9" stroke-linecap="round"/>
+        <rect x="45" y="26" width="10" height="26" rx="3" fill="#8a97a6"/>
+        <rect x="40" y="52" width="20" height="26" rx="4" fill="#c3ccd6"/>
+        <path d="M30 74 h40" stroke="#13579e" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="wm">
+        <div class="n1">MEDRANO <span>PLUMBING</span></div>
+        <div class="n2">Family-Owned · Austin, TX</div>
+      </div>
+    </a>
+    <nav class="main">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+15129472383" class="header-phone">+1 (512) 947-2383<small>Call us today</small></a>
+      <a href="#contact" class="btn btn-red">Book Now</a>
+      <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#services" onclick="closeNav()">Services</a>
+    <a href="#why" onclick="closeNav()">Why Us</a>
+    <a href="#work" onclick="closeNav()">Our Work</a>
+    <a href="#reviews" onclick="closeNav()">Reviews</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="tel:+15129472383" onclick="closeNav()">📞 +1 (512) 947-2383</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="chip">🔧 Austin, TX · Residential &amp; Commercial</span>
+      <h1>Austin's Trusted <span class="y">Family Plumbers</span> for Over 20 Years.</h1>
+      <p class="sub">From water heaters and drains to leaks and repipes — Medrano Plumbing delivers honest, professional work across Austin and South Texas. Licensed, insured, and family-owned.</p>
+      <div class="hero-cta">
+        <a href="tel:+15129472383" class="btn btn-red">📞 Call +1 (512) 947-2383</a>
+        <a href="https://wa.me/15129472383" target="_blank" class="btn btn-green">💬 WhatsApp Us</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t"><span class="ic">🛡️</span> Licensed &amp; Insured</div>
+        <div class="t"><span class="ic">👨‍👩‍👧</span> Family-Owned</div>
+        <div class="t"><span class="ic">🗣️</span> Se Habla Español</div>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div class="float-badge"><b>20+</b><span>Years Experience</span></div>
+      <div class="hero-card">
+        <div class="pic">
+          <div class="wrench">🔧</div>
+          <div class="cap">Honest · Reliable · Guaranteed</div>
+        </div>
+        <div class="meta">
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="rev">Trusted across Austin</div>
+          </div>
+          <a href="#contact" class="btn btn-blue" style="padding:10px 18px;font-size:14px;">Book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="strip">
+  <div class="wrap">
+    <div class="s"><div class="n">20+</div><div class="l">Years Experience</div></div>
+    <div class="s"><div class="n">Family</div><div class="l">Owned &amp; Operated</div></div>
+    <div class="s"><div class="n">Licensed</div><div class="l">&amp; Fully Insured</div></div>
+    <div class="s"><div class="n">Free</div><div class="l">Estimates</div></div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec services" id="services">
+  <div class="wrap center">
+    <span class="eyebrow">Our Services</span>
+    <h2 class="h-title">Complete Plumbing, <span class="u">Done Right</span></h2>
+    <p class="lead">Comprehensive plumbing services for homes and businesses across Austin — efficient solutions and reliable results, every time.</p>
+    <div class="cards" style="text-align:left;">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h12v6l-3 3v9a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-9L6 8z"/></svg></div>
+        <h3>Water Heater Install &amp; Repair</h3>
+        <p>Expert installation, repair and maintenance of water heaters using high-quality parts that last.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 10h10V6l6 6-6 6v-4H4z"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Fast, professional drain cleaning that clears blockages and keeps your plumbing flowing smoothly.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2s6 7.5 6 12a6 6 0 1 1-12 0c0-4.5 6-12 6-12z"/></svg></div>
+        <h3>Leak Detection &amp; Repair</h3>
+        <p>We find and fix leaks quickly — protecting your home from costly water damage.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13h-6v-7H9v7z"/></svg></div>
+        <h3>Kitchen &amp; Bathroom Plumbing</h3>
+        <p>Sinks, taps, toilets, showers and full remodels — clean, professional work throughout your home.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h11v3H3zm7 3h4l7 7-3 3-7-7z"/></svg></div>
+        <h3>Repiping &amp; Installations</h3>
+        <p>Pipe installation, repiping and hydraulic networks — built to last for homes and businesses.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h6l-1 8 10-12h-6z"/></svg></div>
+        <h3>Faucets, Taps &amp; Pumps</h3>
+        <p>Installation and repair of faucets, taps and pumps — done right the first time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="why-visual">
+      <div class="big-wrench">🔧</div>
+      <div class="tag"><b>20 Years</b><span>of trusted plumbing in Austin, TX</span></div>
+    </div>
+    <div>
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h-title">A Family Name You Can <span class="u">Trust</span></h2>
+      <p class="lead" style="margin-left:0;">Personalized advice and honest work — we treat your home like our own and stand behind every job.</p>
+      <div class="why-list">
+        <div class="why-item"><div class="tick">✓</div><div><b>20+ Years of Experience</b><span>Two decades of plumbing done right across Austin and South Texas.</span></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><b>Family-Owned &amp; Operated</b><span>Personal service and honest pricing — you deal directly with the people who care.</span></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><b>Licensed, Insured &amp; Guaranteed</b><span>Fully licensed and insured, with quality materials and workmanship you can rely on.</span></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><b>Hablamos Español</b><span>We proudly serve our English- and Spanish-speaking neighbors across the community.</span></div></div>
+      </div>
+      <a href="#contact" class="btn btn-blue" style="margin-top:26px;">Request a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="sec gallery" id="work">
+  <div class="wrap center">
+    <span class="eyebrow" style="color:#ff8a80;">Our Work</span>
+    <h2 class="h-title">Recent Projects</h2>
+    <p class="lead">A look at some of the residential and commercial plumbing work we've delivered.</p>
+    <div class="grid-g">
+      <div class="gitem"><span>🚿 Water Heater Install</span></div>
+      <div class="gitem"><span>🔧 Repipe &amp; Rough-In</span></div>
+      <div class="gitem"><span>🏗️ New Construction</span></div>
+      <div class="gitem"><span>🛁 Bathroom Remodel</span></div>
+      <div class="gitem"><span>💧 Leak Repair</span></div>
+      <div class="gitem"><span>🏢 Commercial Project</span></div>
+    </div>
+    <p style="color:#8fa6c0;font-size:13px;margin-top:18px;">(Swap these tiles for your real job photos — just drop them into an <code style="color:#ffd23f;">/img</code> folder.)</p>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="sec" id="reviews">
+  <div class="wrap center">
+    <span class="eyebrow">Reviews</span>
+    <h2 class="h-title">What Customers Say</h2>
+    <p class="lead">Real feedback from Austin homeowners and businesses.</p>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rev-card"><div class="stars">★★★★★</div><p>"Came out fast, fixed our water heater the same day, and the price was fair. A real family business you can trust."</p><div class="who"><div class="av">R</div><div><b>Robert M.</b><br><small>Austin, TX</small></div></div></div>
+      <div class="rev-card"><div class="stars">★★★★★</div><p>"Honestos y profesionales. Repararon una fuga en la cocina rápido y limpio. ¡Muy recomendados!"</p><div class="who"><div class="av">C</div><div><b>Carmen L.</b><br><small>Austin, TX</small></div></div></div>
+      <div class="rev-card"><div class="stars">★★★★★</div><p>"Used Medrano for a repipe on our rental. On time, great quality, and 20 years of experience really shows."</p><div class="who"><div class="av">D</div><div><b>David S.</b><br><small>Austin, TX</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="band">
+  <div class="wrap">
+    <div>
+      <h2>Need a plumber you can trust?</h2>
+      <p>Call, text, or WhatsApp us — we'll take care of it.</p>
+    </div>
+    <a href="tel:+15129472383" class="btn btn-outline" style="font-size:17px;">📞 +1 (512) 947-2383</a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="cinfo">
+      <span class="eyebrow">Contact Us</span>
+      <h2 class="h-title">Let's Get It Fixed</h2>
+      <p class="lead" style="margin-left:0;margin-bottom:26px;">Call, WhatsApp, email, or send a request — we'll get back to you fast with a free estimate.</p>
+      <div class="row"><div class="ic">📞</div><div><b>Phone / SMS</b><span>+1 (512) 947-2383</span></div></div>
+      <div class="row"><div class="ic">💬</div><div><b>WhatsApp</b><span>+1 (512) 947-2383</span></div></div>
+      <div class="row"><div class="ic">✉️</div><div><b>Email</b><span>medranoplumbingtx@gmail.com</span></div></div>
+      <div class="row"><div class="ic">📍</div><div><b>Address</b><span>10208 Rodriguez Rd, Austin, TX 78747</span></div></div>
+      <div class="row"><div class="ic">🕒</div><div><b>Hours</b><span>Monday – Friday: 7:00 am – 7:00 pm</span></div></div>
+    </div>
+    <form class="cform" onsubmit="event.preventDefault();alert('Thanks! This is a demo form. Your real site will send this straight to your inbox.');">
+      <h3>Request a Free Estimate</h3>
+      <div class="f"><input type="text" placeholder="Your name" required></div>
+      <div class="f"><input type="tel" placeholder="Phone number" required></div>
+      <div class="f"><select><option>Select a service…</option><option>Water Heater</option><option>Drain Cleaning</option><option>Leak Repair</option><option>Kitchen / Bathroom</option><option>Repipe / Installation</option><option>Faucets, Taps &amp; Pumps</option></select></div>
+      <div class="f"><textarea rows="3" placeholder="Briefly describe the job"></textarea></div>
+      <button type="submit" class="btn btn-red">Get My Free Estimate</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div class="flogo">
+        <div class="n1">MEDRANO <span>PLUMBING</span></div>
+        <p class="desc">Family-owned, licensed &amp; insured plumbing in Austin, TX. 20+ years of honest, reliable work. Se habla español.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Water Heaters</a>
+        <a href="#services">Drain Cleaning</a>
+        <a href="#services">Leak Repair</a>
+        <a href="#services">Kitchen &amp; Bathroom</a>
+        <a href="#services">Repiping</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#why">Why Choose Us</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+15129472383">📞 +1 (512) 947-2383</a>
+        <a href="https://wa.me/15129472383" target="_blank">💬 WhatsApp</a>
+        <a href="mailto:medranoplumbingtx@gmail.com">✉️ Email us</a>
+        <a href="#">📍 10208 Rodriguez Rd, Austin, TX 78747</a>
+      </div>
+    </div>
+    <div class="footbar">
+      <div>© <span id="yr"></span> Medrano Plumbing · Family-Owned · Austin, TX</div>
+      <div>Demo site designed by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function closeNav(){ document.getElementById('mnav').classList.remove('open'); }
+</script>
+</body>
+</html>
