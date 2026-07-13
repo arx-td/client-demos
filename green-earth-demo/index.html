@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Green Earth Conservation Lawns — Eco-Friendly Lawn Care in North Austin, TX</title>
+<meta name="description" content="Green Earth Conservation Lawns — eco-friendly, organic lawn care in North Austin, Pflugerville & Central TX. Mowing, organic treatments & water-smart maintenance. 4.9★ rated. Free quotes." />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --cream:#f5f2ea;--cream2:#efe9dc;--panel:#ffffff;--panel2:#faf8f1;
+    --ink:#2a2922;--muted:#6f6d5f;--soft:#8f8c7d;
+    --accent:#5f7048;--accent-d:#48562f;--accent-l:#e7ecda;--accent-ll:#f0f3e6;
+    --line:#e6e1d3;--dark:#2b3226;--gold:#c9a24b;
+    --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  h1,h2,h3,.serif{font-family:'Fraunces','Georgia',serif;font-weight:500;letter-spacing:-.01em;line-height:1.12;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+  .narrow{max-width:900px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Inter';font-weight:600;font-size:15px;padding:13px 26px;border-radius:40px;cursor:pointer;border:1.5px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-accent{background:var(--accent);color:#fff;}
+  .btn-accent:hover{background:var(--accent-d);transform:translateY(-2px);}
+  .btn-line{background:transparent;color:var(--ink);border-color:var(--ink);}
+  .btn-line:hover{background:var(--ink);color:var(--cream);}
+  .btn-cream{background:var(--cream);color:var(--accent-d);}
+  .btn-cream:hover{background:#fff;transform:translateY(-2px);}
+  .sec{padding:96px 0;}
+  .eyebrow{font-family:'Inter';font-weight:600;font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+  .center{text-align:center;}
+  .h2{font-size:clamp(28px,4vw,46px);color:var(--ink);}
+  .h2 .em{font-style:italic;color:var(--accent);}
+  .lead{color:var(--muted);font-size:17px;max-width:620px;margin:18px auto 0;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1 !important;transform:none !important;transition:none !important;}}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:60;background:rgba(245,242,234,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:78px;gap:14px;}
+  nav.left{display:flex;gap:26px;align-items:center;}
+  nav.left a,nav.right a.nl{font-size:14.5px;font-weight:500;color:var(--ink);}
+  nav.left a:hover{color:var(--accent);}
+  .brand{justify-self:center;text-align:center;display:flex;align-items:center;gap:9px;}
+  .brand svg{width:30px;height:30px;}
+  .brand .bt{font-family:'Fraunces';font-weight:600;font-size:21px;letter-spacing:.2px;color:var(--accent-d);}
+  nav.right{justify-self:end;display:flex;align-items:center;gap:18px;}
+  nav.right .ph{font-weight:600;font-size:14.5px;color:var(--ink);}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;}
+  .burger span{width:24px;height:2px;background:var(--ink);}
+  nav.mobile{display:none;flex-direction:column;background:var(--cream);border-bottom:1px solid var(--line);padding:10px 26px 18px;}
+  nav.mobile a{padding:11px 0;font-weight:500;border-bottom:1px solid var(--line);}
+
+  /* HERO */
+  .hero{padding:70px 0 40px;}
+  .hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;background:var(--accent-ll);color:var(--accent-d);border:1px solid var(--accent-l);padding:7px 16px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:22px;}
+  .hero h1{font-size:clamp(38px,5.4vw,64px);font-weight:500;color:var(--ink);}
+  .hero h1 .em{font-style:italic;color:var(--accent);}
+  .hero p.sub{margin-top:22px;font-size:18px;color:var(--muted);max-width:490px;}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-mini{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13.5px;font-weight:500;}
+  .hero-mini .st{color:var(--gold);letter-spacing:1px;}
+  .hero-mini b{color:var(--ink);}
+  .hero-visual{position:relative;}
+  .hero-img{border-radius:26px;height:440px;background:linear-gradient(160deg,#8fa76a,#5f7048 60%,#3f4b2c);position:relative;overflow:hidden;box-shadow:0 30px 60px -28px rgba(60,70,40,.5);}
+  .hero-img::after{content:"🌿";position:absolute;font-size:150px;opacity:.14;right:6px;bottom:-16px;}
+  .hero-img .ov{position:absolute;inset:0;background:repeating-linear-gradient(52deg,rgba(255,255,255,.05) 0 2px,transparent 2px 22px);}
+  .hero-float{position:absolute;left:-20px;bottom:34px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -16px rgba(60,70,40,.4);display:flex;align-items:center;gap:12px;}
+  .hero-float .n{font-family:'Fraunces';font-weight:600;font-size:26px;color:var(--accent-d);line-height:1;}
+  .hero-float .s{font-size:12px;color:var(--muted);}
+  .hero-float .s b{color:var(--ink);}
+
+  /* PRESS / TRUST STRIP */
+  .press{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel2);}
+  .press .wrap{padding:26px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap;text-align:center;}
+  .press .lab{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);font-weight:600;}
+  .press .item{font-size:14.5px;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:8px;}
+  .press .item .st{color:var(--gold);}
+
+  /* SMART PATH — image row */
+  .path .row{margin-top:44px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .path .im{border-radius:16px;height:150px;position:relative;overflow:hidden;}
+  .path .im span{position:absolute;left:0;right:0;bottom:0;padding:9px 12px;font-size:11px;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(43,50,38,.75));}
+  .g1{background:linear-gradient(150deg,#a7bd80,#5f7048);}
+  .g2{background:linear-gradient(150deg,#8ba766,#4a5838);}
+  .g3{background:linear-gradient(150deg,#c3cf9c,#7a8a54);}
+  .g4{background:linear-gradient(150deg,#7d9457,#3f4b2c);}
+  .g5{background:linear-gradient(150deg,#b4c489,#63754a);}
+  .g6{background:linear-gradient(150deg,#93a86d,#556339);}
+
+  /* PACKAGES */
+  .packs{background:var(--panel2);}
+  .pk-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;}
+  .pk{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.22s;}
+  .pk:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(60,70,40,.4);border-color:var(--accent-l);}
+  .pk.feat{border:1.5px solid var(--accent);box-shadow:0 20px 44px -24px rgba(95,112,72,.5);}
+  .pk .pimg{height:150px;position:relative;}
+  .pk .pimg span{position:absolute;top:14px;left:14px;background:#fff;color:var(--accent-d);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+  .pk .pb{padding:24px;display:flex;flex-direction:column;flex:1;}
+  .pk h3{font-size:23px;color:var(--ink);}
+  .pk .price{font-family:'Fraunces';font-size:15px;color:var(--accent-d);margin:4px 0 14px;font-weight:600;}
+  .pk ul{list-style:none;margin-bottom:20px;flex:1;}
+  .pk ul li{padding:7px 0 7px 26px;position:relative;font-size:14px;color:var(--muted);border-bottom:1px dashed var(--line);}
+  .pk ul li:last-child{border-bottom:0;}
+  .pk ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .pk .btn{justify-content:center;width:100%;}
+
+  /* WHY */
+  .why-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .why-c .wimg{border-radius:16px;height:210px;position:relative;overflow:hidden;margin-bottom:18px;}
+  .why-c .wimg .ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:52px;opacity:.9;}
+  .why-c h3{font-size:21px;color:var(--ink);margin-bottom:7px;}
+  .why-c p{color:var(--muted);font-size:14.5px;}
+
+  /* COMPARISON */
+  .cmp{background:var(--dark);color:#eef0e6;}
+  .cmp .eyebrow{color:#b9c79a;}
+  .cmp .h2{color:#fff;}
+  .cmp .lead{color:#c3c8b6;}
+  .table{margin-top:44px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.12);}
+  .trow{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;}
+  .trow>div{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:8px;font-size:14px;}
+  .trow.head>div{background:rgba(255,255,255,.05);font-weight:600;font-size:13px;}
+  .trow.head .col-g{background:var(--accent);color:#fff;}
+  .trow .feat-name{color:#e7e9dd;justify-content:flex-start;}
+  .trow .col-g{background:rgba(95,112,72,.22);justify-content:center;color:#fff;font-weight:600;}
+  .trow .col{justify-content:center;color:#aeb4a0;}
+  .trow:last-child>div{border-bottom:0;}
+  .yes{color:#a7d47f;font-weight:700;}
+  .no{color:#8a8f7d;}
+
+  /* TESTIMONIALS */
+  .tst .stars-big{color:var(--gold);font-size:20px;letter-spacing:3px;text-align:center;margin-top:8px;}
+  .tst-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .tcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;}
+  .tcard .st{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .tcard p{font-family:'Fraunces';font-style:italic;font-size:16px;color:var(--ink);margin:12px 0 16px;line-height:1.5;}
+  .tcard .who{display:flex;align-items:center;gap:11px;}
+  .tcard .av{width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-family:'Fraunces';}
+  .tcard .who b{font-size:14px;color:var(--ink);display:block;}
+  .tcard .who small{color:var(--soft);}
+  .tnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;}
+
+  /* ICON GRID */
+  .amen{background:var(--panel2);}
+  .am-grid{margin-top:46px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .am{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 10px;text-align:center;transition:.18s;}
+  .am:hover{border-color:var(--accent);transform:translateY(-4px);background:var(--accent-ll);}
+  .am .e{font-size:26px;}
+  .am .t{font-size:12.5px;font-weight:600;color:var(--ink);margin-top:8px;}
+
+  /* BEFORE / AFTER */
+  .ba-wrap{margin-top:46px;max-width:860px;margin-left:auto;margin-right:auto;}
+  .ba{position:relative;height:380px;border-radius:var(--radius);overflow:hidden;user-select:none;box-shadow:0 24px 50px -26px rgba(60,70,40,.45);}
+  .ba .layer{position:absolute;inset:0;display:flex;align-items:flex-end;padding:20px;}
+  .ba .after{background:linear-gradient(150deg,#9dba6f,#5f7048 65%,#465330);}
+  .ba .before{background:linear-gradient(150deg,#b8ab7e,#8a7f57 60%,#6d6440);width:50%;border-right:3px solid #fff;overflow:hidden;}
+  .ba .lbl{background:rgba(43,50,38,.8);color:#fff;font-size:12px;font-weight:600;padding:6px 13px;border-radius:20px;}
+  .ba .before .lbl{position:absolute;left:20px;bottom:20px;}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:40px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;cursor:ew-resize;}
+  .ba .handle .grip{width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:var(--accent-d);font-weight:700;font-size:15px;}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;}
+  .ba-hint{text-align:center;color:var(--soft);font-size:12.5px;margin-top:14px;}
+
+  /* SERVICE AREA */
+  .area-grid{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .area-c{border-radius:16px;height:180px;position:relative;overflow:hidden;}
+  .area-c .cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(43,50,38,.8));color:#fff;}
+  .area-c .cap b{font-family:'Fraunces';font-size:18px;display:block;}
+  .area-c .cap span{font-size:12px;opacity:.85;}
+
+  /* CTA BAND / FOOTER */
+  .band{background:linear-gradient(150deg,#3f4b2c,#5f7048);color:#fff;position:relative;overflow:hidden;}
+  .band::after{content:"🌿";position:absolute;font-size:220px;opacity:.08;right:20px;top:-30px;}
+  .band .wrap{padding:80px 26px;text-align:center;position:relative;z-index:2;}
+  .band h2{font-size:clamp(28px,4vw,44px);color:#fff;}
+  .band p{color:#dbe3cb;max-width:520px;margin:16px auto 26px;}
+
+  footer{background:var(--dark);color:#c3c8b6;padding:60px 0 26px;}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .fb{font-family:'Fraunces';font-weight:600;font-size:22px;color:#fff;display:flex;align-items:center;gap:9px;}
+  footer p.fd{font-size:14px;margin-top:12px;max-width:270px;color:#aab09a;}
+  footer h4{color:#fff;font-size:14px;margin-bottom:15px;letter-spacing:.5px;}
+  footer a{display:block;color:#c3c8b6;font-size:14px;margin-bottom:10px;}
+  footer a:hover{color:#fff;}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#9198836;}
+  .fbar span{color:#9ba187;}
+  .fbar a{display:inline;color:#c9d3ac;}
+
+  @media(max-width:940px){
+    nav.left,nav.right .ph,nav.right .nl{display:none;}
+    header .wrap{grid-template-columns:auto 1fr auto;height:64px;}
+    .brand{justify-self:start;}
+    .burger{display:flex;}
+    nav.mobile.open{display:flex;}
+    .hero .wrap{grid-template-columns:1fr;gap:34px;}
+    .hero-visual{order:-1;}
+    .hero-img{height:280px;}
+    .pk-grid,.why-grid,.tst-grid{grid-template-columns:1fr;}
+    .path .row,.am-grid{grid-template-columns:repeat(3,1fr);}
+    .area-grid{grid-template-columns:1fr 1fr;}
+    .trow{grid-template-columns:1.4fr .9fr .9fr .9fr;}
+    .trow>div{padding:12px 10px;font-size:12.5px;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .path .row{grid-template-columns:1fr 1fr;}
+    .am-grid{grid-template-columns:1fr 1fr;}
+    .area-grid{grid-template-columns:1fr;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;justify-content:center;}
+    .ba{height:300px;}
+    .trow{grid-template-columns:1.3fr .8fr .8fr .8fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap">
+    <nav class="left">
+      <a href="#packages">Packages</a>
+      <a href="#how">How It Works</a>
+      <a href="#services">Services</a>
+    </nav>
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 48 48" aria-label="Green Earth">
+        <circle cx="24" cy="24" r="23" fill="#5f7048"/>
+        <path d="M24 12 C16 18 15 30 24 37 C33 30 32 18 24 12 Z" fill="#e7ecda"/>
+        <path d="M24 15 L24 35" stroke="#5f7048" stroke-width="2"/>
+        <path d="M24 22 L18 18 M24 28 L18 24 M24 22 L30 18 M24 28 L30 24" stroke="#5f7048" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="bt">Green Earth</span>
+    </a>
+    <nav class="right">
+      <a href="tel:+15124301228" class="ph">(512) 430-1228</a>
+      <a href="#contact" class="btn btn-accent">Get a Free Quote</a>
+      <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#packages" onclick="cn()">Packages</a>
+    <a href="#how" onclick="cn()">How It Works</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#reviews" onclick="cn()">Reviews</a>
+    <a href="tel:+15124301228" onclick="cn()">📞 (512) 430-1228</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag">🌿 Eco-Friendly Lawn Care · North Austin, TX</span>
+      <h1>Beautifully healthy lawns, <span class="em">cared for the greener way.</span></h1>
+      <p class="sub">Green Earth Conservation Lawns brings expert, eco-conscious lawn care to North Austin — mowing, organic treatments and water-smart maintenance that keep your yard lush without the guesswork.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-accent">Get Your Free Quote</a>
+        <a href="tel:+15124301228" class="btn btn-line">📞 (512) 430-1228</a>
+      </div>
+      <div class="hero-mini">
+        <span><span class="st">★★★★★</span> <b>4.9</b> · 36 Google reviews</span>
+        <span>🛡️ <b>Licensed &amp; Insured</b></span>
+        <span>🌱 <b>Organic Options</b></span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img"><div class="ov"></div></div>
+      <div class="hero-float">
+        <div class="n">4.9★</div>
+        <div class="s"><b>Loved by Austin homeowners</b><br>36 five-star reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="press">
+  <div class="wrap">
+    <span class="lab">Trusted across Central Texas</span>
+    <span class="item"><span class="st">★</span> 4.9 Google Rating</span>
+    <span class="item">🌿 Eco-Friendly &amp; Organic</span>
+    <span class="item">🛡️ Licensed &amp; Insured</span>
+    <span class="item">💧 Water-Smart Care</span>
+    <span class="item">✅ Free Estimates</span>
+  </div>
+</div>
+
+<!-- SMART PATH -->
+<section class="sec path">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Simple &amp; Stress-Free</div>
+      <h2 class="h2">The smartest path to a <span class="em">lawn you love</span></h2>
+      <p class="lead">No contracts, no guesswork. Just reliable, eco-conscious care from a local team that treats your yard like its own.</p>
+    </div>
+    <div class="row reveal">
+      <div class="im g1"><span>Weekly Mowing</span></div>
+      <div class="im g2"><span>Organic Feed</span></div>
+      <div class="im g3"><span>Weed Control</span></div>
+      <div class="im g4"><span>Aeration</span></div>
+      <div class="im g5"><span>Water-Smart</span></div>
+      <div class="im g6"><span>Cleanups</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec packs" id="packages">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Our Care Plans</div>
+      <h2 class="h2">Pick the plan that fits <span class="em">your yard</span></h2>
+      <p class="lead">Flexible lawn care plans for every home and budget — upgrade, downgrade or pause anytime.</p>
+    </div>
+    <div class="pk-grid" style="text-align:left;">
+      <div class="pk reveal">
+        <div class="pimg g3"><span>Essential</span></div>
+        <div class="pb">
+          <h3>Essential Mow</h3>
+          <div class="price">Starting at $39 / visit</div>
+          <ul>
+            <li>Weekly or bi-weekly mowing</li>
+            <li>Edging &amp; string trimming</li>
+            <li>Blow-off of walks &amp; drive</li>
+            <li>Reliable, on-time service</li>
+          </ul>
+          <a href="#contact" class="btn btn-line">Get This Plan</a>
+        </div>
+      </div>
+      <div class="pk feat reveal">
+        <div class="pimg g1"><span>Most Popular</span></div>
+        <div class="pb">
+          <h3>Complete Care</h3>
+          <div class="price">Starting at $79 / visit</div>
+          <ul>
+            <li>Everything in Essential</li>
+            <li>Organic fertilization program</li>
+            <li>Weed &amp; pest control</li>
+            <li>Seasonal yard cleanups</li>
+          </ul>
+          <a href="#contact" class="btn btn-accent">Get This Plan</a>
+        </div>
+      </div>
+      <div class="pk reveal">
+        <div class="pimg g4"><span>Premium</span></div>
+        <div class="pb">
+          <h3>Premium Green</h3>
+          <div class="price">Custom quote</div>
+          <ul>
+            <li>Everything in Complete Care</li>
+            <li>Aeration &amp; overseeding</li>
+            <li>Water-smart irrigation checks</li>
+            <li>Custom lawn health plan</li>
+          </ul>
+          <a href="#contact" class="btn btn-line">Get This Plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="how">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Why Green Earth</div>
+      <h2 class="h2">Lawn care that's better for <span class="em">your yard &amp; the planet</span></h2>
+      <p class="lead">We do things the greener way — with results Austin homeowners rate 4.9 stars.</p>
+    </div>
+    <div class="why-grid" style="text-align:left;">
+      <div class="why-c reveal"><div class="wimg g2"><div class="ic">🌿</div></div><h3>Eco-Friendly &amp; Organic</h3><p>Organic-based treatments that are safe for kids, pets and Central Texas soil — a lush lawn without harsh chemicals.</p></div>
+      <div class="why-c reveal"><div class="wimg g5"><div class="ic">⏱️</div></div><h3>Reliable &amp; On Time</h3><p>A consistent schedule you can count on. No missed weeks, no chasing us down — we just show up and do great work.</p></div>
+      <div class="why-c reveal"><div class="wimg g4"><div class="ic">📍</div></div><h3>Local Lawn Experts</h3><p>We know Central Texas grass, heat and water rules — so your lawn gets exactly the care it needs to thrive.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="sec cmp">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">A Fundamentally Better Way</div>
+      <h2 class="h2">Why homeowners switch to Green Earth</h2>
+      <p class="lead">See how eco-conscious, done-for-you care compares to the usual options.</p>
+    </div>
+    <div class="table reveal">
+      <div class="trow head">
+        <div class="feat-name">&nbsp;</div>
+        <div class="col-g">Green Earth</div>
+        <div class="col">Typical Service</div>
+        <div class="col">DIY</div>
+      </div>
+      <div class="trow"><div class="feat-name">Eco-friendly &amp; organic options</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="no">—</span></div><div class="col"><span class="no">—</span></div></div>
+      <div class="trow"><div class="feat-name">Consistent, reliable schedule</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="no">Sometimes</span></div><div class="col"><span class="no">—</span></div></div>
+      <div class="trow"><div class="feat-name">Upfront, flat pricing</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="no">Varies</span></div><div class="col"><span class="yes">✓</span></div></div>
+      <div class="trow"><div class="feat-name">Local Texas lawn expertise</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="no">Varies</span></div><div class="col"><span class="no">—</span></div></div>
+      <div class="trow"><div class="feat-name">Free estimates &amp; no contracts</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="no">—</span></div><div class="col"><span class="yes">✓</span></div></div>
+      <div class="trow"><div class="feat-name">Saves you time &amp; hassle</div><div class="col-g"><span class="yes">✓</span></div><div class="col"><span class="yes">✓</span></div><div class="col"><span class="no">—</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec tst" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Happy Homeowners</div>
+      <h2 class="h2">Rated <span class="em">4.9 stars</span> by Austin locals</h2>
+      <div class="stars-big">★★★★★</div>
+    </div>
+    <div class="tst-grid" style="text-align:left;">
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>"Our lawn has never looked better, and I love that their treatments are safe for the kids and dog. Always on time too."</p><div class="who"><div class="av">S</div><div><b>Sarah M.</b><small>North Austin, TX</small></div></div></div>
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>"Finally a lawn service that actually cares. They fixed our patchy grass and it's the greenest on the block now."</p><div class="who"><div class="av">D</div><div><b>David R.</b><small>Pflugerville, TX</small></div></div></div>
+      <div class="tcard reveal"><div class="st">★★★★★</div><p>"Reliable, friendly and fairly priced. The organic approach was exactly what we were looking for. Highly recommend."</p><div class="who"><div class="av">L</div><div><b>Linda K.</b><small>Round Rock, TX</small></div></div></div>
+    </div>
+    <p class="tnote">(Sample layout — on your live site these pull straight from your real 4.9★ Google reviews.)</p>
+  </div>
+</section>
+
+<!-- ICON GRID -->
+<section class="sec amen" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Everything Your Lawn Needs</div>
+      <h2 class="h2">Your lawn, <span class="em">your way</span></h2>
+      <p class="lead">Mix and match the services your yard needs — all from one trusted local team.</p>
+    </div>
+    <div class="am-grid reveal">
+      <div class="am"><div class="e">🚜</div><div class="t">Mowing</div></div>
+      <div class="am"><div class="e">✂️</div><div class="t">Edging</div></div>
+      <div class="am"><div class="e">🌱</div><div class="t">Fertilization</div></div>
+      <div class="am"><div class="e">🍃</div><div class="t">Weed Control</div></div>
+      <div class="am"><div class="e">🕳️</div><div class="t">Aeration</div></div>
+      <div class="am"><div class="e">🌾</div><div class="t">Overseeding</div></div>
+      <div class="am"><div class="e">🍂</div><div class="t">Leaf Cleanup</div></div>
+      <div class="am"><div class="e">🪵</div><div class="t">Mulch &amp; Beds</div></div>
+      <div class="am"><div class="e">💧</div><div class="t">Irrigation</div></div>
+      <div class="am"><div class="e">🌳</div><div class="t">Shrub Trim</div></div>
+      <div class="am"><div class="e">🟩</div><div class="t">Sod Install</div></div>
+      <div class="am"><div class="e">🧹</div><div class="t">Cleanups</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">See The Difference</div>
+      <h2 class="h2">From tired &amp; patchy to <span class="em">lush &amp; green</span></h2>
+      <p class="lead">Drag the slider to see the Green Earth difference on a real Austin lawn.</p>
+    </div>
+    <div class="ba-wrap reveal">
+      <div class="ba" id="ba">
+        <div class="layer after"><span class="lbl">After 🌿</span></div>
+        <div class="layer before" id="baBefore"><span class="lbl">Before</span></div>
+        <div class="handle" id="baHandle"><div class="grip">⇄</div></div>
+        <input type="range" min="2" max="98" value="50" class="ba-range" id="baRange" aria-label="Before and after slider">
+      </div>
+      <p class="ba-hint">← drag to compare →</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="sec" style="padding-top:0;">
+  <div class="wrap center">
+    <div class="reveal">
+      <div class="eyebrow">Where We Work</div>
+      <h2 class="h2">Proudly serving <span class="em">Central Texas</span></h2>
+      <p class="lead">Local, friendly lawn care across North Austin and the surrounding communities.</p>
+    </div>
+    <div class="area-grid reveal">
+      <div class="area-c g1"><div class="cap"><b>North Austin</b><span>Wells Branch · Milwood</span></div></div>
+      <div class="area-c g4"><div class="cap"><b>Pflugerville</b><span>&amp; Wells Branch</span></div></div>
+      <div class="area-c g5"><div class="cap"><b>Round Rock</b><span>&amp; Brushy Creek</span></div></div>
+      <div class="area-c g2"><div class="cap"><b>Cedar Park</b><span>&amp; Leander</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="band">
+  <div class="wrap">
+    <h2>Ready for a greener, healthier lawn?</h2>
+    <p>Get your free, no-pressure quote today — and see why Austin homeowners rate us 4.9 stars.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:+15124301228" class="btn btn-cream">📞 (512) 430-1228</a>
+      <a href="#contact" class="btn btn-line" style="color:#fff;border-color:rgba(255,255,255,.6);">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px;" class="reveal">
+      <div>
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="h2" style="text-align:left;">Request your <span class="em">free quote</span></h2>
+        <p style="color:var(--muted);margin:16px 0 24px;">Tell us about your lawn and we'll send a fast, free estimate — usually the same day.</p>
+        <div style="display:grid;gap:16px;">
+          <div style="display:flex;gap:13px;align-items:center;"><span style="font-size:20px;">📞</span><div><b>Call or Text</b><br><span style="color:var(--muted);font-size:14px;">(512) 430-1228</span></div></div>
+          <div style="display:flex;gap:13px;align-items:center;"><span style="font-size:20px;">📍</span><div><b>Service Area</b><br><span style="color:var(--muted);font-size:14px;">North Austin, Pflugerville &amp; Central TX</span></div></div>
+          <div style="display:flex;gap:13px;align-items:center;"><span style="font-size:20px;">🕒</span><div><b>Hours</b><br><span style="color:var(--muted);font-size:14px;">Mon–Sat: 7:00 am – 6:00 pm</span></div></div>
+          <div style="display:flex;gap:13px;align-items:center;"><span style="font-size:20px;">⭐</span><div><b>Rated</b><br><span style="color:var(--muted);font-size:14px;">4.9 stars · 36 Google reviews</span></div></div>
+        </div>
+      </div>
+      <form style="background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;" onsubmit="event.preventDefault();alert('Thanks! This is a demo form — your real site will send this straight to your phone & inbox.');">
+        <h3 class="serif" style="font-size:24px;margin-bottom:18px;">Free Lawn Care Quote</h3>
+        <div style="margin-bottom:14px;"><input type="text" placeholder="Your name" required style="width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:var(--panel2);"></div>
+        <div style="margin-bottom:14px;"><input type="tel" placeholder="Phone number" required style="width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:var(--panel2);"></div>
+        <div style="margin-bottom:14px;"><select style="width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:var(--panel2);"><option>Which plan interests you?</option><option>Essential Mow</option><option>Complete Care</option><option>Premium Green</option><option>Not sure yet</option></select></div>
+        <div style="margin-bottom:16px;"><textarea rows="3" placeholder="Tell us about your lawn" style="width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:var(--panel2);"></textarea></div>
+        <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;">Get My Free Quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="fb">🌿 Green Earth</div>
+        <p class="fd">Eco-friendly, organic-based lawn care for North Austin, Pflugerville &amp; Central Texas. Licensed, insured &amp; locally loved.</p>
+      </div>
+      <div>
+        <h4>Care Plans</h4>
+        <a href="#packages">Essential Mow</a>
+        <a href="#packages">Complete Care</a>
+        <a href="#packages">Premium Green</a>
+        <a href="#services">All Services</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#how">Why Green Earth</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Service Area</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <a href="tel:+15124301228">📞 (512) 430-1228</a>
+        <a href="#contact">✅ Free Estimates</a>
+        <a href="#">📍 North Austin &amp; Central TX</a>
+        <a href="#">🕒 Mon–Sat 7am–6pm</a>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Green Earth Conservation Lawns · North Austin, TX</span>
+      <span>Demo site designed by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+
+  // Scroll reveal
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  // Before/After slider
+  (function(){
+    var range=document.getElementById('baRange'), before=document.getElementById('baBefore'), handle=document.getElementById('baHandle');
+    if(!range) return;
+    function set(v){ before.style.width=v+'%'; handle.style.left=v+'%'; }
+    range.addEventListener('input',function(){ set(this.value); });
+    set(50);
+  })();
+</script>
+</body>
+</html>
