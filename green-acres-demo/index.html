@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Green Acres Landscaping &amp; Irrigation — New Braunfels, TX</title>
+<meta name="description" content="Green Acres Landscaping & Irrigation — sprinkler systems, landscape lighting, sod & grass installation, commercial maintenance and more in New Braunfels & Central Texas. Free estimates." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#0e1410;--bg2:#141b16;--panel:#19211b;--panel2:#1f2820;
+    --green:#3fae62;--green-d:#2b8a4b;--green-sec:#123320;--green-deep:#0c2114;
+    --gold:#e0b13a;--gold-d:#bf9328;
+    --ink:#f2f6f1;--muted:#a2b0a6;--soft:#7d8a80;--line:#2a332c;--star:#f5c518;--radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.dsp{font-family:'Archivo','Inter',sans-serif;font-weight:800;letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.4px;text-transform:uppercase;padding:14px 26px;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-green{background:var(--green);color:#062411;}
+  .btn-green:hover{background:var(--green-d);color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--green);}
+  .btn-gold{background:var(--gold);color:#2a1e00;}
+  .btn-gold:hover{background:var(--gold-d);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+  .sec{padding:92px 0;}
+  .eyebrow{font-family:'Archivo';font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:#fff;}
+  .h2 .g{color:var(--green);}
+  .h2 .y{color:var(--gold);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;text-transform:none;font-family:'Inter';font-weight:400;letter-spacing:0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:#0a0f0b;border-bottom:1px solid var(--line);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:var(--muted);display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:var(--gold);}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--green);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(14,20,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;gap:16px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo .mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--green-d));display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;flex-shrink:0;box-shadow:0 8px 20px -8px var(--green);}
+  .logo .wm{display:flex;flex-direction:column;line-height:1;}
+  .logo .n1{font-family:'Archivo';font-weight:900;font-size:20px;color:#fff;letter-spacing:.3px;text-transform:uppercase;}
+  .logo .n1 b{color:var(--green);font-weight:900;}
+  .logo .n2{font-size:9.5px;letter-spacing:2.5px;color:var(--gold);font-weight:700;text-transform:uppercase;margin-top:4px;}
+  nav.main{display:flex;align-items:center;gap:24px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#e6ede8;}
+  nav.main a:hover{color:var(--gold);}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Archivo';font-weight:700;text-transform:uppercase;font-size:14px;border-bottom:1px solid var(--line);}
+
+  /* HERO */
+  .hero{position:relative;min-height:650px;display:flex;align-items:center;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:url('img/sp5.jpg') center/cover;transform:scale(1.05);animation:kb 20s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.15);}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,14,10,.95) 0%,rgba(9,14,10,.82) 45%,rgba(12,33,20,.5) 100%);}
+  .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding:64px 24px;width:100%;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:40px;margin-bottom:22px;}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;}
+  .rate-badge b{font-size:14px;}
+  .rate-badge .stars{color:var(--star);font-size:13px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(36px,5.6vw,64px);color:#fff;line-height:.98;}
+  .hero h1 .g{color:var(--green);}
+  .hero .slogan{font-family:'Archivo';font-weight:700;font-size:clamp(15px,1.9vw,20px);color:var(--gold);margin-top:16px;letter-spacing:.5px;}
+  .hero p.sub{margin-top:14px;font-size:17px;color:#dbe4dd;max-width:520px;text-transform:none;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .quote-card{background:rgba(19,26,20,.75);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);}
+  .quote-card h3{font-size:21px;color:#fff;}
+  .quote-card p{color:var(--muted);font-size:13.5px;margin:6px 0 16px;text-transform:none;font-family:'Inter';}
+  .qbtn{display:flex;align-items:center;gap:13px;width:100%;background:var(--green);color:#062411;border:0;border-radius:11px;padding:15px 16px;font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:14px;cursor:pointer;transition:.18s;margin-bottom:10px;letter-spacing:.4px;}
+  .qbtn .ic{width:34px;height:34px;border-radius:8px;background:rgba(6,36,17,.16);display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .qbtn:hover{background:var(--green-d);color:#fff;transform:translateY(-2px);}
+  .qbtn.alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);}
+  .qbtn.alt:hover{border-color:var(--gold);color:var(--gold);}
+  .qbtn.alt .ic{background:rgba(255,255,255,.08);}
+  .qbtn-row{display:flex;gap:12px;}
+  .qbtn-row .qbtn{margin-bottom:0;justify-content:center;font-size:12.5px;padding:12px 10px;}
+
+  /* MARQUEE */
+  .marquee{background:var(--green-sec);border-top:1px solid rgba(63,174,98,.25);border-bottom:1px solid rgba(63,174,98,.25);overflow:hidden;white-space:nowrap;}
+  .marquee .track{display:inline-flex;align-items:center;animation:scroll 32s linear infinite;padding:15px 0;}
+  .marquee:hover .track{animation-play-state:paused;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .marquee .it{display:inline-flex;align-items:center;gap:9px;padding:0 24px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;color:#cfe6d5;text-transform:uppercase;}
+  .marquee .it i{color:var(--green);font-size:13px;}
+
+  /* ABOUT */
+  .about .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;}
+  .about h2{font-size:clamp(26px,3.4vw,40px);color:#fff;}
+  .about p{color:var(--muted);margin-top:16px;text-transform:none;}
+  .trust-row{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
+  .tchip{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+  .tchip i{color:var(--gold);font-size:18px;}
+  .tchip b{font-family:'Archivo';text-transform:uppercase;font-size:13px;color:#fff;}
+  .grid-img{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid-img .gi{border-radius:14px;overflow:hidden;height:210px;}
+  .grid-img .gi img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+  .grid-img .gi:hover img{transform:scale(1.07);}
+  .grid-img .gi:nth-child(1){margin-top:24px;}
+  .grid-img .gi:nth-child(4){margin-top:-24px;}
+
+  /* STATS */
+  .stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:44px 24px;}
+  .stat{display:flex;gap:16px;align-items:center;}
+  .stat .si{width:56px;height:56px;border-radius:12px;background:var(--green-sec);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  .stat:nth-child(even) .si{background:rgba(224,177,58,.16);color:var(--gold);}
+  .stat .sn{font-family:'Archivo';font-weight:900;font-size:30px;color:#fff;line-height:1;}
+  .stat .sl{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+
+  /* SERVICES */
+  .services{background:var(--green-deep);}
+  .svc-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .svc{border-radius:var(--radius);overflow:hidden;position:relative;height:300px;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.08);}
+  .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s;z-index:1;}
+  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,17,10,.96) 8%,rgba(7,17,10,.35) 60%,rgba(7,17,10,.15));z-index:2;transition:.3s;}
+  .svc:hover img{transform:scale(1.09);}
+  .svc:hover::after{background:linear-gradient(to top,rgba(7,17,10,.97) 12%,rgba(18,51,32,.5) 70%);}
+  .svc .body{position:relative;z-index:3;padding:24px;width:100%;}
+  .svc .si{width:52px;height:52px;border-radius:12px;background:var(--green);color:#062411;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;transition:.3s;}
+  .svc:nth-child(even) .si{background:var(--gold);color:#2a1e00;}
+  .svc:hover .si{transform:translateY(-4px);}
+  .svc h3{font-size:19px;color:#fff;}
+  .svc p{color:#cfdccf;font-size:14px;margin-top:6px;text-transform:none;font-family:'Inter';opacity:0;max-height:0;transition:.35s;}
+  .svc:hover p{opacity:1;max-height:80px;}
+
+  /* WHY */
+  .why-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .wc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s;text-align:center;}
+  .wc:hover{border-color:var(--green);transform:translateY(-4px);background:var(--panel2);}
+  .wc .wi{width:64px;height:64px;border-radius:50%;background:var(--green-sec);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
+  .wc:nth-child(even) .wi{background:rgba(224,177,58,.16);color:var(--gold);}
+  .wc b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:#fff;letter-spacing:.3px;}
+  .wc span{font-size:13.5px;color:var(--muted);text-transform:none;}
+
+  /* REVIEWS */
+  .reviews{position:relative;background:url('img/lt3.jpg') center/cover fixed;}
+  .reviews::after{content:"";position:absolute;inset:0;background:rgba(9,14,10,.92);}
+  .reviews .wrap{position:relative;z-index:2;}
+  .rev-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--gold);opacity:.2;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--star);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#dbe4dd;text-transform:none;font-family:'Inter';}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--green);color:#062411;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo';}
+  .rc:nth-child(even) .av{background:var(--gold);color:#2a1e00;}
+  .rc .who b{font-family:'Archivo';text-transform:uppercase;font-size:14px;color:#fff;}
+  .rc .who small{color:var(--soft);display:block;text-transform:none;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;text-transform:none;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:12px;overflow:hidden;position:relative;}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* PROCESS */
+  .process{background:var(--bg2);}
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;}
+  .pc .pin{width:84px;height:84px;border-radius:50%;background:var(--green-sec);border:2px solid var(--green);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;position:relative;}
+  .pc .num{position:absolute;top:-4px;right:calc(50% - 52px);width:28px;height:28px;border-radius:50%;background:var(--gold);color:#2a1e00;display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;font-size:13px;}
+  .pc h3{font-size:19px;color:#fff;}
+  .pc p{color:var(--muted);font-size:14px;margin-top:8px;text-transform:none;font-family:'Inter';max-width:280px;margin:8px auto 0;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(120deg,var(--green-deep),var(--green-sec));border-top:1px solid rgba(63,174,98,.2);}
+  .cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:52px 24px;flex-wrap:wrap;}
+  .cta-band h2{font-size:clamp(22px,3vw,34px);color:#fff;}
+  .cta-band p{color:#bcd3c2;margin-top:6px;text-transform:none;}
+  .cta-band .acts{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer{background:#0a0f0b;padding:60px 0 26px;border-top:1px solid var(--line);}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .flogo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  footer .flogo .mark{width:44px;height:44px;border-radius:11px;background:linear-gradient(135deg,var(--green),var(--green-d));display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;}
+  footer .flogo .n1{font-family:'Archivo';font-weight:900;font-size:18px;color:#fff;text-transform:uppercase;}
+  footer .flogo .n1 b{color:var(--green);}
+  footer p.fd{color:var(--muted);font-size:14px;max-width:280px;text-transform:none;}
+  footer h4{font-family:'Archivo';text-transform:uppercase;color:#fff;font-size:14px;margin-bottom:16px;letter-spacing:.5px;}
+  footer a{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--gold);}
+  footer a i{color:var(--green);width:16px;text-align:center;}
+  .fbar{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--soft);text-transform:none;}
+  .fbar a{color:var(--gold);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--green);color:#062411;}
+
+  @media(max-width:960px){
+    nav.main{display:none;}
+    .burger{display:block;}
+    nav.mobile.open{display:flex;}
+    .hero .wrap,.about .wrap{grid-template-columns:1fr;}
+    .quote-card{max-width:460px;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:26px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}
+    .topbar .wrap>span:first-child{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid,footer .cols{grid-template-columns:1fr;}
+    .gal-grid,.grid-img{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .cta-band .wrap{flex-direction:column;align-items:flex-start;}
+    .logo .n2{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> 9561 IH-35 North, New Braunfels, TX</span>
+    <div class="r">
+      <a href="tel:+18309264117"><i class="fa-solid fa-phone"></i> (830) 624-1011</a>
+      <span><i class="fa-solid fa-clock"></i> Mon–Fri: 8am – 5pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark"><i class="fa-solid fa-seedling"></i></span>
+      <span class="wm"><span class="n1">Green <b>Acres</b></span><span class="n2">Landscaping &amp; Irrigation</span></span>
+    </a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-green">Get a Free Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#about" onclick="cn()">About</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#gallery" onclick="cn()">Gallery</a>
+    <a href="#reviews" onclick="cn()">Reviews</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+18309264117" onclick="cn()"><i class="fa-solid fa-phone"></i> (830) 624-1011</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="rate-badge">
+        <span class="gg">G</span>
+        <b>4.4 Rating</b>
+        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+      </div>
+      <h1>New Braunfels' <span class="g">Landscaping &amp; Irrigation</span> Experts</h1>
+      <div class="slogan">Sprinklers · Lighting · Sod · Full-Service Landscaping.</div>
+      <p class="sub">From sprinkler systems and landscape lighting to sod installation and commercial maintenance — Green Acres keeps Central Texas properties green, healthy and beautiful.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-green"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+18309264117" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> (830) 624-1011</a>
+      </div>
+    </div>
+    <div class="quote-card">
+      <h3>Request a Quote</h3>
+      <p>Pick the way that works best for you:</p>
+      <a href="#contact" class="qbtn"><span class="ic"><i class="fa-solid fa-bolt"></i></span> Get Instant Quote</a>
+      <div class="qbtn-row">
+        <a href="tel:+18309264117" class="qbtn alt"><i class="fa-solid fa-phone"></i> Call Us</a>
+        <a href="#contact" class="qbtn alt"><i class="fa-solid fa-file-lines"></i> Submit Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="mq">
+    <span class="it"><i class="fa-solid fa-location-dot"></i> New Braunfels, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> San Marcos, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Canyon Lake, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Seguin, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Buda, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> San Antonio, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Spring Branch, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Central Texas</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Serving Central Texas Since 2016</span>
+      <h2>Full-service landscaping &amp; <span style="color:var(--green)">irrigation</span></h2>
+      <p>Green Acres Landscaping &amp; Irrigation is your one-stop team for beautiful, healthy outdoor spaces across New Braunfels and the Hill Country. From the sprinkler system that keeps your lawn green to the lighting that makes it shine at night, we do it all.</p>
+      <p>Homeowners, businesses and property managers trust us for <strong style="color:#fff">reliable, professional work</strong> — sprinklers, sod, lighting, commercial maintenance and more, done right the first time.</p>
+      <div class="trust-row">
+        <div class="tchip"><i class="fa-solid fa-droplet"></i><b>Irrigation Experts</b></div>
+        <div class="tchip"><i class="fa-solid fa-building"></i><b>Commercial &amp; Residential</b></div>
+        <div class="tchip"><i class="fa-solid fa-clipboard-check"></i><b>Free Estimates</b></div>
+      </div>
+      <a href="#contact" class="btn btn-green" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Get a Free Quote</a>
+    </div>
+    <div class="grid-img reveal">
+      <div class="gi"><img src="img/sp3.jpg" alt="Sprinkler irrigation at sunset" /></div>
+      <div class="gi"><img src="img/lt5.jpg" alt="Landscape lighting" /></div>
+      <div class="gi"><img src="img/sp2.jpg" alt="Green lawn sprinkler" /></div>
+      <div class="gi"><img src="img/sp4.jpg" alt="Commercial property irrigation" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="si"><i class="fa-solid fa-star"></i></div><div><div class="sn">4.4</div><div class="sl">Google Rating</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-comment"></i></div><div><div class="sn"><span class="count" data-to="59">0</span>+</div><div class="sl">Customer Reviews</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-calendar-check"></i></div><div><div class="sn">Since</div><div class="sl">2016 · Established</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-location-dot"></i></div><div><div class="sn">7+</div><div class="sl">Cities Served</div></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="h2">Professional <span class="g">landscaping</span> services</h2>
+      <p class="lead">Everything your property needs to look its best — from the ground up and the sprinklers on.</p>
+    </div>
+    <div class="svc-grid" style="text-align:left;">
+      <div class="svc reveal"><img src="img/sp6.jpg" alt="Sprinkler systems"><div class="body"><div class="si"><i class="fa-solid fa-droplet"></i></div><h3>Sprinkler Systems &amp; Irrigation</h3><p>Installation, repair and maintenance of efficient sprinkler &amp; irrigation systems.</p></div></div>
+      <div class="svc reveal"><img src="img/lt5.jpg" alt="Landscape lighting"><div class="body"><div class="si"><i class="fa-solid fa-lightbulb"></i></div><h3>Landscape Lighting</h3><p>Beautiful, energy-efficient lighting that makes your property shine at night.</p></div></div>
+      <div class="svc reveal"><img src="img/sp2.jpg" alt="Sod and grass installation"><div class="body"><div class="si"><i class="fa-solid fa-layer-group"></i></div><h3>Sod &amp; Grass Installation</h3><p>St. Augustine, Bermuda, Zoysia &amp; more — delivered and installed.</p></div></div>
+      <div class="svc reveal"><img src="img/sp4.jpg" alt="Commercial maintenance"><div class="body"><div class="si"><i class="fa-solid fa-building"></i></div><h3>Commercial Maintenance</h3><p>Reliable grounds maintenance for businesses &amp; property managers.</p></div></div>
+      <div class="svc reveal"><img src="img/sp3.jpg" alt="Hydroseeding"><div class="body"><div class="si"><i class="fa-solid fa-seedling"></i></div><h3>Hydroseeding &amp; Lawns</h3><p>Fast, even lawn establishment with professional hydroseeding.</p></div></div>
+      <div class="svc reveal"><img src="img/sp1.jpg" alt="Bobcat work and hauling"><div class="body"><div class="si"><i class="fa-solid fa-truck-ramp-box"></i></div><h3>Bobcat, Hauling &amp; Topsoil</h3><p>Bobcat work, hauling, topsoil and gravel for any landscape project.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h2">The name Central Texas <span class="y">trusts</span></h2>
+      <p class="lead">Established, experienced, and committed to doing the job right — every time.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-calendar-check"></i></div><b>Established Since 2016</b><span>Years of trusted landscaping &amp; irrigation experience.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-droplet"></i></div><b>Irrigation Specialists</b><span>Sprinkler systems done right — efficient and reliable.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-building"></i></div><b>Commercial &amp; Residential</b><span>Homes, businesses and property managers all trust us.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-list-check"></i></div><b>Full-Service</b><span>Sprinklers, lighting, sod, hauling &amp; more — all in one call.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-clipboard-check"></i></div><b>Free Estimates</b><span>Clear, honest quotes with no pressure and no surprises.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-location-dot"></i></div><b>Local &amp; Reliable</b><span>Proudly serving New Braunfels &amp; the Hill Country.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="h2">What our customers say</h2>
+      <p class="lead">Real feedback from homeowners and businesses across Central Texas.</p>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>They installed our sprinkler system and new sod — everything looks amazing and the crew was professional start to finish.</p><div class="who"><div class="av">T</div><div><b>Tom W.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Green Acres handles the maintenance for our commercial property and they're reliable, fair and always on time. Highly recommend.</p><div class="who"><div class="av">M</div><div><b>Maria G.</b><small>San Marcos, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>The landscape lighting they added completely transformed our backyard at night. Great work and great value.</p><div class="who"><div class="av">C</div><div><b>Chris B.</b><small>Canyon Lake, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real Google reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="h2">Recent <span class="g">projects</span></h2>
+      <p class="lead">A look at some of the lawns, systems and landscapes we've brought to life across Central Texas.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/sp5.jpg" alt="Landscaped garden with irrigation"></div>
+      <div class="gc"><img src="img/sp3.jpg" alt="Sprinkler at sunset"></div>
+      <div class="gc"><img src="img/lt5.jpg" alt="Landscape lighting"></div>
+      <div class="gc"><img src="img/sp2.jpg" alt="Green lawn"></div>
+      <div class="gc"><img src="img/lt3.jpg" alt="Lighting at night"></div>
+      <div class="gc"><img src="img/sp4.jpg" alt="Commercial irrigation"></div>
+      <div class="gc"><img src="img/sp6.jpg" alt="Sprinkler system"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Easy &amp; Stress-Free</span>
+      <h2 class="h2">Our simple process</h2>
+      <p class="lead">Getting your project done is easy — here's how we work.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-clipboard-list"></i><span class="num">1</span></div><h3>Free Estimate</h3><p>We visit, assess your property and give you a clear, free quote.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-helmet-safety"></i><span class="num">2</span></div><h3>We Get to Work</h3><p>Our experienced crew installs or services your project with care.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-circle-check"></i><span class="num">3</span></div><h3>Enjoy the Results</h3><p>Sit back and enjoy a greener, healthier, better-looking property.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Ready for a greener property?</h2>
+      <p>Get your free, no-pressure estimate today — sprinklers, sod, lighting &amp; more in New Braunfels.</p>
+    </div>
+    <div class="acts">
+      <a href="tel:+18309264117" class="btn btn-ghost" style="color:#fff;"><i class="fa-solid fa-phone"></i> (830) 624-1011</a>
+      <a href="mailto:info@greenacresnb.com" class="btn btn-green"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo">
+          <span class="mark"><i class="fa-solid fa-seedling"></i></span>
+          <span class="n1">Green <b>Acres</b></span>
+        </div>
+        <p class="fd">Full-service landscaping &amp; irrigation serving New Braunfels &amp; Central Texas since 2016. Sprinklers, lighting, sod, commercial maintenance &amp; more.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Sprinkler &amp; Irrigation</a>
+        <a href="#services">Landscape Lighting</a>
+        <a href="#services">Sod &amp; Grass Installation</a>
+        <a href="#services">Commercial Maintenance</a>
+        <a href="#services">Bobcat &amp; Hauling</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+18309264117"><i class="fa-solid fa-phone"></i> (830) 624-1011</a>
+        <a href="mailto:info@greenacresnb.com"><i class="fa-solid fa-envelope"></i> info@greenacresnb.com</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> 9561 IH-35 N, New Braunfels TX</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Green Acres Landscaping &amp; Irrigation · New Braunfels, TX</span>
+      <span>Redesign concept by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){ var t=document.getElementById('mq'); if(t) t.innerHTML+=t.innerHTML; })();
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+  (function(){
+    var counted=false;
+    function run(){ if(counted) return; counted=true;
+      document.querySelectorAll('.count').forEach(function(el){
+        var to=+el.dataset.to, cur=0, step=Math.max(1,Math.round(to/40));
+        var t=setInterval(function(){ cur+=step; if(cur>=to){cur=to;clearInterval(t);} el.textContent=cur; },30);
+      });
+    }
+    var s=document.querySelector('.stats');
+    if(s && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4}).observe(s); }
+    else run();
+  })();
+</script>
+</body>
+</html>
