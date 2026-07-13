@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>San Marcos Landscaping, Tree &amp; Lawn — Landscaping, Tree Service &amp; Lawn Care in San Marcos, TX</title>
+<meta name="description" content="San Marcos Landscaping, Tree & Lawn — the best-priced landscaping contractor & tree service in San Marcos, TX. Landscape design, lawn care, tree service, irrigation, sod, patios & more. Free estimates." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --green:#3f9d4f;--green-d:#2f7d3c;--green-l:#eaf4ea;--green-ll:#f4faf5;
+    --blue:#1f6fb2;--blue-d:#155a94;--navy:#12233a;--navy2:#1a3050;
+    --ink:#1b2a20;--muted:#5f6d64;--soft:#8a978d;--line:#e4ebe5;
+    --bg:#ffffff;--bg2:#f5f9f5;--gold:#f5b301;--radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.dsp{font-family:'Archivo','Inter',sans-serif;font-weight:800;letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.4px;text-transform:uppercase;padding:14px 26px;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-green:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--green);}
+  .btn-blue{background:var(--blue);color:#fff;}
+  .btn-blue:hover{background:var(--blue-d);transform:translateY(-2px);}
+  .btn-line{background:#fff;color:var(--ink);border-color:var(--line);}
+  .btn-line:hover{border-color:var(--green);color:var(--green-d);}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
+  .btn-outline:hover{background:#fff;color:var(--green-d);}
+  .sec{padding:92px 0;}
+  .eyebrow{font-family:'Archivo';font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--green-d);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:var(--navy);}
+  .h2 .g{color:var(--green);}
+  .h2 .b{color:var(--blue);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;text-transform:none;font-family:'Inter';font-weight:400;letter-spacing:0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:var(--navy);color:#cdd7e2;font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:#cdd7e2;display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:#fff;}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--green);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 20px -14px rgba(0,0,0,.3);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;}
+  .logo img{height:60px;width:auto;}
+  nav.main{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:var(--navy);}
+  nav.main a:hover{color:var(--green-d);}
+  .burger{display:none;background:none;border:0;color:var(--navy);font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Archivo';font-weight:700;text-transform:uppercase;font-size:14px;border-bottom:1px solid var(--line);color:var(--navy);}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,var(--green-ll),#e6f1e8 70%,#ddeee0);position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;right:-140px;top:-100px;width:480px;height:480px;background:radial-gradient(circle,rgba(63,157,79,.18),transparent 65%);}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:70px 24px 78px;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:40px;margin-bottom:22px;box-shadow:0 10px 26px -14px rgba(0,0,0,.2);}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;border:1px solid var(--line);}
+  .rate-badge b{font-size:14px;color:var(--navy);}
+  .rate-badge .stars{color:var(--gold);font-size:12px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(34px,5vw,58px);color:var(--navy);line-height:1.02;}
+  .hero h1 .g{color:var(--green);}
+  .hero h1 .b{color:var(--blue);}
+  .hero .slogan{font-family:'Archivo';font-weight:700;font-size:clamp(15px,1.8vw,19px);color:var(--green-d);margin-top:14px;letter-spacing:.3px;}
+  .hero p.sub{margin-top:14px;font-size:17px;color:var(--muted);max-width:500px;text-transform:none;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-visual{position:relative;}
+  .hero-img{border-radius:22px;overflow:hidden;box-shadow:0 34px 70px -30px rgba(20,40,25,.55);height:440px;}
+  .hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:kb 18s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.14);}}
+  .quote-card{position:absolute;left:-24px;bottom:-28px;background:#fff;border-radius:16px;padding:18px;box-shadow:0 26px 50px -20px rgba(20,40,25,.45);width:290px;border:1px solid var(--line);}
+  .quote-card h3{font-size:16px;color:var(--navy);margin-bottom:12px;}
+  .qbtn{display:flex;align-items:center;gap:11px;width:100%;background:var(--green);color:#fff;border:0;border-radius:10px;padding:12px 14px;font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:13px;cursor:pointer;transition:.18s;margin-bottom:9px;letter-spacing:.3px;}
+  .qbtn:hover{background:var(--green-d);transform:translateY(-1px);}
+  .qbtn.b{background:var(--blue);}.qbtn.b:hover{background:var(--blue-d);}
+  .qbtn.o{background:#fff;color:var(--navy);border:1.5px solid var(--line);}
+  .qbtn.o:hover{border-color:var(--green);color:var(--green-d);}
+  .qbtn i{width:20px;text-align:center;}
+
+  /* MARQUEE */
+  .marquee{background:var(--green);overflow:hidden;white-space:nowrap;}
+  .marquee .track{display:inline-flex;align-items:center;animation:scroll 30s linear infinite;padding:14px 0;}
+  .marquee:hover .track{animation-play-state:paused;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .marquee .it{display:inline-flex;align-items:center;gap:9px;padding:0 26px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;color:#fff;text-transform:uppercase;}
+  .marquee .it i{color:#c9ecce;font-size:13px;}
+
+  /* ABOUT */
+  .about .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;}
+  .about h2{font-size:clamp(26px,3.4vw,40px);color:var(--navy);}
+  .about p{color:var(--muted);margin-top:16px;text-transform:none;}
+  .best-badge{display:flex;gap:14px;align-items:center;background:var(--green-l);border:1px solid #cfe6d4;border-radius:14px;padding:16px 18px;margin-top:22px;}
+  .best-badge .bi{width:54px;height:54px;border-radius:12px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  .best-badge b{color:var(--navy);font-family:'Archivo';text-transform:uppercase;font-size:15px;display:block;}
+  .best-badge span{color:var(--muted);font-size:13.5px;}
+  .grid-img{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid-img .gi{border-radius:14px;overflow:hidden;height:210px;box-shadow:0 16px 34px -22px rgba(0,0,0,.4);}
+  .grid-img .gi img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+  .grid-img .gi:hover img{transform:scale(1.07);}
+  .grid-img .gi:nth-child(1){margin-top:24px;}
+  .grid-img .gi:nth-child(4){margin-top:-24px;}
+
+  /* STATS */
+  .stats{background:var(--navy);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:44px 24px;}
+  .stat{display:flex;gap:16px;align-items:center;}
+  .stat .si{width:56px;height:56px;border-radius:12px;background:rgba(63,157,79,.18);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  .stat .sn{font-family:'Archivo';font-weight:900;font-size:30px;color:#fff;line-height:1;}
+  .stat .sl{font-size:12.5px;color:#9fb0c0;text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+
+  /* SERVICES */
+  .services{background:var(--bg2);}
+  .svc-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.22s;}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(20,40,25,.4);border-color:#cfe6d4;}
+  .svc .pic{height:190px;position:relative;overflow:hidden;}
+  .svc .pic img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .svc:hover .pic img{transform:scale(1.08);}
+  .svc .si{position:absolute;left:18px;bottom:-22px;width:52px;height:52px;border-radius:12px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 10px 22px -8px rgba(0,0,0,.4);border:3px solid #fff;}
+  .svc:nth-child(even) .si{background:var(--blue);}
+  .svc .body{padding:30px 22px 24px;}
+  .svc h3{font-size:19px;color:var(--navy);}
+  .svc p{color:var(--muted);font-size:14px;margin-top:7px;text-transform:none;font-family:'Inter';}
+  .svc .more{margin-top:14px;font-family:'Archivo';font-weight:700;font-size:12.5px;text-transform:uppercase;color:var(--green-d);display:inline-flex;align-items:center;gap:7px;}
+
+  /* CTA GREEN */
+  .cta-green{background:linear-gradient(120deg,var(--green),#54b465);color:#fff;position:relative;overflow:hidden;}
+  .cta-green .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center;padding:0 24px;}
+  .cta-green .txt{padding:56px 0;}
+  .cta-green h2{font-size:clamp(24px,3.2vw,38px);color:#fff;}
+  .cta-green p{margin:12px 0 22px;color:#eafaee;text-transform:none;}
+  .cta-green .pic{align-self:stretch;position:relative;min-height:250px;border-radius:16px 0 0 0;overflow:hidden;}
+  .cta-green .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+
+  /* WHY */
+  .why-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .wc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s;text-align:center;}
+  .wc:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(20,40,25,.35);}
+  .wc .wi{width:64px;height:64px;border-radius:50%;background:var(--green-l);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
+  .wc:nth-child(even) .wi{background:#e6f0fa;color:var(--blue);}
+  .wc b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:var(--navy);letter-spacing:.3px;}
+  .wc span{font-size:13.5px;color:var(--muted);text-transform:none;}
+
+  /* REVIEWS */
+  .reviews{background:var(--bg2);}
+  .rev-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;box-shadow:0 14px 30px -24px rgba(0,0,0,.3);}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--green);opacity:.16;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#3b453e;text-transform:none;font-family:'Inter';}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo';}
+  .rc:nth-child(even) .av{background:var(--blue);}
+  .rc .who b{font-family:'Archivo';text-transform:uppercase;font-size:14px;color:var(--navy);}
+  .rc .who small{color:var(--soft);display:block;text-transform:none;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;text-transform:none;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:12px;overflow:hidden;position:relative;box-shadow:0 12px 26px -20px rgba(0,0,0,.4);}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* PROCESS */
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;}
+  .pc .pin{width:84px;height:84px;border-radius:50%;background:var(--green-l);border:2px solid var(--green);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;position:relative;}
+  .pc .num{position:absolute;top:-4px;right:calc(50% - 52px);width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;font-size:13px;}
+  .pc h3{font-size:19px;color:var(--navy);}
+  .pc p{color:var(--muted);font-size:14px;margin-top:8px;text-transform:none;font-family:'Inter';max-width:280px;margin:8px auto 0;}
+
+  /* CTA NAVY */
+  .cta-navy{background:linear-gradient(120deg,var(--navy),var(--navy2));}
+  .cta-navy .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:52px 24px;flex-wrap:wrap;}
+  .cta-navy h2{font-size:clamp(22px,3vw,34px);color:#fff;}
+  .cta-navy p{color:#9fb0c0;margin-top:6px;text-transform:none;}
+  .cta-navy .acts{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer{background:var(--navy);padding:60px 0 26px;color:#9fb0c0;}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .logo-box{display:inline-block;background:#fff;padding:12px 16px;border-radius:12px;margin-bottom:16px;}
+  footer .logo-box img{height:52px;}
+  footer p.fd{color:#9fb0c0;font-size:14px;max-width:280px;text-transform:none;}
+  footer h4{font-family:'Archivo';text-transform:uppercase;color:#fff;font-size:14px;margin-bottom:16px;letter-spacing:.5px;}
+  footer a{display:flex;align-items:center;gap:9px;color:#9fb0c0;font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--green);}
+  footer a i{color:var(--green);width:16px;text-align:center;}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7a8a99;text-transform:none;}
+  .fbar a{color:var(--green);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--green);}
+
+  @media(max-width:960px){
+    nav.main{display:none;}
+    .burger{display:block;}
+    nav.mobile.open{display:flex;}
+    .hero .wrap,.about .wrap,.cta-green .wrap{grid-template-columns:1fr;}
+    .hero-visual{order:-1;margin-bottom:40px;}
+    .quote-card{position:static;width:100%;margin-top:16px;}
+    .cta-green .pic{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:26px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}
+    .topbar .wrap>span:first-child{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid,footer .cols{grid-template-columns:1fr;}
+    .gal-grid,.grid-img{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .cta-navy .wrap{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> Serving San Marcos, Wimberley, Kyle, New Braunfels &amp; Canyon Lake, TX</span>
+    <div class="r">
+      <a href="tel:+15128777730"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+      <span><i class="fa-solid fa-clock"></i> Mon–Sat: 7am–6pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="img/s1.png" alt="San Marcos Landscaping, Tree & Lawn" /></a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-green">Get a Free Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#about" onclick="cn()">About</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#gallery" onclick="cn()">Gallery</a>
+    <a href="#reviews" onclick="cn()">Reviews</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+15128777730" onclick="cn()"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="rate-badge">
+        <span class="gg">G</span>
+        <b>4.5 Rating</b>
+        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+      </div>
+      <h1>San Marcos <span class="g">Landscaping,</span> <span class="b">Tree</span> &amp; Lawn</h1>
+      <div class="slogan">The Best-Priced Landscaping Contractor &amp; Tree Service in Town.</div>
+      <p class="sub">From full landscape design and stonework to lawn care, tree service and irrigation — one trusted local team for every outdoor project in San Marcos.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-green"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+15128777730" class="btn btn-line"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img"><img src="img/s2.jpg" alt="Beautiful landscaped lawn in San Marcos" /></div>
+      <div class="quote-card">
+        <h3>Request a Free Quote</h3>
+        <a href="#contact" class="qbtn"><i class="fa-solid fa-bolt"></i> Get Instant Quote</a>
+        <a href="tel:+15128777730" class="qbtn b"><i class="fa-solid fa-phone"></i> Call Us Now</a>
+        <a href="#contact" class="qbtn o"><i class="fa-solid fa-file-lines"></i> Submit Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="mq">
+    <span class="it"><i class="fa-solid fa-location-dot"></i> San Marcos, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Wimberley, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Kyle, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> New Braunfels, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Canyon Lake, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Lockhart, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Luling, TX</span>
+    <span class="it"><i class="fa-solid fa-location-dot"></i> Dripping Springs, TX</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Your Full-Service Landscapers</span>
+      <h2>One local team for <span style="color:var(--green)">every</span> outdoor project</h2>
+      <p>San Marcos Landscaping, Tree &amp; Lawn is your one-stop shop for beautiful, healthy outdoor spaces. Whether you need weekly lawn care, a full landscape design, tree work or a brand-new patio, our experienced crew does it all — and does it right.</p>
+      <p>We're proud to be known as the <strong style="color:var(--green-d)">best-priced landscaping and tree service</strong> in the area, delivering pro-level results at fair, honest prices for homeowners across Central Texas.</p>
+      <div class="best-badge">
+        <div class="bi"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <div>
+          <b>Best-Priced, Full-Service</b>
+          <span>Landscaping, tree service, lawn care, irrigation, stonework &amp; more — all from one trusted local crew.</span>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-green" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Get a Free Quote</a>
+    </div>
+    <div class="grid-img reveal">
+      <div class="gi"><img src="img/s8.jpg" alt="Landscape design flower bed" /></div>
+      <div class="gi"><img src="img/s12.jpg" alt="Stone paver patio" /></div>
+      <div class="gi"><img src="img/s7.jpg" alt="Water feature landscaping" /></div>
+      <div class="gi"><img src="img/s5.jpg" alt="Tree trimming service" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="si"><i class="fa-solid fa-star"></i></div><div><div class="sn">4.5</div><div class="sl">Google Rating</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-comment"></i></div><div><div class="sn"><span class="count" data-to="17">0</span>+</div><div class="sl">Happy Reviews</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-list-check"></i></div><div><div class="sn"><span class="count" data-to="15">0</span>+</div><div class="sl">Services Offered</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-location-dot"></i></div><div><div class="sn">7+</div><div class="sl">Cities Served</div></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="h2">Professional Services <span class="g">by our team</span></h2>
+      <p class="lead">Full-service landscaping, tree care and hardscape — everything your property needs, all in one place.</p>
+    </div>
+    <div class="svc-grid" style="text-align:left;">
+      <div class="svc reveal"><div class="pic"><img src="img/s9.jpg" alt="Landscape design"><div class="si"><i class="fa-solid fa-ruler-combined"></i></div></div><div class="body"><h3>Landscape Design</h3><p>Custom landscape design &amp; installation that transforms your yard and boosts curb appeal.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/s2.jpg" alt="Lawn care"><div class="si"><i class="fa-solid fa-scissors"></i></div></div><div class="body"><h3>Lawn Care &amp; Mowing</h3><p>Weekly, bi-weekly or monthly mowing, edging, hedge trimming and fertilization.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/s5.jpg" alt="Tree service"><div class="si"><i class="fa-solid fa-tree"></i></div></div><div class="body"><h3>Tree Trimming &amp; Removal</h3><p>Professional tree trimming, removal and stump grinding — safe and clean.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/s11.jpg" alt="Irrigation"><div class="si"><i class="fa-solid fa-droplet"></i></div></div><div class="body"><h3>Sprinklers &amp; Irrigation</h3><p>Sprinkler installation, repair and irrigation systems to keep your lawn green.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/s15.jpg" alt="Sod and turf"><div class="si"><i class="fa-solid fa-seedling"></i></div></div><div class="body"><h3>Sod &amp; Artificial Turf</h3><p>Fresh sod installation and premium artificial turf for a perfect lawn year-round.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/s12.jpg" alt="Stonework patios"><div class="si"><i class="fa-solid fa-layer-group"></i></div></div><div class="body"><h3>Stonework &amp; Patios</h3><p>Patios, retaining walls, fire pits, outdoor kitchens and custom stonework.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA GREEN -->
+<section class="cta-green">
+  <div class="wrap">
+    <div class="txt reveal">
+      <span class="eyebrow" style="color:#eafaee;">Free Consultation</span>
+      <h2>Let's bring your outdoor space to life</h2>
+      <p>Tell us about your project and get a fast, free, best-priced quote — no pressure, no obligation.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+15128777730" class="btn btn-outline"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+      </div>
+    </div>
+    <div class="pic"><img src="img/s7.jpg" alt="Landscape water feature" /></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h2">The <span class="g">best value</span> in San Marcos landscaping</h2>
+      <p class="lead">Pro results, honest pricing, and a local team that treats your property like its own.</p>
+    </div>
+    <div class="why-grid" style="margin-top:50px;">
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-hand-holding-dollar"></i></div><b>Best Priced</b><span>Top-tier work at the fairest, most honest prices around.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-shield-halved"></i></div><b>Licensed &amp; Insured</b><span>Fully covered crews for your complete peace of mind.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-list-check"></i></div><b>Full-Service</b><span>Landscaping, trees, lawn, irrigation &amp; stonework — all in one.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-location-dot"></i></div><b>Local Experts</b><span>We know Central Texas soil, plants, trees and climate.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-clipboard-check"></i></div><b>Free Estimates</b><span>Clear, upfront quotes with no surprises or hidden fees.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-star"></i></div><b>Highly Rated</b><span>Trusted by homeowners across San Marcos &amp; Hays County.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="h2">What our clients say</h2>
+      <p class="lead">Real feedback from homeowners across San Marcos and the surrounding towns.</p>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Great work at a great price. They redesigned our whole front yard and it looks incredible. Fair, fast and professional.</p><div class="who"><div class="av">M</div><div><b>Michael T.</b><small>San Marcos, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Best priced tree service we could find and they did an amazing job. Cleaned everything up perfectly. Highly recommend!</p><div class="who"><div class="av">R</div><div><b>Rachel S.</b><small>Wimberley, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>From sprinklers to sod to our new patio, they handled it all. One team, honest pricing, beautiful results.</p><div class="who"><div class="av">D</div><div><b>David L.</b><small>Kyle, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real Google reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="h2">Recent <span class="g">projects</span></h2>
+      <p class="lead">A look at the landscapes, patios, lawns and outdoor spaces we've created across Central Texas.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/s2.jpg" alt="Landscaped home"></div>
+      <div class="gc"><img src="img/s7.jpg" alt="Water feature"></div>
+      <div class="gc"><img src="img/s8.jpg" alt="Flower bed design"></div>
+      <div class="gc"><img src="img/s12.jpg" alt="Paver patio"></div>
+      <div class="gc"><img src="img/s9.jpg" alt="Landscape bed"></div>
+      <div class="gc"><img src="img/s15.jpg" alt="Artificial turf"></div>
+      <div class="gc"><img src="img/s4.jpg" alt="Paver installation"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Easy &amp; Stress-Free</span>
+      <h2 class="h2">Our simple process</h2>
+      <p class="lead">Getting your project done is easy — here's how we work.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-clipboard-list"></i><span class="num">1</span></div><h3>Free Consultation</h3><p>We visit, listen to your goals and give you a clear, best-priced quote.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-helmet-safety"></i><span class="num">2</span></div><h3>Design &amp; Build</h3><p>Our crew gets to work with care, craftsmanship and quality materials.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-circle-check"></i><span class="num">3</span></div><h3>Enjoy &amp; Maintain</h3><p>We finish clean and can keep your property looking great year-round.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA NAVY -->
+<section class="cta-navy" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Ready for your free, best-priced quote?</h2>
+      <p>Call or message us today — landscaping, tree service, lawn care &amp; more in San Marcos.</p>
+    </div>
+    <div class="acts">
+      <a href="tel:+15128777730" class="btn btn-outline"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+      <a href="#contact" class="btn btn-green"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="logo-box"><img src="img/s1.png" alt="San Marcos Landscaping, Tree & Lawn" /></div>
+        <p class="fd">The best-priced landscaping contractor &amp; tree service in San Marcos, TX. Full-service outdoor care from one trusted local team.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Landscape Design</a>
+        <a href="#services">Lawn Care &amp; Mowing</a>
+        <a href="#services">Tree Trimming &amp; Removal</a>
+        <a href="#services">Sprinklers &amp; Irrigation</a>
+        <a href="#services">Stonework &amp; Patios</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+15128777730"><i class="fa-solid fa-phone"></i> (512) 877-7730</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> San Marcos, TX</a>
+        <a href="#"><i class="fa-solid fa-clock"></i> Mon–Sat: 7am – 6pm</a>
+        <a href="#contact"><i class="fa-solid fa-clipboard-check"></i> Free Estimates</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> San Marcos Landscaping, Tree &amp; Lawn · San Marcos, TX</span>
+      <span>Redesign concept by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){ var t=document.getElementById('mq'); if(t) t.innerHTML+=t.innerHTML; })();
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+  (function(){
+    var counted=false;
+    function run(){ if(counted) return; counted=true;
+      document.querySelectorAll('.count').forEach(function(el){
+        var to=+el.dataset.to, cur=0, step=Math.max(1,Math.round(to/40));
+        var t=setInterval(function(){ cur+=step; if(cur>=to){cur=to;clearInterval(t);} el.textContent=cur; },30);
+      });
+    }
+    var s=document.querySelector('.stats');
+    if(s && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4}).observe(s); }
+    else run();
+  })();
+</script>
+</body>
+</html>
