@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landscape Junction — Stone, Soil, Mulch &amp; Landscape Materials in San Marcos, TX</title>
+<meta name="description" content="Landscape Junction — family-owned landscape materials yard in San Marcos, TX. Soil, mulch, gravel, river rock, flagstone, boulders, sod & more. Bulk pricing & delivery across Central Texas." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#17130e;--bg2:#1f1a13;--panel:#25201a;--panel2:#2c261e;
+    --amber:#d99a34;--amber-d:#b87d1f;--amber-sec:#2e2413;--amber-deep:#241c0f;
+    --blue:#3a9fd4;--blue-d:#2079ab;
+    --ink:#f4eee2;--muted:#aca090;--soft:#847a6b;--line:#352d22;
+    --gold:#f5c518;--radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.dsp{font-family:'Archivo','Inter',sans-serif;font-weight:800;letter-spacing:-.01em;line-height:1.08;text-transform:uppercase;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.4px;text-transform:uppercase;padding:14px 26px;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-amber{background:var(--amber);color:#26190a;}
+  .btn-amber:hover{background:var(--amber-d);color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--amber);}
+  .btn-blue{background:var(--blue);color:#08222f;}
+  .btn-blue:hover{background:var(--blue-d);color:#fff;transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
+  .sec{padding:92px 0;}
+  .eyebrow{font-family:'Archivo';font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:#fff;}
+  .h2 .a{color:var(--amber);}
+  .h2 .b{color:var(--blue);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;text-transform:none;font-family:'Inter';font-weight:400;letter-spacing:0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:#100d09;border-bottom:1px solid var(--line);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:var(--muted);display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:var(--amber);}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--amber);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(23,19,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;}
+  .logo img{height:60px;width:auto;}
+  nav.main{display:flex;align-items:center;gap:24px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#eae3d5;}
+  nav.main a:hover{color:var(--amber);}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Archivo';font-weight:700;text-transform:uppercase;font-size:14px;border-bottom:1px solid var(--line);}
+
+  /* HERO */
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:url('img/w14.jpg') center/cover;transform:scale(1.05);animation:kb 20s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.15);}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,14,9,.95) 0%,rgba(18,14,9,.8) 45%,rgba(18,14,9,.45) 100%);}
+  .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding:64px 24px;width:100%;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:40px;margin-bottom:22px;}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;}
+  .rate-badge b{font-size:14px;}
+  .rate-badge .stars{color:var(--gold);font-size:13px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(36px,5.6vw,66px);color:#fff;line-height:.98;}
+  .hero h1 .a{color:var(--amber);}
+  .hero .slogan{font-family:'Archivo';font-weight:700;font-size:clamp(15px,1.9vw,20px);color:var(--amber);margin-top:16px;letter-spacing:.5px;}
+  .hero p.sub{margin-top:14px;font-size:17px;color:#e2dccf;max-width:520px;text-transform:none;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .quote-card{background:rgba(30,24,17,.75);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);}
+  .quote-card h3{font-size:21px;color:#fff;}
+  .quote-card p{color:var(--muted);font-size:13.5px;margin:6px 0 16px;text-transform:none;font-family:'Inter';}
+  .qbtn{display:flex;align-items:center;gap:13px;width:100%;background:var(--amber);color:#26190a;border:0;border-radius:11px;padding:15px 16px;font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:14px;cursor:pointer;transition:.18s;margin-bottom:10px;letter-spacing:.4px;}
+  .qbtn .ic{width:34px;height:34px;border-radius:8px;background:rgba(38,25,10,.16);display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .qbtn:hover{background:var(--amber-d);color:#fff;transform:translateY(-2px);}
+  .qbtn.alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.2);}
+  .qbtn.alt:hover{border-color:var(--amber);color:var(--amber);}
+  .qbtn.alt .ic{background:rgba(255,255,255,.08);}
+  .qbtn-row{display:flex;gap:12px;}
+  .qbtn-row .qbtn{margin-bottom:0;justify-content:center;font-size:12.5px;padding:12px 10px;}
+
+  /* MARQUEE */
+  .marquee{background:var(--amber-sec);border-top:1px solid rgba(217,154,52,.25);border-bottom:1px solid rgba(217,154,52,.25);overflow:hidden;white-space:nowrap;}
+  .marquee .track{display:inline-flex;align-items:center;animation:scroll 32s linear infinite;padding:15px 0;}
+  .marquee:hover .track{animation-play-state:paused;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .marquee .it{display:inline-flex;align-items:center;gap:9px;padding:0 24px;font-family:'Archivo';font-weight:700;font-size:14px;letter-spacing:.5px;color:#ecd9b6;text-transform:uppercase;}
+  .marquee .it i{color:var(--amber);font-size:13px;}
+
+  /* ABOUT */
+  .about .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;}
+  .about h2{font-size:clamp(26px,3.4vw,40px);color:#fff;}
+  .about p{color:var(--muted);margin-top:16px;text-transform:none;}
+  .trust-row{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;}
+  .tchip{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+  .tchip i{color:var(--amber);font-size:18px;}
+  .tchip b{font-family:'Archivo';text-transform:uppercase;font-size:13px;color:#fff;}
+  .grid-img{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid-img .gi{border-radius:14px;overflow:hidden;height:210px;}
+  .grid-img .gi img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+  .grid-img .gi:hover img{transform:scale(1.07);}
+  .grid-img .gi:nth-child(1){margin-top:24px;}
+  .grid-img .gi:nth-child(4){margin-top:-24px;}
+
+  /* STATS */
+  .stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:44px 24px;}
+  .stat{display:flex;gap:16px;align-items:center;}
+  .stat .si{width:56px;height:56px;border-radius:12px;background:var(--amber-sec);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+  .stat .sn{font-family:'Archivo';font-weight:900;font-size:30px;color:#fff;line-height:1;}
+  .stat .sl{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+
+  /* MATERIALS */
+  .materials{background:var(--amber-deep);}
+  .mat-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .mat{border-radius:var(--radius);overflow:hidden;position:relative;height:300px;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.08);}
+  .mat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s;z-index:1;}
+  .mat::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,14,9,.96) 8%,rgba(18,14,9,.35) 60%,rgba(18,14,9,.15));z-index:2;transition:.3s;}
+  .mat:hover img{transform:scale(1.09);}
+  .mat:hover::after{background:linear-gradient(to top,rgba(18,14,9,.97) 12%,rgba(46,36,19,.5) 70%);}
+  .mat .body{position:relative;z-index:3;padding:24px;width:100%;}
+  .mat .si{width:52px;height:52px;border-radius:12px;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;transition:.3s;}
+  .mat:hover .si{transform:translateY(-4px);}
+  .mat h3{font-size:20px;color:#fff;}
+  .mat p{color:#d8cdb9;font-size:14px;margin-top:6px;text-transform:none;font-family:'Inter';opacity:0;max-height:0;transition:.35s;}
+  .mat:hover p{opacity:1;max-height:80px;}
+
+  /* DELIVERY */
+  .delivery{background:linear-gradient(120deg,var(--blue-d),var(--blue));color:#fff;}
+  .del-grid{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .del{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:26px 20px;text-align:center;transition:.2s;}
+  .del:hover{background:rgba(255,255,255,.16);transform:translateY(-4px);}
+  .del i{font-size:32px;color:#fff;margin-bottom:14px;}
+  .del b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:#fff;}
+  .del span{font-size:13px;color:#e6f3fb;text-transform:none;}
+
+  /* WHY */
+  .why-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .wc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s;text-align:center;}
+  .wc:hover{border-color:var(--amber);transform:translateY(-4px);background:var(--panel2);}
+  .wc .wi{width:64px;height:64px;border-radius:50%;background:var(--amber-sec);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px;}
+  .wc:nth-child(even) .wi{background:rgba(58,159,212,.16);color:var(--blue);}
+  .wc b{display:block;font-family:'Archivo';text-transform:uppercase;font-size:15px;color:#fff;letter-spacing:.3px;}
+  .wc span{font-size:13.5px;color:var(--muted);text-transform:none;}
+
+  /* REVIEWS */
+  .reviews{position:relative;background:url('img/w6.jpg') center/cover fixed;}
+  .reviews::after{content:"";position:absolute;inset:0;background:rgba(18,14,9,.92);}
+  .reviews .wrap{position:relative;z-index:2;}
+  .rev-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--amber);opacity:.18;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#e2dccf;text-transform:none;font-family:'Inter';}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo';}
+  .rc:nth-child(even) .av{background:var(--blue);color:#08222f;}
+  .rc .who b{font-family:'Archivo';text-transform:uppercase;font-size:14px;color:#fff;}
+  .rc .who small{color:var(--soft);display:block;text-transform:none;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;text-transform:none;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:12px;overflow:hidden;position:relative;}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* PROCESS */
+  .process{background:var(--bg2);}
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;}
+  .pc .pin{width:84px;height:84px;border-radius:50%;background:var(--amber-sec);border:2px solid var(--amber);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;position:relative;}
+  .pc .num{position:absolute;top:-4px;right:calc(50% - 52px);width:28px;height:28px;border-radius:50%;background:var(--amber);color:#26190a;display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:800;font-size:13px;}
+  .pc h3{font-size:19px;color:#fff;}
+  .pc p{color:var(--muted);font-size:14px;margin-top:8px;text-transform:none;font-family:'Inter';max-width:280px;margin:8px auto 0;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(120deg,var(--amber-deep),var(--amber-sec));border-top:1px solid rgba(217,154,52,.2);}
+  .cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:52px 24px;flex-wrap:wrap;}
+  .cta-band h2{font-size:clamp(22px,3vw,34px);color:#fff;}
+  .cta-band p{color:#d8cdb9;margin-top:6px;text-transform:none;}
+  .cta-band .acts{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer{background:#100d09;padding:60px 0 26px;border-top:1px solid var(--line);}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .logo img{height:64px;margin-bottom:16px;}
+  footer p.fd{color:var(--muted);font-size:14px;max-width:280px;text-transform:none;}
+  footer h4{font-family:'Archivo';text-transform:uppercase;color:#fff;font-size:14px;margin-bottom:16px;letter-spacing:.5px;}
+  footer a{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--amber);}
+  footer a i{color:var(--amber);width:16px;text-align:center;}
+  .fbar{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--soft);text-transform:none;}
+  .fbar a{color:var(--amber);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--amber);color:#26190a;}
+
+  @media(max-width:960px){
+    nav.main{display:none;}
+    .burger{display:block;}
+    nav.mobile.open{display:flex;}
+    .hero .wrap,.about .wrap{grid-template-columns:1fr;}
+    .quote-card{max-width:460px;}
+    .mat-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .del-grid{grid-template-columns:1fr 1fr;}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:26px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}
+    .topbar .wrap>span:first-child{display:none;}
+    .mat-grid,.rev-grid,.proc-grid,.why-grid,.del-grid,footer .cols{grid-template-columns:1fr;}
+    .gal-grid,.grid-img{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .cta-band .wrap{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> 8989 RR 12, San Marcos, TX 78666</span>
+    <div class="r">
+      <a href="tel:+15126180696"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+      <span><i class="fa-solid fa-clock"></i> Mon–Sat: 7am – 5pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="img/logo.png" alt="Landscape Junction" /></a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#materials">Materials</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-amber">Get a Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#about" onclick="cn()">About</a>
+    <a href="#materials" onclick="cn()">Materials</a>
+    <a href="#delivery" onclick="cn()">Delivery</a>
+    <a href="#gallery" onclick="cn()">Gallery</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+15126180696" onclick="cn()"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="rate-badge">
+        <span class="gg">G</span>
+        <b>4.8 Rating</b>
+        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+      </div>
+      <h1>Your San Marcos <span class="a">Stone &amp; Soil</span> Yard</h1>
+      <div class="slogan">Family Owned &amp; Locally Operated.</div>
+      <p class="sub">Soil, mulch, gravel, river rock, flagstone, boulders and more — huge selection, honest bulk pricing, and fast delivery across Central Texas.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-amber"><i class="fa-solid fa-paper-plane"></i> Get a Quote</a>
+        <a href="tel:+15126180696" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+      </div>
+    </div>
+    <div class="quote-card">
+      <h3>Get Your Materials</h3>
+      <p>Pick the way that works best for you:</p>
+      <a href="#contact" class="qbtn"><span class="ic"><i class="fa-solid fa-bolt"></i></span> Get a Fast Quote</a>
+      <div class="qbtn-row">
+        <a href="tel:+15126180696" class="qbtn alt"><i class="fa-solid fa-phone"></i> Call Us</a>
+        <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="qbtn alt"><i class="fa-solid fa-location-arrow"></i> Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="mq">
+    <span class="it"><i class="fa-solid fa-truck"></i> San Marcos, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> New Braunfels, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Seguin, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Canyon Lake, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Wimberley, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Kyle, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Buda, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Blanco, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Dripping Springs, TX</span>
+    <span class="it"><i class="fa-solid fa-truck"></i> Martindale, TX</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Family Owned &amp; Locally Operated</span>
+      <h2>The Hill Country's landscape <span style="color:var(--amber)">material yard</span></h2>
+      <p>Landscape Junction is your one-stop Central Texas source for bulk landscape materials. Whether you're building a patio, refreshing your beds or filling a whole yard, we've got the soil, stone, mulch and gravel to get it done — at honest, fair prices.</p>
+      <p>As a <strong style="color:#fff">family-owned, locally operated</strong> yard, we know Hill Country landscapes inside out. Load up at our San Marcos yard, or let us deliver straight to your project.</p>
+      <div class="trust-row">
+        <div class="tchip"><i class="fa-solid fa-people-roof"></i><b>Family Owned</b></div>
+        <div class="tchip"><i class="fa-solid fa-truck-fast"></i><b>Bulk Delivery</b></div>
+        <div class="tchip"><i class="fa-solid fa-tags"></i><b>Fair Prices</b></div>
+      </div>
+      <a href="#materials" class="btn btn-amber" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Browse Materials</a>
+    </div>
+    <div class="grid-img reveal">
+      <div class="gi"><img src="img/w5.jpg" alt="Chopped stone" /></div>
+      <div class="gi"><img src="img/w4.jpg" alt="Gravel and river rock" /></div>
+      <div class="gi"><img src="img/w6.jpg" alt="Flagstone slabs" /></div>
+      <div class="gi"><img src="img/w11.jpg" alt="Firewood" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="si"><i class="fa-solid fa-star"></i></div><div><div class="sn">4.8</div><div class="sl">Google Rating</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-comment"></i></div><div><div class="sn"><span class="count" data-to="38">0</span>+</div><div class="sl">Five-Star Reviews</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-cubes"></i></div><div><div class="sn"><span class="count" data-to="30">0</span>+</div><div class="sl">Materials In Stock</div></div></div>
+    <div class="stat"><div class="si"><i class="fa-solid fa-truck"></i></div><div><div class="sn">12+</div><div class="sl">Cities Delivered</div></div></div>
+  </div>
+</div>
+
+<!-- MATERIALS -->
+<section class="sec materials" id="materials">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">What We Stock</span>
+      <h2 class="h2">Bulk landscape <span class="a">materials</span></h2>
+      <p class="lead">Everything you need to build, plant and beautify — priced by the bag, scoop or truckload.</p>
+    </div>
+    <div class="mat-grid" style="text-align:left;">
+      <div class="mat reveal"><img src="img/w2.jpg" alt="Soil and compost"><div class="body"><div class="si"><i class="fa-solid fa-trowel"></i></div><h3>Soil &amp; Compost</h3><p>Rich topsoil, garden mixes and compost for healthy beds and lawns.</p></div></div>
+      <div class="mat reveal"><img src="img/w1.jpg" alt="Mulch"><div class="body"><div class="si"><i class="fa-solid fa-leaf"></i></div><h3>Mulch</h3><p>Hardwood, cedar and colored mulch to protect beds and add curb appeal.</p></div></div>
+      <div class="mat reveal"><img src="img/w4.jpg" alt="Gravel and river rock"><div class="body"><div class="si"><i class="fa-solid fa-mound"></i></div><h3>Gravel &amp; River Rock</h3><p>Decorative gravel, pea gravel, base rock and smooth river rock.</p></div></div>
+      <div class="mat reveal"><img src="img/w7.jpg" alt="Flagstone and patio stone"><div class="body"><div class="si"><i class="fa-solid fa-cubes"></i></div><h3>Flagstone &amp; Patio Stone</h3><p>Chopped stone, flagstone and patio stone for walls, paths and patios.</p></div></div>
+      <div class="mat reveal"><img src="img/w6.jpg" alt="Boulders and slabs"><div class="body"><div class="si"><i class="fa-solid fa-mountain"></i></div><h3>Boulders &amp; Slabs</h3><p>Statement boulders, slabs and large stone for standout landscapes.</p></div></div>
+      <div class="mat reveal"><img src="img/w10.jpg" alt="Blocks and pavers"><div class="body"><div class="si"><i class="fa-solid fa-layer-group"></i></div><h3>Blocks, Sod &amp; More</h3><p>Retaining blocks, pavers, sod, firewood, cement and weed fabric.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="sec delivery" id="delivery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#e6f3fb;">How You Get It</span>
+      <h2 class="h2">Delivered or loaded — <span style="color:#fff">your way</span></h2>
+      <p class="lead" style="color:#e6f3fb;">Take it with you or let us bring it to your project. Fast, easy and hassle-free.</p>
+    </div>
+    <div class="del-grid">
+      <div class="del reveal"><i class="fa-solid fa-truck"></i><b>Dump Truck Delivery</b><span>Bulk soil, mulch &amp; gravel delivered by the load.</span></div>
+      <div class="del reveal"><i class="fa-solid fa-truck-ramp-box"></i><b>Flatbed Delivery</b><span>Stone, pallets &amp; boulders delivered on flatbed.</span></div>
+      <div class="del reveal"><i class="fa-solid fa-hands-holding"></i><b>We Load You Up</b><span>Bring your truck or trailer — we'll load it fast.</span></div>
+      <div class="del reveal"><i class="fa-solid fa-weight-scale"></i><b>Weigh-Your-Stone</b><span>Bring a bucket and pay only for what you need.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h2">The Hill Country's <span class="a">favorite</span> stone yard</h2>
+      <p class="lead">Huge selection, honest pricing, and a family team that knows Central Texas landscapes.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-people-roof"></i></div><b>Family Owned</b><span>Locally owned &amp; operated — you're dealing with the owners.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-warehouse"></i></div><b>Huge Selection</b><span>Soil, stone, mulch, gravel, sod &amp; more, all in one yard.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-truck-fast"></i></div><b>Fast Delivery</b><span>Dump truck &amp; flatbed delivery across Central Texas.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-tags"></i></div><b>Fair Bulk Pricing</b><span>Honest by-the-scoop and truckload prices — no games.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-location-dot"></i></div><b>Local Experts</b><span>We know Hill Country soil, stone and what works here.</span></div>
+      <div class="wc reveal"><div class="wi"><i class="fa-solid fa-star"></i></div><b>4.8-Star Rated</b><span>Trusted by homeowners &amp; contractors across the area.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Customer Love</span>
+      <h2 class="h2">What our customers say</h2>
+      <p class="lead">Real feedback from homeowners and contractors across the Hill Country.</p>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Best prices around and a huge selection of stone. They loaded my trailer in minutes. My go-to yard now.</p><div class="who"><div class="av">J</div><div><b>Jason M.</b><small>San Marcos, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Delivered a full load of mulch and gravel right on time. Friendly, family-run and fairly priced. Highly recommend.</p><div class="who"><div class="av">K</div><div><b>Kayla T.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>As a contractor I buy here constantly. Great stone selection, honest weights and quick loading every time.</p><div class="who"><div class="av">R</div><div><b>Robert D.</b><small>Canyon Lake, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real 4.8★ Google reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Yard</span>
+      <h2 class="h2">Stone &amp; material <span class="a">gallery</span></h2>
+      <p class="lead">A look at just some of the stone, soil and materials waiting for you at our San Marcos yard.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/w14.jpg" alt="Our material yard"></div>
+      <div class="gc"><img src="img/w5.jpg" alt="Chopped stone"></div>
+      <div class="gc"><img src="img/w4.jpg" alt="Gravel"></div>
+      <div class="gc"><img src="img/w7.jpg" alt="Patio stone"></div>
+      <div class="gc"><img src="img/w9.jpg" alt="Stone pallets"></div>
+      <div class="gc"><img src="img/w1.jpg" alt="Mulch"></div>
+      <div class="gc"><img src="img/w11.jpg" alt="Firewood"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Easy As 1-2-3</span>
+      <h2 class="h2">How it works</h2>
+      <p class="lead">Getting the materials you need is simple.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-hand-pointer"></i><span class="num">1</span></div><h3>Pick Your Material</h3><p>Call, visit or message us — we'll help you choose and price it out.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-truck-ramp-box"></i><span class="num">2</span></div><h3>Load or Deliver</h3><p>We load your truck at the yard, or deliver straight to your project.</p></div>
+      <div class="pc reveal"><div class="pin"><i class="fa-solid fa-trowel-bricks"></i><span class="num">3</span></div><h3>Build It</h3><p>Get to work with quality materials at the Hill Country's best prices.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Need materials for your next project?</h2>
+      <p>Call, visit or message us for a fast quote — delivery available across Central Texas.</p>
+    </div>
+    <div class="acts">
+      <a href="tel:+15126180696" class="btn btn-ghost" style="color:#fff;"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+      <a href="https://maps.google.com/?q=8989+RR+12+San+Marcos+TX" class="btn btn-amber"><i class="fa-solid fa-location-arrow"></i> Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="logo"><img src="img/logo.png" alt="Landscape Junction" /></div>
+        <p class="fd">Family owned &amp; locally operated landscape material yard in San Marcos, TX. Stone, soil, mulch, gravel &amp; more — with delivery across Central Texas.</p>
+      </div>
+      <div>
+        <h4>Materials</h4>
+        <a href="#materials">Soil &amp; Compost</a>
+        <a href="#materials">Mulch</a>
+        <a href="#materials">Gravel &amp; River Rock</a>
+        <a href="#materials">Flagstone &amp; Patio Stone</a>
+        <a href="#materials">Boulders &amp; Slabs</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <a href="tel:+15126180696"><i class="fa-solid fa-phone"></i> (512) 618-0696</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> 8989 RR 12, San Marcos TX</a>
+        <a href="#"><i class="fa-solid fa-clock"></i> Mon–Sat: 7am – 5pm</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Landscape Junction · San Marcos, TX</span>
+      <span>Redesign concept by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){ var t=document.getElementById('mq'); if(t) t.innerHTML+=t.innerHTML; })();
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+  (function(){
+    var counted=false;
+    function run(){ if(counted) return; counted=true;
+      document.querySelectorAll('.count').forEach(function(el){
+        var to=+el.dataset.to, cur=0, step=Math.max(1,Math.round(to/40));
+        var t=setInterval(function(){ cur+=step; if(cur>=to){cur=to;clearInterval(t);} el.textContent=cur; },30);
+      });
+    }
+    var s=document.querySelector('.stats');
+    if(s && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)run();});},{threshold:.4}).observe(s); }
+    else run();
+  })();
+</script>
+</body>
+</html>
