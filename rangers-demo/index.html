@@ -25,8 +25,9 @@
   *{max-width:100%;}
   .wrap,header .wrap,.hero .wrap,.strip .wrap,.services .wrap,.why .wrap,.gallery .wrap,.contact .wrap,.band .wrap,footer .wrap{max-width:1180px;}
   html{scroll-behavior:smooth;overflow-x:hidden;}
-  body{font-family:'Manrope',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--white);line-height:1.55;overflow-x:hidden;width:100%;}
-  h1,h2,h3{font-family:'Plus Jakarta Sans','Manrope',sans-serif;}
+  body{font-family:'Manrope',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--white);line-height:1.62;overflow-x:hidden;width:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans','Manrope',sans-serif;letter-spacing:-.021em;}
+  .h-title,.hero h1{letter-spacing:-.03em;}
   h1,h2,h3,p{overflow-wrap:break-word;word-wrap:break-word;}
   a{color:inherit;text-decoration:none;}
   img{display:block;}
@@ -39,7 +40,10 @@
   .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55);}
   .btn-ghost:hover{background:rgba(255,255,255,.12);}
   .btn-outline{background:#fff;color:var(--green-dark);border-color:var(--line);}
-  .sec{padding:78px 0;}
+  .sec{padding:104px 0;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1 !important;transform:none !important;transition:none !important;}}
   .eyebrow{display:inline-block;color:var(--accent-dark);font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
   .h-title{font-size:clamp(26px,3.4vw,40px);font-weight:800;color:var(--forest);line-height:1.12;}
   .h-title .u{color:var(--green);}
@@ -101,7 +105,7 @@
   .strip .s .l{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
 
   .services{background:var(--bg);}
-  .cards{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .cards{margin-top:54px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:.2s;position:relative;overflow:hidden;}
   .card::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--green),var(--accent));transform:scaleX(0);transform-origin:left;transition:.25s;}
   .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;}
@@ -293,7 +297,7 @@
 <div class="strip">
   <div class="wrap">
     <div class="s"><div class="n">5.0★</div><div class="l">Google Rating</div></div>
-    <div class="s"><div class="n">100%</div><div class="l">Satisfaction</div></div>
+    <div class="s"><div class="n">17</div><div class="l">5-Star Reviews</div></div>
     <div class="s"><div class="n">Licensed</div><div class="l">&amp; Insured</div></div>
     <div class="s"><div class="n">Free</div><div class="l">Estimates</div></div>
   </div>
@@ -391,6 +395,7 @@
       <div class="rev-card"><div class="stars">★★★★★</div><p>"They redid our whole front yard — mulch, beds, trimming — and it looks amazing. Fair price and great work."</p><div class="who"><div class="av">M</div><div><b>Mark D.</b><br><small>Kyle, TX</small></div></div></div>
       <div class="rev-card"><div class="stars">★★★★★</div><p>"Finally a lawn service that actually shows up and does a great job. Highly recommend Rangers to anyone."</p><div class="who"><div class="av">J</div><div><b>Jessica R.</b><br><small>Buda, TX</small></div></div></div>
     </div>
+    <p style="color:var(--muted);font-size:13px;margin-top:20px;">(Sample layout — on your live site these pull straight from your real 5-star Google reviews.)</p>
   </div>
 </section>
 
@@ -469,6 +474,17 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
   function closeNav(){ document.getElementById('mnav').classList.remove('open'); }
+  // Purposeful motion: gentle staggered scroll-reveal (respects reduced-motion)
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.card,.why-item,.rev-card,.gitem,.strip .s,.hero-card,.why-visual');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    els.forEach(function(el,i){ el.classList.add('reveal'); el.style.transitionDelay=(Math.min(i%6,5)*70)+'ms'; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
 </script>
 </body>
 </html>
