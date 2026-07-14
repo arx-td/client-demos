@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hydro Pro Soft Wash — Soft Washing &amp; Pressure Washing in New Braunfels &amp; San Antonio, TX</title>
+<meta name="description" content="Hydro Pro Soft Wash — professional soft washing & pressure washing in Bulverde, New Braunfels, San Antonio & Central TX. House washing, driveways, roofs, gutters & more. 5-star rated. Free quotes." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#0a1622;--bg2:#0f1e2d;--panel:#14273a;--panel2:#193049;
+    --blue:#2ea6e6;--blue-d:#1d82c4;--cyan:#22d3ee;--blue-sec:#0e2f45;
+    --ink:#eaf3fb;--muted:#9fb4c6;--soft:#6f889f;--line:#213648;
+    --gold:#f5c518;--radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:14.5px;padding:14px 26px;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-blue{background:var(--blue);color:#04121d;}
+  .btn-blue:hover{background:var(--blue-d);color:#fff;transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--blue);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+  .sec{padding:94px 0;}
+  .eyebrow{font-family:'Space Grotesk';font-weight:700;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:#fff;}
+  .h2 .b{color:var(--cyan);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:#07101a;border-bottom:1px solid var(--line);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:var(--muted);display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:var(--cyan);}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--blue);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(10,22,34,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;gap:16px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo .mark{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue-d));display:flex;align-items:center;justify-content:center;color:#04121d;font-size:22px;flex-shrink:0;box-shadow:0 8px 20px -8px var(--blue);}
+  .logo .n1{font-family:'Space Grotesk';font-weight:700;font-size:20px;color:#fff;letter-spacing:.3px;line-height:1;}
+  .logo .n1 b{color:var(--cyan);}
+  .logo .n2{font-size:9.5px;letter-spacing:3px;color:var(--muted);font-weight:600;text-transform:uppercase;margin-top:4px;}
+  nav.main{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Space Grotesk';font-weight:600;font-size:14.5px;color:#dbe7f0;}
+  nav.main a:hover{color:var(--cyan);}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Space Grotesk';font-weight:600;font-size:15px;border-bottom:1px solid var(--line);}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(900px 500px at 78% 0%,rgba(46,166,230,.18),transparent 60%);}
+  .hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;padding:70px 24px 84px;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:8px 16px;border-radius:40px;margin-bottom:22px;}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;}
+  .rate-badge b{font-size:14px;}
+  .rate-badge .stars{color:var(--gold);font-size:13px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(36px,5.4vw,60px);color:#fff;line-height:1;}
+  .hero h1 .b{color:var(--cyan);}
+  .hero p.sub{margin-top:18px;font-size:17.5px;color:#cdddea;max-width:500px;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-mini{margin-top:26px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13.5px;font-weight:500;}
+  .hero-mini .m{display:inline-flex;align-items:center;gap:8px;}
+  .hero-mini i{color:var(--cyan);}
+  .hero-mini b{color:#fff;}
+
+  /* BEFORE/AFTER */
+  .ba-wrap{position:relative;}
+  .ba{position:relative;height:440px;border-radius:20px;overflow:hidden;user-select:none;box-shadow:0 34px 70px -30px rgba(0,0,0,.8);border:1px solid var(--line);}
+  .ba .layer{position:absolute;inset:0;background-size:cover;background-position:center;}
+  .ba .after{background-image:url('img/w1.jpg');}
+  .ba .before{background-image:url('img/w1.jpg');filter:grayscale(.5) sepia(.45) brightness(.62) contrast(1.05);clip-path:inset(0 50% 0 0);}
+  .ba .lbl{position:absolute;bottom:18px;padding:6px 14px;border-radius:30px;font-family:'Space Grotesk';font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#fff;z-index:4;}
+  .ba .lbl.bf{left:18px;background:rgba(10,22,34,.85);}
+  .ba .lbl.af{right:18px;background:var(--blue);color:#04121d;}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:40px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;cursor:ew-resize;z-index:5;}
+  .ba .handle::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);}
+  .ba .handle .grip{width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;color:var(--blue-d);font-size:16px;}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;}
+  .ba-hint{text-align:center;color:var(--soft);font-size:12.5px;margin-top:14px;font-family:'Space Grotesk';letter-spacing:1px;text-transform:uppercase;}
+
+  /* TRUST STRIP */
+  .strip{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:30px 24px;}
+  .strip .s{display:flex;gap:13px;align-items:center;justify-content:center;}
+  .strip .s i{font-size:26px;color:var(--cyan);}
+  .strip .s b{font-family:'Space Grotesk';font-weight:700;font-size:18px;color:#fff;display:block;line-height:1;}
+  .strip .s span{font-size:12.5px;color:var(--muted);}
+
+  /* SERVICES */
+  .services{background:var(--bg);}
+  .svc-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .svc{border-radius:var(--radius);overflow:hidden;position:relative;height:300px;display:flex;align-items:flex-end;border:1px solid var(--line);}
+  .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s;z-index:1;}
+  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,16,26,.96) 8%,rgba(6,16,26,.35) 60%,rgba(6,16,26,.1));z-index:2;transition:.3s;}
+  .svc:hover img{transform:scale(1.09);}
+  .svc:hover::after{background:linear-gradient(to top,rgba(6,16,26,.97) 12%,rgba(14,47,69,.5) 70%);}
+  .svc .body{position:relative;z-index:3;padding:24px;width:100%;}
+  .svc .si{width:52px;height:52px;border-radius:12px;background:var(--blue);color:#04121d;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;transition:.3s;}
+  .svc:hover .si{transform:translateY(-4px);background:var(--cyan);}
+  .svc h3{font-size:19px;color:#fff;}
+  .svc p{color:#c2d3e0;font-size:14px;margin-top:6px;opacity:0;max-height:0;transition:.35s;}
+  .svc:hover p{opacity:1;max-height:80px;}
+
+  /* WHY */
+  .why{background:var(--bg2);}
+  .why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;}
+  .why h2{font-size:clamp(26px,3.4vw,40px);}
+  .why p.intro{color:var(--muted);margin-top:14px;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .wc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s;}
+  .wc:hover{border-color:var(--blue);transform:translateY(-4px);background:var(--panel2);}
+  .wc i{font-size:26px;color:var(--cyan);margin-bottom:12px;}
+  .wc b{display:block;font-family:'Space Grotesk';font-weight:700;font-size:16px;color:#fff;}
+  .wc span{font-size:13px;color:var(--muted);}
+
+  /* PROCESS */
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:34px 24px;}
+  .pc .pin{width:76px;height:76px;border-radius:50%;background:var(--blue-sec);border:2px solid var(--blue);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px;}
+  .pc .num{position:absolute;top:16px;right:20px;font-family:'Space Grotesk';font-weight:700;font-size:34px;color:rgba(255,255,255,.07);}
+  .pc h3{font-size:19px;color:#fff;}
+  .pc p{color:var(--muted);font-size:14px;margin-top:8px;}
+
+  /* REVIEWS */
+  .reviews{background:var(--bg2);}
+  .rev-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--blue);opacity:.22;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#cdddea;}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#04121d;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';}
+  .rc .who b{font-family:'Space Grotesk';font-weight:700;font-size:14px;color:#fff;}
+  .rc .who small{color:var(--soft);display:block;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--line);}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(120deg,var(--blue-d),var(--blue));color:#04121d;position:relative;overflow:hidden;}
+  .cta-band::after{content:"\f043";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;font-size:200px;opacity:.12;right:24px;top:-20px;color:#fff;}
+  .cta-band .wrap{padding:60px 24px;text-align:center;position:relative;z-index:2;}
+  .cta-band h2{font-size:clamp(26px,3.6vw,40px);color:#04121d;}
+  .cta-band p{color:#06283c;max-width:540px;margin:12px auto 24px;font-weight:500;}
+  .cta-band .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-dark{background:#07101a;color:#fff;}.btn-dark:hover{background:#000;transform:translateY(-2px);}
+  .btn-white{background:#fff;color:var(--blue-d);}.btn-white:hover{transform:translateY(-2px);}
+
+  /* CONTACT */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .cinfo .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+  .cinfo .row .ic{width:48px;height:48px;border-radius:12px;background:var(--blue-sec);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .cinfo .row b{display:block;color:#fff;font-family:'Space Grotesk';font-weight:700;font-size:15px;}
+  .cinfo .row span{color:var(--muted);font-size:14.5px;}
+  form.cform{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+  form.cform h3{color:#fff;margin-bottom:18px;font-size:22px;}
+  form.cform .f{margin-bottom:14px;}
+  form.cform input,form.cform select,form.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:var(--bg2);color:var(--ink);}
+  form.cform input::placeholder,form.cform textarea::placeholder{color:var(--soft);}
+  form.cform input:focus,form.cform textarea:focus,form.cform select:focus{outline:2px solid var(--blue);border-color:transparent;}
+  form.cform .btn-blue{width:100%;border:0;}
+
+  /* FOOTER */
+  footer{background:#07101a;padding:60px 0 26px;border-top:1px solid var(--line);}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .flogo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  footer .flogo .mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue-d));display:flex;align-items:center;justify-content:center;color:#04121d;font-size:20px;}
+  footer .flogo .n1{font-family:'Space Grotesk';font-weight:700;font-size:18px;color:#fff;}
+  footer .flogo .n1 b{color:var(--cyan);}
+  footer p.fd{color:var(--muted);font-size:14px;max-width:280px;}
+  footer h4{font-family:'Space Grotesk';font-weight:700;color:#fff;font-size:15px;margin-bottom:16px;}
+  footer a{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--cyan);}
+  footer a i{color:var(--blue);width:16px;text-align:center;}
+  .fbar{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--soft);}
+  .fbar a{color:var(--cyan);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--blue);color:#04121d;}
+
+  @media(max-width:960px){
+    nav.main{display:none;}.burger{display:block;}nav.mobile.open{display:flex;}
+    .hero .wrap,.why .wrap,.contact .wrap{grid-template-columns:1fr;}
+    .ba-wrap{order:-1;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .strip .wrap{grid-template-columns:1fr 1fr;gap:22px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}.topbar .wrap>span:first-child{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid,.strip .wrap,footer .cols{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .ba{height:320px;}
+    .logo .n2{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> Serving Bulverde, New Braunfels, San Antonio &amp; Central TX</span>
+    <div class="r">
+      <a href="tel:+15126333551"><i class="fa-solid fa-phone"></i> (512) 633-3551</a>
+      <span><i class="fa-solid fa-clock"></i> Mon–Sat: 7am – 6pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark"><i class="fa-solid fa-droplet"></i></span>
+      <span><span class="n1">Hydro <b>Pro</b></span><span class="n2">Soft Wash</span></span>
+    </a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-blue">Free Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#work" onclick="cn()">Our Work</a>
+    <a href="#why" onclick="cn()">Why Us</a>
+    <a href="#reviews" onclick="cn()">Reviews</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+15126333551" onclick="cn()"><i class="fa-solid fa-phone"></i> (512) 633-3551</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="rate-badge">
+        <span class="gg">G</span>
+        <b>5.0 Rating</b>
+        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+      </div>
+      <h1>Powerful clean, <span class="b">gentle touch.</span></h1>
+      <p class="sub">Hydro Pro Soft Wash safely blasts away dirt, mold and grime from your home, driveway, roof and more — restoring that like-new shine across Central Texas.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-blue"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+15126333551" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> (512) 633-3551</a>
+      </div>
+      <div class="hero-mini">
+        <span class="m"><i class="fa-solid fa-star"></i> <b>5.0</b> Rated</span>
+        <span class="m"><i class="fa-solid fa-shield-halved"></i> <b>Insured</b></span>
+        <span class="m"><i class="fa-solid fa-droplet"></i> <b>Soft-Wash Safe</b></span>
+      </div>
+    </div>
+    <div class="ba-wrap">
+      <div class="ba" id="ba">
+        <div class="layer after"></div>
+        <div class="layer before" id="baBefore"></div>
+        <span class="lbl bf">Before</span>
+        <span class="lbl af">After</span>
+        <div class="handle" id="baHandle"><div class="grip"><i class="fa-solid fa-left-right"></i></div></div>
+        <input type="range" min="2" max="98" value="50" class="ba-range" id="baRange" aria-label="Before and after slider">
+      </div>
+      <p class="ba-hint">← drag to see the difference →</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="s"><i class="fa-solid fa-star"></i><div><b>5.0 Rating</b><span>on Google</span></div></div>
+    <div class="s"><i class="fa-solid fa-shield-halved"></i><div><b>Licensed &amp; Insured</b><span>fully covered</span></div></div>
+    <div class="s"><i class="fa-solid fa-droplet"></i><div><b>Soft-Wash Safe</b><span>no surface damage</span></div></div>
+    <div class="s"><i class="fa-solid fa-clipboard-check"></i><div><b>Free Quotes</b><span>satisfaction guaranteed</span></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">What We Clean</span>
+      <h2 class="h2">Exterior cleaning, <span class="b">done right</span></h2>
+      <p class="lead">From soft washing your home to blasting your driveway clean — we restore every surface, safely.</p>
+    </div>
+    <div class="svc-grid" style="text-align:left;">
+      <div class="svc reveal"><img src="img/w2.jpg" alt="House soft washing"><div class="body"><div class="si"><i class="fa-solid fa-house"></i></div><h3>House &amp; Soft Washing</h3><p>Gentle, low-pressure soft washing that safely removes mold, dirt &amp; algae from siding.</p></div></div>
+      <div class="svc reveal"><img src="img/w1.jpg" alt="Driveway and concrete cleaning"><div class="body"><div class="si"><i class="fa-solid fa-road"></i></div><h3>Driveway &amp; Concrete</h3><p>High-pressure cleaning that lifts oil, dirt and stains from concrete &amp; pavers.</p></div></div>
+      <div class="svc reveal"><img src="img/w11.jpg" alt="Roof and exterior cleaning"><div class="body"><div class="si"><i class="fa-solid fa-house-chimney"></i></div><h3>Roof &amp; Exterior Wash</h3><p>Safe roof soft washing that kills black streaks, moss and algae — no damage.</p></div></div>
+      <div class="svc reveal"><img src="img/w5.jpg" alt="Gutter cleaning"><div class="body"><div class="si"><i class="fa-solid fa-broom"></i></div><h3>Gutter Cleaning</h3><p>Clear, flowing gutters and a bright, streak-free exterior gutter face.</p></div></div>
+      <div class="svc reveal"><img src="img/w6.jpg" alt="Commercial pressure washing"><div class="body"><div class="si"><i class="fa-solid fa-building"></i></div><h3>Commercial &amp; Storefront</h3><p>Keep your business looking sharp with regular storefront &amp; lot cleaning.</p></div></div>
+      <div class="svc reveal"><img src="img/w3.jpg" alt="Deck patio and fence cleaning"><div class="body"><div class="si"><i class="fa-solid fa-border-all"></i></div><h3>Deck, Patio &amp; Fence</h3><p>Bring wood and stone back to life — patios, decks, fences and walkways.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Why Hydro Pro</span>
+      <h2 class="h2">The safe way to a <span class="b">spotless</span> exterior</h2>
+      <p class="intro">"Soft wash" means we use the right pressure and safe detergents for each surface — powerful results without cracking, stripping or damage. That's the Hydro Pro difference.</p>
+      <a href="#contact" class="btn btn-blue" style="margin-top:24px;"><i class="fa-solid fa-arrow-right"></i> Get a Free Quote</a>
+    </div>
+    <div class="why-grid reveal">
+      <div class="wc"><i class="fa-solid fa-droplet"></i><b>Soft-Wash Safe</b><span>Right pressure for every surface — zero damage.</span></div>
+      <div class="wc"><i class="fa-solid fa-star"></i><b>5-Star Rated</b><span>A perfect 5.0 from happy Central Texas customers.</span></div>
+      <div class="wc"><i class="fa-solid fa-shield-halved"></i><b>Licensed &amp; Insured</b><span>Fully insured for your complete peace of mind.</span></div>
+      <div class="wc"><i class="fa-solid fa-leaf"></i><b>Eco-Friendly</b><span>Safe detergents that protect plants, pets &amp; kids.</span></div>
+      <div class="wc"><i class="fa-solid fa-location-dot"></i><b>Local &amp; Reliable</b><span>Proudly serving Bulverde &amp; the Hill Country.</span></div>
+      <div class="wc"><i class="fa-solid fa-thumbs-up"></i><b>Satisfaction Guaranteed</b><span>We're not done until it's spotless.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Easy As 1-2-3</span>
+      <h2 class="h2">Booking us is simple</h2>
+      <p class="lead">A cleaner, brighter property is just three steps away.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><span class="num">01</span><div class="pin"><i class="fa-solid fa-comment-dots"></i></div><h3>Get Your Quote</h3><p>Call or message us with your project — we'll send a fast, free quote.</p></div>
+      <div class="pc reveal"><span class="num">02</span><div class="pin"><i class="fa-solid fa-spray-can-sparkles"></i></div><h3>We Wash</h3><p>Our insured team arrives on time and safely soft-washes every surface.</p></div>
+      <div class="pc reveal"><span class="num">03</span><div class="pin"><i class="fa-solid fa-face-smile"></i></div><h3>You Say Wow</h3><p>Enjoy a like-new exterior — and set up seasonal cleanings if you like.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="h2">Rated 5 stars by our customers</h2>
+      <p class="lead">Real feedback from homeowners across the Hill Country.</p>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Our driveway and siding look brand new. He was on time, professional and the soft wash didn't harm a single plant. Amazing job.</p><div class="who"><div class="av">K</div><div><b>Kenny B.</b><small>Bulverde, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>The black streaks on our roof are completely gone. Fair price, great communication and incredible results. Highly recommend.</p><div class="who"><div class="av">M</div><div><b>Melissa R.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Cleaned our whole patio and fence — the difference is unreal. Friendly, reliable and worth every penny. Will use again.</p><div class="who"><div class="av">D</div><div><b>Derek P.</b><small>Spring Branch, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real 5.0★ Google reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec services" id="work">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="h2">The Hydro Pro <span class="b">difference</span></h2>
+      <p class="lead">A look at the surfaces we've brought back to life across Central Texas.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/w2.jpg" alt="House washing"></div>
+      <div class="gc"><img src="img/w1.jpg" alt="Concrete cleaning"></div>
+      <div class="gc"><img src="img/w5.jpg" alt="Gutter cleaning"></div>
+      <div class="gc"><img src="img/w6.jpg" alt="Commercial cleaning"></div>
+      <div class="gc"><img src="img/w11.jpg" alt="Exterior soft wash"></div>
+      <div class="gc"><img src="img/w10.jpg" alt="Hydro Pro service"></div>
+      <div class="gc"><img src="img/w7.jpg" alt="Surface cleaning"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to see your property shine?</h2>
+    <p>Get your free, no-pressure quote today — and see why the Hill Country rates us 5 stars.</p>
+    <div class="acts">
+      <a href="tel:+15126333551" class="btn btn-dark"><i class="fa-solid fa-phone"></i> (512) 633-3551</a>
+      <a href="#contact" class="btn btn-white">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="cinfo reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="h2" style="text-align:left;">Request your <span class="b">free quote</span></h2>
+      <p style="color:var(--muted);margin:16px 0 26px;">Tell us about your property and we'll send a fast, free quote — usually the same day.</p>
+      <div class="row"><div class="ic"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><span>(512) 633-3551</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>Bulverde, New Braunfels, San Antonio &amp; Central TX</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Monday – Saturday: 7:00 am – 6:00 pm</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-star"></i></div><div><b>Rated</b><span>5.0 stars on Google</span></div></div>
+    </div>
+    <form class="cform reveal" onsubmit="event.preventDefault();alert('Thanks! This is a demo form — your real site will send this straight to your phone & inbox.');">
+      <h3>Free Wash Quote</h3>
+      <div class="f"><input type="text" placeholder="Your name" required></div>
+      <div class="f"><input type="tel" placeholder="Phone number" required></div>
+      <div class="f"><select><option>What needs cleaning?</option><option>House / Soft Washing</option><option>Driveway &amp; Concrete</option><option>Roof &amp; Exterior</option><option>Gutter Cleaning</option><option>Commercial</option><option>Deck, Patio &amp; Fence</option></select></div>
+      <div class="f"><textarea rows="3" placeholder="Tell us about your property"></textarea></div>
+      <button type="submit" class="btn btn-blue">Get My Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><span class="mark"><i class="fa-solid fa-droplet"></i></span><span class="n1">Hydro <b>Pro</b></span></div>
+        <p class="fd">Professional soft washing &amp; pressure washing for Bulverde, New Braunfels, San Antonio &amp; Central Texas. 5-star rated, insured &amp; surface-safe.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">House &amp; Soft Washing</a>
+        <a href="#services">Driveway &amp; Concrete</a>
+        <a href="#services">Roof &amp; Exterior</a>
+        <a href="#services">Gutter Cleaning</a>
+        <a href="#services">Commercial</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#work">Our Work</a>
+        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+15126333551"><i class="fa-solid fa-phone"></i> (512) 633-3551</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Bulverde &amp; New Braunfels, TX</a>
+        <a href="#"><i class="fa-solid fa-clock"></i> Mon–Sat: 7am – 6pm</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Hydro Pro Soft Wash · New Braunfels, TX</span>
+      <span>Demo site designed by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+  (function(){
+    var range=document.getElementById('baRange'), before=document.getElementById('baBefore'), handle=document.getElementById('baHandle');
+    if(!range) return;
+    function set(v){ before.style.clipPath='inset(0 '+(100-v)+'% 0 0)'; handle.style.left=v+'%'; }
+    range.addEventListener('input',function(){ set(this.value); });
+    set(50);
+  })();
+</script>
+</body>
+</html>
