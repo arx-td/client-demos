@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>119 Cleaning Solutions — House, Commercial &amp; Post-Construction Cleaning in San Antonio &amp; New Braunfels, TX</title>
+<meta name="description" content="119 Cleaning Solutions — trusted house, commercial & post-construction cleaning in San Antonio, New Braunfels & Central Texas. 5-star rated. Insured. Free quotes." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --teal:#12b0aa;--teal-d:#0c8a85;--teal-l:#e2f6f5;--teal-ll:#f1fbfa;
+    --navy:#0f2942;--navy2:#173a5c;
+    --ink:#14252f;--muted:#5c6b76;--soft:#8a97a0;--line:#e3ebee;
+    --bg:#ffffff;--bg2:#f3f8f9;--gold:#f5b301;--radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Poppins','Inter',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.12;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Poppins';font-weight:700;font-size:14.5px;padding:14px 26px;border-radius:40px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-teal{background:var(--teal);color:#fff;}
+  .btn-teal:hover{background:var(--teal-d);transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--teal);}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{background:var(--navy2);transform:translateY(-2px);}
+  .btn-line{background:#fff;color:var(--navy);border-color:var(--line);}
+  .btn-line:hover{border-color:var(--teal);color:var(--teal-d);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
+  .btn-ghost:hover{background:#fff;color:var(--teal-d);}
+  .sec{padding:94px 0;}
+  .eyebrow{font-family:'Poppins';font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--teal-d);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(28px,4vw,44px);color:var(--navy);}
+  .h2 .t{color:var(--teal);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:var(--navy);color:#bcd0dd;font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:#bcd0dd;display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:#fff;}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--teal);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 20px -14px rgba(0,0,0,.25);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo .mark{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--teal-d));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins';font-weight:800;font-size:17px;flex-shrink:0;box-shadow:0 8px 20px -8px var(--teal);position:relative;}
+  .logo .mark::after{content:"\f890";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;top:-6px;right:-6px;font-size:13px;color:var(--gold);}
+  .logo .n1{font-family:'Poppins';font-weight:800;font-size:19px;color:var(--navy);line-height:1;}
+  .logo .n1 b{color:var(--teal);}
+  .logo .n2{font-size:9.5px;letter-spacing:2.5px;color:var(--soft);font-weight:600;text-transform:uppercase;margin-top:3px;}
+  nav.main{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Poppins';font-weight:600;font-size:14.5px;color:var(--navy);}
+  nav.main a:hover{color:var(--teal-d);}
+  .burger{display:none;background:none;border:0;color:var(--navy);font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Poppins';font-weight:600;font-size:15px;border-bottom:1px solid var(--line);color:var(--navy);}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,var(--teal-ll),#e4f4f3 70%,#dbeff0);position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;right:-140px;top:-100px;width:480px;height:480px;background:radial-gradient(circle,rgba(18,176,170,.18),transparent 65%);}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:72px 24px 80px;}
+  .rate-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:40px;margin-bottom:22px;box-shadow:0 10px 26px -14px rgba(0,0,0,.2);}
+  .rate-badge .gg{width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#4285F4;border:1px solid var(--line);}
+  .rate-badge b{font-size:14px;color:var(--navy);}
+  .rate-badge .stars{color:var(--gold);font-size:12px;letter-spacing:1px;}
+  .hero h1{font-size:clamp(34px,5vw,56px);color:var(--navy);line-height:1.04;}
+  .hero h1 .t{color:var(--teal);}
+  .hero .slogan{font-family:'Poppins';font-weight:600;font-size:clamp(15px,1.8vw,18px);color:var(--teal-d);margin-top:14px;}
+  .hero p.sub{margin-top:14px;font-size:17px;color:var(--muted);max-width:500px;}
+  .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-mini{margin-top:26px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13.5px;font-weight:500;}
+  .hero-mini .m{display:inline-flex;align-items:center;gap:8px;}
+  .hero-mini i{color:var(--teal);}
+  .hero-mini b{color:var(--navy);}
+  .hero-visual{position:relative;}
+  .hero-img{border-radius:24px;overflow:hidden;box-shadow:0 34px 70px -30px rgba(15,41,66,.5);height:450px;}
+  .hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:kb 18s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.14);}}
+  .hero-float{position:absolute;left:-22px;bottom:32px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 24px 50px -20px rgba(15,41,66,.4);display:flex;align-items:center;gap:14px;}
+  .hero-float .ic{width:46px;height:46px;border-radius:12px;background:var(--teal-l);color:var(--teal-d);display:flex;align-items:center;justify-content:center;font-size:20px;}
+  .hero-float .n{font-family:'Poppins';font-weight:800;font-size:22px;color:var(--navy);line-height:1;}
+  .hero-float .s{font-size:12px;color:var(--muted);}
+
+  /* TRUST STRIP */
+  .strip{background:#fff;border-bottom:1px solid var(--line);}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:30px 24px;}
+  .strip .s{display:flex;gap:13px;align-items:center;justify-content:center;text-align:left;}
+  .strip .s i{font-size:26px;color:var(--teal);}
+  .strip .s b{font-family:'Poppins';font-weight:700;font-size:18px;color:var(--navy);display:block;line-height:1;}
+  .strip .s span{font-size:12.5px;color:var(--muted);}
+
+  /* SERVICES */
+  .services{background:var(--bg2);}
+  .svc-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.22s;}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(15,41,66,.35);border-color:#c8e8e6;}
+  .svc .pic{height:190px;position:relative;overflow:hidden;}
+  .svc .pic img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .svc:hover .pic img{transform:scale(1.08);}
+  .svc .si{position:absolute;left:18px;bottom:-22px;width:52px;height:52px;border-radius:14px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 10px 22px -8px rgba(0,0,0,.4);border:3px solid #fff;}
+  .svc:nth-child(even) .si{background:var(--navy);}
+  .svc .body{padding:30px 22px 24px;}
+  .svc h3{font-size:19px;color:var(--navy);}
+  .svc p{color:var(--muted);font-size:14px;margin-top:7px;}
+  .svc .more{margin-top:14px;font-family:'Poppins';font-weight:600;font-size:13px;color:var(--teal-d);display:inline-flex;align-items:center;gap:7px;}
+
+  /* WHY */
+  .why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;}
+  .why h2{font-size:clamp(26px,3.4vw,40px);}
+  .why p.intro{color:var(--muted);margin-top:14px;}
+  .why-note{background:var(--teal-ll);border:1px solid #cfeceb;border-radius:14px;padding:16px 18px;margin-top:20px;display:flex;gap:13px;align-items:flex-start;}
+  .why-note i{color:var(--teal-d);font-size:20px;margin-top:2px;}
+  .why-note span{font-size:14px;color:var(--ink);}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .wc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s;}
+  .wc:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 18px 40px -26px rgba(15,41,66,.3);}
+  .wc i{font-size:26px;color:var(--teal);margin-bottom:12px;}
+  .wc:nth-child(even) i{color:var(--navy);}
+  .wc b{display:block;font-family:'Poppins';font-weight:700;font-size:16px;color:var(--navy);}
+  .wc span{font-size:13px;color:var(--muted);}
+
+  /* PROCESS */
+  .process{background:var(--navy);color:#fff;}
+  .process .h2{color:#fff;}
+  .process .lead{color:#a9c0d0;}
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:34px 24px;}
+  .pc .pin{width:76px;height:76px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px;}
+  .pc .num{position:absolute;top:16px;right:20px;font-family:'Poppins';font-weight:800;font-size:34px;color:rgba(255,255,255,.1);}
+  .pc h3{font-size:19px;color:#fff;}
+  .pc p{color:#a9c0d0;font-size:14px;margin-top:8px;}
+
+  /* REVIEWS */
+  .reviews{background:var(--bg2);}
+  .rev-top{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px;}
+  .rev-top .big{font-family:'Poppins';font-weight:800;font-size:40px;color:var(--navy);line-height:1;}
+  .rev-top .stars{color:var(--gold);font-size:18px;letter-spacing:2px;}
+  .rev-top .sub{font-size:13px;color:var(--muted);}
+  .rev-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;box-shadow:0 14px 30px -24px rgba(15,41,66,.3);}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--teal);opacity:.16;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#38454e;}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Poppins';}
+  .rc:nth-child(even) .av{background:var(--navy);}
+  .rc .who b{font-family:'Poppins';font-weight:700;font-size:14px;color:var(--navy);}
+  .rc .who small{color:var(--soft);display:block;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:14px;overflow:hidden;position:relative;box-shadow:0 12px 26px -20px rgba(0,0,0,.4);}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(120deg,var(--teal),#1ec9c2);color:#fff;position:relative;overflow:hidden;}
+  .cta-band::after{content:"\f890";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;font-size:220px;opacity:.08;right:20px;top:-30px;}
+  .cta-band .wrap{padding:64px 24px;text-align:center;position:relative;z-index:2;}
+  .cta-band h2{font-size:clamp(26px,3.6vw,40px);color:#fff;}
+  .cta-band p{color:#e6fbfa;max-width:540px;margin:14px auto 24px;}
+  .cta-band .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+  /* CONTACT */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .cinfo .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+  .cinfo .row .ic{width:48px;height:48px;border-radius:12px;background:var(--teal-l);color:var(--teal-d);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .cinfo .row b{display:block;color:var(--navy);font-family:'Poppins';font-weight:700;font-size:15px;}
+  .cinfo .row span{color:var(--muted);font-size:14.5px;}
+  form.cform{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+  form.cform h3{color:var(--navy);margin-bottom:18px;font-size:22px;}
+  form.cform .f{margin-bottom:14px;}
+  form.cform input,form.cform select,form.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:#fff;}
+  form.cform input:focus,form.cform textarea:focus,form.cform select:focus{outline:2px solid var(--teal);border-color:transparent;}
+  form.cform .btn-teal{width:100%;border:0;}
+
+  /* FOOTER */
+  footer{background:var(--navy);padding:60px 0 26px;color:#a9c0d0;}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .flogo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  footer .flogo .mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--teal-d));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins';font-weight:800;font-size:16px;}
+  footer .flogo .n1{font-family:'Poppins';font-weight:800;font-size:18px;color:#fff;}
+  footer .flogo .n1 b{color:var(--teal);}
+  footer p.fd{color:#a9c0d0;font-size:14px;max-width:280px;}
+  footer h4{font-family:'Poppins';font-weight:700;color:#fff;font-size:15px;margin-bottom:16px;}
+  footer a{display:flex;align-items:center;gap:9px;color:#a9c0d0;font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--teal);}
+  footer a i{color:var(--teal);width:16px;text-align:center;}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7a90a0;}
+  .fbar a{color:var(--teal);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--teal);}
+
+  @media(max-width:960px){
+    nav.main{display:none;}.burger{display:block;}nav.mobile.open{display:flex;}
+    .hero .wrap,.why .wrap,.contact .wrap{grid-template-columns:1fr;}
+    .hero-visual{order:-1;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .strip .wrap{grid-template-columns:1fr 1fr;gap:22px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}.topbar .wrap>span:first-child{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid,.strip .wrap,footer .cols{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .logo .n2{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> Serving San Antonio, New Braunfels &amp; Central Texas</span>
+    <div class="r">
+      <a href="tel:+12102791900"><i class="fa-solid fa-phone"></i> (210) 279-1900</a>
+      <span><i class="fa-solid fa-clock"></i> Mon–Sat: 8am – 6pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark">119</span>
+      <span><span class="n1">119 <b>Cleaning</b></span><span class="n2">Solutions</span></span>
+    </a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-teal">Get a Free Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#why" onclick="cn()">Why Us</a>
+    <a href="#reviews" onclick="cn()">Reviews</a>
+    <a href="#gallery" onclick="cn()">Gallery</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+12102791900" onclick="cn()"><i class="fa-solid fa-phone"></i> (210) 279-1900</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="rate-badge">
+        <span class="gg">G</span>
+        <b>5.0 Rating</b>
+        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+      </div>
+      <h1>A spotless home &amp; business, <span class="t">every single time.</span></h1>
+      <div class="slogan">Trusted, thorough &amp; always on time.</div>
+      <p class="sub">119 Cleaning Solutions delivers reliable house, commercial and post-construction cleaning across San Antonio, New Braunfels and Central Texas — with a 5-star reputation to prove it.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-teal"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+12102791900" class="btn btn-line"><i class="fa-solid fa-phone"></i> (210) 279-1900</a>
+      </div>
+      <div class="hero-mini">
+        <span class="m"><i class="fa-solid fa-star"></i> <b>5.0</b> · 46 reviews</span>
+        <span class="m"><i class="fa-solid fa-shield-halved"></i> <b>Insured</b></span>
+        <span class="m"><i class="fa-solid fa-award"></i> <b>20+ yrs experience</b></span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img"><img src="img/c10.jpg" alt="Professional cleaning team at work" /></div>
+      <div class="hero-float">
+        <div class="ic"><i class="fa-solid fa-star"></i></div>
+        <div><div class="n">5.0★</div><div class="s">Rated by 46 happy clients</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="s"><i class="fa-solid fa-star"></i><div><b>5.0 Rating</b><span>46 Google reviews</span></div></div>
+    <div class="s"><i class="fa-solid fa-shield-halved"></i><div><b>Insured</b><span>&amp; fully vetted team</span></div></div>
+    <div class="s"><i class="fa-solid fa-award"></i><div><b>20+ Years</b><span>of experience</span></div></div>
+    <div class="s"><i class="fa-solid fa-clipboard-check"></i><div><b>Free Quotes</b><span>satisfaction guaranteed</span></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Services</span>
+      <h2 class="h2">Cleaning done <span class="t">right</span> — every corner</h2>
+      <p class="lead">From everyday home cleaning to big commercial and post-construction jobs, one trusted team does it all.</p>
+    </div>
+    <div class="svc-grid" style="text-align:left;">
+      <div class="svc reveal"><div class="pic"><img src="img/c4.jpg" alt="House cleaning"><div class="si"><i class="fa-solid fa-house"></i></div></div><div class="body"><h3>House Cleaning</h3><p>Reliable one-time or recurring home cleaning, tailored to how you like it.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/c12.jpg" alt="Commercial cleaning"><div class="si"><i class="fa-solid fa-building"></i></div></div><div class="body"><h3>Commercial &amp; Office</h3><p>Offices, warehouses, restaurants &amp; gyms kept spotless and professional.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/c11.jpg" alt="Post-construction cleaning"><div class="si"><i class="fa-solid fa-helmet-safety"></i></div></div><div class="body"><h3>Post-Construction</h3><p>Rough &amp; final cleans that turn a dusty build into a move-in-ready space.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/c2.jpg" alt="Deep cleaning"><div class="si"><i class="fa-solid fa-spray-can-sparkles"></i></div></div><div class="body"><h3>Deep Cleaning</h3><p>Top-to-bottom deep cleans for kitchens, bathrooms and everything between.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/c8.jpg" alt="Move in move out cleaning"><div class="si"><i class="fa-solid fa-key"></i></div></div><div class="body"><h3>Move-In / Move-Out</h3><p>Leave it spotless or start fresh — perfect for renters, buyers &amp; landlords.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+      <div class="svc reveal"><div class="pic"><img src="img/c9.jpg" alt="Recurring cleaning"><div class="si"><i class="fa-solid fa-calendar-check"></i></div></div><div class="body"><h3>Recurring Cleaning</h3><p>Weekly, bi-weekly or monthly plans that keep your space always ready.</p><span class="more">Learn More <i class="fa-solid fa-arrow-right"></i></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="h2">A name Central Texas <span class="t">trusts</span></h2>
+      <p class="intro">119 Cleaning Solutions was founded on a simple promise: honest, thorough work you can count on. With 20+ years of experience and a 5-star reputation, we treat every space like it's our own.</p>
+      <div class="why-note"><i class="fa-solid fa-heart"></i><span><b style="color:var(--navy)">Built on trust.</b> Our name comes from a promise to do right by every customer — dependable, detailed cleaning, every single visit.</span></div>
+    </div>
+    <div class="why-grid reveal">
+      <div class="wc"><i class="fa-solid fa-star"></i><b>5-Star Rated</b><span>A perfect 5.0 from 46 happy Central Texas clients.</span></div>
+      <div class="wc"><i class="fa-solid fa-shield-halved"></i><b>Insured &amp; Vetted</b><span>Fully insured, background-checked, professional team.</span></div>
+      <div class="wc"><i class="fa-solid fa-award"></i><b>20+ Years Experience</b><span>Decades of hotel, home &amp; commercial cleaning know-how.</span></div>
+      <div class="wc"><i class="fa-solid fa-clock"></i><b>Reliable &amp; On Time</b><span>We show up when we say we will — no missed cleanings.</span></div>
+      <div class="wc"><i class="fa-solid fa-hand-sparkles"></i><b>Detail-Obsessed</b><span>We clean the spots other companies skip — guaranteed.</span></div>
+      <div class="wc"><i class="fa-solid fa-calendar-check"></i><b>Flexible Scheduling</b><span>One-time, recurring or last-minute — we work around you.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#5fd8d2;">Easy As 1-2-3</span>
+      <h2 class="h2">Booking us is simple</h2>
+      <p class="lead">A cleaner space is just three easy steps away.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><span class="num">01</span><div class="pin"><i class="fa-solid fa-phone"></i></div><h3>Get Your Quote</h3><p>Call or message us and tell us about your space. We'll send a fast, free quote.</p></div>
+      <div class="pc reveal"><span class="num">02</span><div class="pin"><i class="fa-solid fa-broom"></i></div><h3>We Clean</h3><p>Our insured, experienced team arrives on time and cleans every corner.</p></div>
+      <div class="pc reveal"><span class="num">03</span><div class="pin"><i class="fa-solid fa-face-smile"></i></div><h3>You Relax</h3><p>Come home to a spotless space — and set up recurring cleanings if you like.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="h2">Rated 5 stars by our customers</h2>
+      <div class="rev-top"><span class="big">5.0</span><div style="text-align:left;"><div class="stars">★★★★★</div><div class="sub">from 46 Google reviews</div></div></div>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>They did an incredible job on our post-construction clean — the house went from a dusty mess to move-in ready. Professional and thorough.</p><div class="who"><div class="av">A</div><div><b>Amanda R.</b><small>San Antonio, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>We use them for our office every week and they never miss a detail. Reliable, friendly and fairly priced. Highly recommend.</p><div class="who"><div class="av">J</div><div><b>Jorge M.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Best cleaning service we've hired. Honest, hardworking and my home has never looked better. We're customers for life.</p><div class="who"><div class="av">S</div><div><b>Stephanie L.</b><small>Schertz, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real 5.0★ Google reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="h2">The 119 <span class="t">sparkle</span></h2>
+      <p class="lead">A look at the spotless results we deliver for homes and businesses across Central Texas.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/c3.jpg" alt="Clean home"></div>
+      <div class="gc"><img src="img/c1.jpg" alt="Surface cleaning"></div>
+      <div class="gc"><img src="img/c2.jpg" alt="Deep cleaning"></div>
+      <div class="gc"><img src="img/c8.jpg" alt="Kitchen cleaning"></div>
+      <div class="gc"><img src="img/c9.jpg" alt="Window cleaning"></div>
+      <div class="gc"><img src="img/c12.jpg" alt="Commercial floor"></div>
+      <div class="gc"><img src="img/c14.jpg" alt="Detail cleaning"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready for a spotless space?</h2>
+    <p>Get your free, no-pressure quote today — and see why Central Texas rates us 5 stars.</p>
+    <div class="acts">
+      <a href="tel:+12102791900" class="btn btn-navy"><i class="fa-solid fa-phone"></i> (210) 279-1900</a>
+      <a href="#contact" class="btn btn-ghost">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="cinfo reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="h2" style="text-align:left;">Request your <span class="t">free quote</span></h2>
+      <p style="color:var(--muted);margin:16px 0 26px;">Tell us about your space and we'll send a fast, free quote — usually the same day.</p>
+      <div class="row"><div class="ic"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><span>(210) 279-1900</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>San Antonio, New Braunfels &amp; Central Texas</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Monday – Saturday: 8:00 am – 6:00 pm</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-star"></i></div><div><b>Rated</b><span>5.0 stars · 46 Google reviews</span></div></div>
+    </div>
+    <form class="cform reveal" onsubmit="event.preventDefault();alert('Thanks! This is a demo form — your real site will send this straight to your phone & inbox.');">
+      <h3>Free Cleaning Quote</h3>
+      <div class="f"><input type="text" placeholder="Your name" required></div>
+      <div class="f"><input type="tel" placeholder="Phone number" required></div>
+      <div class="f"><select><option>What do you need cleaned?</option><option>House Cleaning</option><option>Commercial / Office</option><option>Post-Construction</option><option>Deep Cleaning</option><option>Move-In / Move-Out</option><option>Recurring Cleaning</option></select></div>
+      <div class="f"><textarea rows="3" placeholder="Tell us about your space"></textarea></div>
+      <button type="submit" class="btn btn-teal">Get My Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><span class="mark">119</span><span class="n1">119 <b>Cleaning</b></span></div>
+        <p class="fd">Trusted house, commercial &amp; post-construction cleaning for San Antonio, New Braunfels &amp; Central Texas. 5-star rated, insured &amp; detail-obsessed.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">House Cleaning</a>
+        <a href="#services">Commercial &amp; Office</a>
+        <a href="#services">Post-Construction</a>
+        <a href="#services">Deep Cleaning</a>
+        <a href="#services">Move-In / Move-Out</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#why">Why Choose Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+12102791900"><i class="fa-solid fa-phone"></i> (210) 279-1900</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> San Antonio &amp; New Braunfels, TX</a>
+        <a href="#"><i class="fa-solid fa-clock"></i> Mon–Sat: 8am – 6pm</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> 119 Cleaning Solutions · San Antonio &amp; New Braunfels, TX</span>
+      <span>Demo site designed by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
