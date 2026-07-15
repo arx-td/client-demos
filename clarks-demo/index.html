@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clark's Concrete Contractors — Driveways, Patios &amp; Concrete in New Braunfels, TX</title>
+<meta name="description" content="Clark's Concrete Contractors — expert concrete driveways, patios, foundations, stamped & decorative concrete in New Braunfels & Central Texas. Licensed & insured. Free estimates." />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#191c20;--bg2:#20242a;--panel:#272c33;--panel2:#2f353d;
+    --orange:#f26722;--orange-d:#d4531a;--orange-sec:#331a0d;
+    --concrete:#c2c8ce;
+    --ink:#eef1f4;--muted:#98a2ac;--soft:#767f89;--line:#333941;
+    --gold:#f5b301;--radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;max-width:100%;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Barlow','Inter',sans-serif;font-weight:800;letter-spacing:0;line-height:1.05;text-transform:uppercase;}
+  h1,h2,h3,p{overflow-wrap:break-word;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Barlow';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;padding:14px 28px;border-radius:6px;cursor:pointer;border:2px solid transparent;transition:.2s;white-space:nowrap;}
+  .btn-orange{background:var(--orange);color:#fff;}
+  .btn-orange:hover{background:var(--orange-d);transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--orange);}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25);}
+  .btn-ghost:hover{border-color:var(--orange);color:var(--orange);}
+  .btn-light{background:var(--concrete);color:#191c20;}
+  .btn-light:hover{background:#fff;transform:translateY(-2px);}
+  .sec{padding:94px 0;}
+  .eyebrow{font-family:'Barlow';font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:14px;display:inline-block;}
+  .h2{font-size:clamp(30px,4.6vw,50px);color:#fff;}
+  .h2 .o{color:var(--orange);}
+  .center{text-align:center;}
+  .lead{color:var(--muted);font-size:16.5px;max-width:640px;margin:14px auto 0;text-transform:none;font-family:'Inter';letter-spacing:0;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  /* TOP BAR */
+  .topbar{background:#121417;border-bottom:1px solid var(--line);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:16px;flex-wrap:wrap;}
+  .topbar a,.topbar span{color:var(--muted);display:inline-flex;align-items:center;gap:7px;}
+  .topbar a:hover{color:var(--orange);}
+  .topbar .r{display:flex;gap:22px;}
+  .topbar i{color:var(--orange);}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:70;background:rgba(25,28,32,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo .mark{width:50px;height:50px;border-radius:10px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;flex-shrink:0;box-shadow:0 8px 20px -8px var(--orange);}
+  .logo .wm{display:flex;flex-direction:column;}
+  .logo .n1{font-family:'Barlow';font-weight:800;font-size:21px;color:#fff;letter-spacing:.5px;line-height:1;text-transform:uppercase;}
+  .logo .n1 b{color:var(--orange);}
+  .logo .n2{font-size:9.5px;letter-spacing:3px;color:var(--soft);font-weight:600;text-transform:uppercase;margin-top:4px;}
+  nav.main{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:26px;}
+  nav.main a{font-family:'Barlow';font-weight:600;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#dfe4e8;}
+  nav.main a:hover{color:var(--orange);}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  nav.mobile{display:none;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px;}
+  nav.mobile a{padding:12px 0;font-family:'Barlow';font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:15px;border-bottom:1px solid var(--line);}
+
+  /* HERO */
+  .hero{position:relative;min-height:660px;display:flex;align-items:center;overflow:hidden;}
+  .hero-bg{position:absolute;inset:0;background:url('img/k7.jpg') center/cover;transform:scale(1.05);animation:kb 20s ease-in-out infinite alternate;}
+  @keyframes kb{to{transform:scale(1.15);}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,20,23,.96) 0%,rgba(18,20,23,.85) 45%,rgba(51,26,13,.5) 100%);}
+  .hero .wrap{position:relative;z-index:3;padding:70px 24px;width:100%;}
+  .hero .inner{max-width:700px;}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:8px 16px;border-radius:6px;font-size:13px;font-weight:600;}
+  .pill.o{background:var(--orange-sec);border-color:rgba(242,103,34,.4);color:#ffb98d;}
+  .hero h1{font-size:clamp(40px,6.2vw,74px);color:#fff;line-height:.96;}
+  .hero h1 .o{color:var(--orange);}
+  .hero p.sub{margin-top:20px;font-size:17.5px;color:#cdd4da;max-width:540px;text-transform:none;}
+  .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-mini{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13.5px;font-weight:600;}
+  .hero-mini .m{display:inline-flex;align-items:center;gap:8px;}
+  .hero-mini i{color:var(--orange);}
+  .hero-mini b{color:#fff;}
+
+  /* MARQUEE */
+  .marquee{background:var(--orange);overflow:hidden;white-space:nowrap;}
+  .marquee .track{display:inline-flex;align-items:center;animation:scroll 30s linear infinite;padding:13px 0;}
+  .marquee:hover .track{animation-play-state:paused;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .marquee .it{display:inline-flex;align-items:center;gap:10px;padding:0 22px;font-family:'Barlow';font-weight:700;font-size:15px;letter-spacing:1px;color:#fff;text-transform:uppercase;}
+  .marquee .it i{font-size:9px;opacity:.7;}
+
+  /* BEFORE/AFTER */
+  .ba-sec{background:var(--bg2);}
+  .ba-wrap{margin-top:46px;max-width:980px;margin-left:auto;margin-right:auto;}
+  .ba{position:relative;height:440px;border-radius:var(--radius);overflow:hidden;user-select:none;box-shadow:0 30px 70px -30px rgba(0,0,0,.9);border:1px solid var(--line);}
+  .ba .layer{position:absolute;inset:0;background-size:cover;background-position:center;}
+  .ba .after{background-image:url('img/k6.jpg');}
+  .ba .before{background-image:url('img/k6.jpg');filter:grayscale(.6) sepia(.35) brightness(.62) contrast(1.05);clip-path:inset(0 50% 0 0);}
+  .ba .lbl{position:absolute;bottom:18px;padding:7px 15px;border-radius:5px;font-family:'Barlow';font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;z-index:4;}
+  .ba .lbl.bf{left:18px;background:rgba(18,20,23,.9);color:#fff;}
+  .ba .lbl.af{right:18px;background:var(--orange);color:#fff;}
+  .ba .handle{position:absolute;top:0;bottom:0;left:50%;width:40px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;cursor:ew-resize;z-index:5;}
+  .ba .handle::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--orange);transform:translateX(-50%);}
+  .ba .handle .grip{width:46px;height:46px;border-radius:50%;background:var(--orange);box-shadow:0 6px 16px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;}
+  .ba-hint{text-align:center;color:var(--soft);font-size:12.5px;margin-top:16px;font-family:'Barlow';letter-spacing:2px;text-transform:uppercase;}
+
+  /* STATS */
+  .stats{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:34px 24px;}
+  .stats .s{display:flex;gap:14px;align-items:center;justify-content:center;}
+  .stats .s i{font-size:28px;color:var(--orange);}
+  .stats .s b{font-family:'Barlow';font-weight:800;font-size:18px;color:#fff;display:block;line-height:1.1;letter-spacing:.5px;text-transform:uppercase;}
+  .stats .s span{font-size:12.5px;color:var(--muted);}
+
+  /* SERVICES */
+  .svc-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .svc{border-radius:var(--radius);overflow:hidden;position:relative;height:300px;display:flex;align-items:flex-end;border:1px solid var(--line);}
+  .svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s;z-index:1;}
+  .svc::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,20,23,.96) 8%,rgba(18,20,23,.35) 60%,rgba(18,20,23,.1));z-index:2;transition:.3s;}
+  .svc:hover img{transform:scale(1.09);}
+  .svc:hover::after{background:linear-gradient(to top,rgba(18,20,23,.97) 12%,rgba(51,26,13,.5) 70%);}
+  .svc .body{position:relative;z-index:3;padding:24px;width:100%;}
+  .svc .si{width:52px;height:52px;border-radius:8px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;transition:.3s;}
+  .svc:hover .si{transform:translateY(-4px);}
+  .svc h3{font-size:21px;color:#fff;}
+  .svc p{color:#c3ccd2;font-size:14px;margin-top:6px;opacity:0;max-height:0;transition:.35s;text-transform:none;font-family:'Inter';}
+  .svc:hover p{opacity:1;max-height:80px;}
+
+  /* WHY */
+  .why{background:var(--bg2);}
+  .why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;}
+  .why h2{font-size:clamp(28px,3.6vw,44px);}
+  .why p.intro{color:var(--muted);margin-top:14px;text-transform:none;}
+  .why-note{background:var(--orange-sec);border:1px solid rgba(242,103,34,.3);border-radius:10px;padding:16px 18px;margin-top:20px;display:flex;gap:13px;align-items:flex-start;}
+  .why-note i{color:var(--orange);font-size:22px;margin-top:2px;}
+  .why-note b{color:#fff;}
+  .why-note span{font-size:14px;color:#d5dce1;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .wc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;transition:.2s;}
+  .wc:hover{border-color:var(--orange);transform:translateY(-4px);background:var(--panel2);}
+  .wc i{font-size:26px;color:var(--orange);margin-bottom:12px;}
+  .wc b{display:block;font-family:'Barlow';font-weight:700;font-size:17px;color:#fff;letter-spacing:.5px;text-transform:uppercase;}
+  .wc span{font-size:13px;color:var(--muted);}
+
+  /* PROCESS */
+  .proc-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pc{text-align:center;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:34px 24px;}
+  .pc .pin{width:76px;height:76px;border-radius:50%;background:var(--orange-sec);border:2px solid var(--orange);color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px;}
+  .pc .num{position:absolute;top:14px;right:20px;font-family:'Barlow';font-weight:800;font-size:36px;color:rgba(255,255,255,.06);}
+  .pc h3{font-size:20px;color:#fff;}
+  .pc p{color:var(--muted);font-size:14px;margin-top:8px;text-transform:none;font-family:'Inter';}
+
+  /* REVIEWS */
+  .reviews{background:var(--bg2);}
+  .rev-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .rc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative;}
+  .rc .qm{position:absolute;top:16px;right:22px;font-size:44px;color:var(--orange);opacity:.2;font-family:Georgia;line-height:1;}
+  .rc .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+  .rc p{margin:12px 0 16px;font-size:14.5px;color:#ccd5da;text-transform:none;}
+  .rc .who{display:flex;align-items:center;gap:12px;}
+  .rc .av{width:44px;height:44px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Barlow';}
+  .rc .who b{font-family:'Barlow';font-weight:700;font-size:15px;color:#fff;letter-spacing:.5px;text-transform:uppercase;}
+  .rc .who small{color:var(--soft);display:block;text-transform:none;}
+  .rnote{text-align:center;color:var(--soft);font-size:12.5px;margin-top:22px;text-transform:none;}
+
+  /* GALLERY */
+  .gal-grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;}
+  .gal-grid .gc{border-radius:8px;overflow:hidden;position:relative;border:1px solid var(--line);}
+  .gal-grid .gc img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .gal-grid .gc:hover img{transform:scale(1.08);}
+  .gal-grid .big{grid-column:span 2;grid-row:span 2;}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(120deg,var(--orange-d),var(--orange));color:#fff;position:relative;overflow:hidden;}
+  .cta-band::after{content:"\f7d9";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;font-size:190px;opacity:.13;right:26px;top:-14px;color:#fff;}
+  .cta-band .wrap{padding:62px 24px;text-align:center;position:relative;z-index:2;}
+  .cta-band h2{font-size:clamp(28px,4vw,46px);color:#fff;}
+  .cta-band p{color:#ffe6d6;max-width:560px;margin:12px auto 24px;text-transform:none;}
+  .cta-band .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-dark{background:#191c20;color:#fff;}.btn-dark:hover{background:#000;transform:translateY(-2px);}
+
+  /* CONTACT */
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .cinfo .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;}
+  .cinfo .row .ic{width:48px;height:48px;border-radius:8px;background:var(--orange-sec);color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .cinfo .row b{display:block;color:#fff;font-family:'Barlow';font-weight:700;font-size:16px;letter-spacing:.5px;text-transform:uppercase;}
+  .cinfo .row span{color:var(--muted);font-size:14.5px;}
+  form.cform{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+  form.cform h3{color:#fff;margin-bottom:18px;font-size:23px;}
+  form.cform .f{margin-bottom:14px;}
+  form.cform input,form.cform select,form.cform textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:15px;background:var(--bg2);color:var(--ink);}
+  form.cform input::placeholder,form.cform textarea::placeholder{color:var(--soft);}
+  form.cform input:focus,form.cform textarea:focus,form.cform select:focus{outline:2px solid var(--orange);border-color:transparent;}
+  form.cform .btn-orange{width:100%;border:0;}
+
+  /* FOOTER */
+  footer{background:#121417;padding:60px 0 26px;border-top:1px solid var(--line);}
+  footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px;}
+  footer .flogo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  footer .flogo .mark{width:46px;height:46px;border-radius:9px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;}
+  footer .flogo .n1{font-family:'Barlow';font-weight:800;font-size:20px;color:#fff;letter-spacing:.5px;text-transform:uppercase;}
+  footer .flogo .n1 b{color:var(--orange);}
+  footer p.fd{color:var(--muted);font-size:14px;max-width:280px;}
+  footer h4{font-family:'Barlow';font-weight:700;color:#fff;font-size:16px;margin-bottom:16px;letter-spacing:1px;text-transform:uppercase;}
+  footer a{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px;margin-bottom:11px;}
+  footer a:hover{color:var(--orange);}
+  footer a i{color:var(--orange);width:16px;text-align:center;}
+  .fbar{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--soft);}
+  .fbar a{color:var(--orange);display:inline;}
+  .fsoc{display:flex;gap:12px;}
+  .fsoc a{width:38px;height:38px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;color:#fff;margin:0;}
+  .fsoc a:hover{background:var(--orange);}
+
+  @media(max-width:960px){
+    nav.main{display:none;}.burger{display:block;}nav.mobile.open{display:flex;}
+    .why .wrap,.contact .wrap{grid-template-columns:1fr;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid{grid-template-columns:1fr 1fr;}
+    .stats .wrap{grid-template-columns:1fr 1fr;gap:24px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px;}
+    footer .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .sec{padding:64px 0;}
+    .topbar .r{gap:14px;}.topbar .wrap>span:first-child{display:none;}
+    .svc-grid,.rev-grid,.proc-grid,.why-grid,.stats .wrap,footer .cols{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;}
+    .hero-cta .btn{flex:1 1 100%;}
+    .ba{height:300px;}
+    .logo .n2{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa-solid fa-location-dot"></i> New Braunfels, San Marcos, Seguin, Kyle &amp; Canyon Lake, TX</span>
+    <div class="r">
+      <span><i class="fa-solid fa-clipboard-check"></i> Free Estimates</span>
+      <a href="tel:+18306608294"><i class="fa-solid fa-phone"></i> (830) 660-8294</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark"><i class="fa-solid fa-trowel-bricks"></i></span>
+      <span class="wm"><span class="n1">Clark's <b>Concrete</b></span><span class="n2">Contractors · New Braunfels</span></span>
+    </a>
+    <nav class="main">
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#why">Why Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-orange">Free Quote</a>
+    <button class="burger" onclick="document.getElementById('mnav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#top" onclick="cn()">Home</a>
+    <a href="#services" onclick="cn()">Services</a>
+    <a href="#results" onclick="cn()">Results</a>
+    <a href="#why" onclick="cn()">Why Us</a>
+    <a href="#gallery" onclick="cn()">Gallery</a>
+    <a href="#contact" onclick="cn()">Contact</a>
+    <a href="tel:+18306608294" onclick="cn()"><i class="fa-solid fa-phone"></i> (830) 660-8294</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="badges">
+        <span class="pill"><i class="fa-solid fa-location-dot"></i> New Braunfels, TX</span>
+        <span class="pill o"><i class="fa-solid fa-shield-halved"></i> Licensed &amp; Insured</span>
+      </div>
+      <h1>Concrete built to <span class="o">last decades.</span></h1>
+      <p class="sub">Driveways, patios, foundations and decorative concrete done right the first time — Clark's Concrete Contractors pours quality across New Braunfels and Central Texas.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-orange"><i class="fa-solid fa-paper-plane"></i> Get a Free Quote</a>
+        <a href="tel:+18306608294" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> (830) 660-8294</a>
+      </div>
+      <div class="hero-mini">
+        <span class="m"><i class="fa-solid fa-shield-halved"></i> <b>Licensed &amp; Insured</b></span>
+        <span class="m"><i class="fa-solid fa-clipboard-check"></i> <b>Free Estimates</b></span>
+        <span class="m"><i class="fa-solid fa-thumbs-up"></i> <b>Quality Guaranteed</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="mq">
+    <span class="it">Concrete Driveways <i class="fa-solid fa-diamond"></i></span>
+    <span class="it">Patios &amp; Walkways <i class="fa-solid fa-diamond"></i></span>
+    <span class="it">Foundations &amp; Slabs <i class="fa-solid fa-diamond"></i></span>
+    <span class="it">Stamped &amp; Decorative <i class="fa-solid fa-diamond"></i></span>
+    <span class="it">Sidewalks &amp; Flatwork <i class="fa-solid fa-diamond"></i></span>
+    <span class="it">Commercial Concrete <i class="fa-solid fa-diamond"></i></span>
+  </div>
+</div>
+
+<!-- BEFORE/AFTER -->
+<section class="sec ba-sec" id="results">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">See The Difference</span>
+      <h2 class="h2">From cracked &amp; worn to <span class="o">solid &amp; new</span></h2>
+      <p class="lead">Drag the slider to see a Clark's Concrete transformation.</p>
+    </div>
+    <div class="ba-wrap reveal">
+      <div class="ba" id="ba">
+        <div class="layer after"></div>
+        <div class="layer before" id="baBefore"></div>
+        <span class="lbl bf">Before</span>
+        <span class="lbl af">After</span>
+        <div class="handle" id="baHandle"><div class="grip"><i class="fa-solid fa-left-right"></i></div></div>
+        <input type="range" min="2" max="98" value="50" class="ba-range" id="baRange" aria-label="Before and after slider">
+      </div>
+      <p class="ba-hint">← drag to compare →</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="s"><i class="fa-solid fa-shield-halved"></i><div><b>Licensed &amp; Insured</b><span>fully covered</span></div></div>
+    <div class="s"><i class="fa-solid fa-clipboard-check"></i><div><b>Free Estimates</b><span>no obligation</span></div></div>
+    <div class="s"><i class="fa-solid fa-location-dot"></i><div><b>Local Crew</b><span>New Braunfels &amp; nearby</span></div></div>
+    <div class="s"><i class="fa-solid fa-thumbs-up"></i><div><b>Quality Guaranteed</b><span>built to last</span></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">What We Pour</span>
+      <h2 class="h2">Concrete services, <span class="o">done right</span></h2>
+      <p class="lead">Residential and commercial concrete — from driveways to foundations, poured to last.</p>
+    </div>
+    <div class="svc-grid" style="text-align:left;">
+      <div class="svc reveal"><img src="img/k6.jpg" alt="Concrete driveways"><div class="body"><div class="si"><i class="fa-solid fa-car"></i></div><h3>Concrete Driveways</h3><p>Durable, great-looking driveways that boost your curb appeal and value.</p></div></div>
+      <div class="svc reveal"><img src="img/k3.jpg" alt="Patios and walkways"><div class="body"><div class="si"><i class="fa-solid fa-chair"></i></div><h3>Patios &amp; Walkways</h3><p>Custom patios, sidewalks and walkways built for how you live outdoors.</p></div></div>
+      <div class="svc reveal"><img src="img/k5.jpg" alt="Foundations and slabs"><div class="body"><div class="si"><i class="fa-solid fa-layer-group"></i></div><h3>Foundations &amp; Slabs</h3><p>Solid, level slabs and foundations for homes, shops and additions.</p></div></div>
+      <div class="svc reveal"><img src="img/k11.jpg" alt="Stamped and decorative concrete"><div class="body"><div class="si"><i class="fa-solid fa-stamp"></i></div><h3>Stamped &amp; Decorative</h3><p>Stamped, stained and decorative concrete that looks like stone or brick.</p></div></div>
+      <div class="svc reveal"><img src="img/k1.jpg" alt="Sidewalks and flatwork"><div class="body"><div class="si"><i class="fa-solid fa-road"></i></div><h3>Sidewalks &amp; Flatwork</h3><p>Clean, level flatwork — sidewalks, aprons, curbs and more.</p></div></div>
+      <div class="svc reveal"><img src="img/k4.jpg" alt="Commercial concrete"><div class="body"><div class="si"><i class="fa-solid fa-building"></i></div><h3>Commercial Concrete</h3><p>Reliable concrete work for businesses, lots and commercial projects.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Why Clark's</span>
+      <h2 class="h2">Concrete that <span class="o">holds up</span></h2>
+      <p class="intro">Concrete is only as good as the crew that pours it. We prep it right, pour it right, and finish it right — so your driveway or patio still looks great years down the road, not months.</p>
+      <div class="why-note"><i class="fa-solid fa-trowel-bricks"></i><span><b>Done right, once.</b> Proper base, proper thickness, proper finish — the details that separate concrete that lasts decades from concrete that cracks in a year.</span></div>
+      <a href="#contact" class="btn btn-orange" style="margin-top:22px;"><i class="fa-solid fa-arrow-right"></i> Get a Free Quote</a>
+    </div>
+    <div class="why-grid reveal">
+      <div class="wc"><i class="fa-solid fa-shield-halved"></i><b>Licensed &amp; Insured</b><span>Fully insured for your complete peace of mind.</span></div>
+      <div class="wc"><i class="fa-solid fa-medal"></i><b>Quality Craftsmanship</b><span>Poured and finished to last for decades.</span></div>
+      <div class="wc"><i class="fa-solid fa-clipboard-check"></i><b>Free, Honest Estimates</b><span>Clear, upfront pricing with no surprises.</span></div>
+      <div class="wc"><i class="fa-solid fa-clock"></i><b>On Time, On Budget</b><span>We show up and finish when we say we will.</span></div>
+      <div class="wc"><i class="fa-solid fa-location-dot"></i><b>Local &amp; Trusted</b><span>Proudly serving New Braunfels &amp; Central Texas.</span></div>
+      <div class="wc"><i class="fa-solid fa-thumbs-up"></i><b>Satisfaction Guaranteed</b><span>We're not done until you're happy.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Easy As 1-2-3</span>
+      <h2 class="h2">How we <span class="o">work</span></h2>
+      <p class="lead">Getting new concrete is simple and stress-free.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="pc reveal"><span class="num">01</span><div class="pin"><i class="fa-solid fa-ruler-combined"></i></div><h3>Free Estimate</h3><p>We visit, measure your project and give you a clear, free quote.</p></div>
+      <div class="pc reveal"><span class="num">02</span><div class="pin"><i class="fa-solid fa-trowel-bricks"></i></div><h3>We Pour It Right</h3><p>Proper prep, quality concrete and expert finishing — built to last.</p></div>
+      <div class="pc reveal"><span class="num">03</span><div class="pin"><i class="fa-solid fa-face-smile"></i></div><h3>You Enjoy It</h3><p>Sit back and enjoy concrete that looks great for years to come.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2 class="h2">What our customers <span class="o">say</span></h2>
+      <p class="lead">Real feedback from homeowners across New Braunfels and Central Texas.</p>
+    </div>
+    <div class="rev-grid" style="text-align:left;">
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Clark's poured our new driveway and it looks fantastic. Clean lines, great finish, and they cleaned up everything. Highly recommend.</p><div class="who"><div class="av">M</div><div><b>Mark D.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Did a stamped concrete patio for us — turned out better than we imagined. Professional crew, fair price, on schedule.</p><div class="who"><div class="av">S</div><div><b>Sandra R.</b><small>Seguin, TX</small></div></div></div>
+      <div class="rc reveal"><div class="qm">&rdquo;</div><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Poured the slab for our shop. Level, solid and done right. These guys know concrete. Will use them again.</p><div class="who"><div class="av">J</div><div><b>Jesse L.</b><small>Canyon Lake, TX</small></div></div></div>
+    </div>
+    <p class="rnote">(Sample layout — on your live site these pull straight from your real Google &amp; Yelp reviews.)</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec ba-sec" id="gallery">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="h2">Concrete we're <span class="o">proud of</span></h2>
+      <p class="lead">A look at some of the driveways, patios and slabs we've poured across Central Texas.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gc big"><img src="img/k7.jpg" alt="Concrete driveway"></div>
+      <div class="gc"><img src="img/k2.jpg" alt="Concrete finishing"></div>
+      <div class="gc"><img src="img/k11.jpg" alt="Stamped concrete"></div>
+      <div class="gc"><img src="img/k9.jpg" alt="Modern driveway"></div>
+      <div class="gc"><img src="img/k5.jpg" alt="Concrete slab"></div>
+      <div class="gc"><img src="img/k1.jpg" alt="Concrete flatwork"></div>
+      <div class="gc"><img src="img/k6.jpg" alt="Residential driveway"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to pour something solid?</h2>
+    <p>Get your free, no-obligation estimate today — New Braunfels and all of Central Texas.</p>
+    <div class="acts">
+      <a href="tel:+18306608294" class="btn btn-dark"><i class="fa-solid fa-phone"></i> (830) 660-8294</a>
+      <a href="#contact" class="btn btn-light">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="cinfo reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="h2" style="text-align:left;">Request your <span class="o">free estimate</span></h2>
+      <p style="color:var(--muted);margin:16px 0 26px;">Tell us about your concrete project and we'll get right back to you with a free estimate.</p>
+      <div class="row"><div class="ic"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><span>(830) 660-8294</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>New Braunfels, San Marcos, Seguin, Kyle, Bulverde &amp; Canyon Lake, TX</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Monday – Friday: 8:00 am – 5:00 pm</span></div></div>
+      <div class="row"><div class="ic"><i class="fa-solid fa-shield-halved"></i></div><div><b>Licensed</b><span>Fully licensed &amp; insured</span></div></div>
+    </div>
+    <form class="cform reveal" onsubmit="event.preventDefault();alert('Thanks! This is a demo form — your real site will send this straight to your phone & inbox.');">
+      <h3>Free Concrete Estimate</h3>
+      <div class="f"><input type="text" placeholder="Your name" required></div>
+      <div class="f"><input type="tel" placeholder="Phone number" required></div>
+      <div class="f"><select><option>What do you need poured?</option><option>Driveway</option><option>Patio / Walkway</option><option>Foundation / Slab</option><option>Stamped / Decorative</option><option>Sidewalk / Flatwork</option><option>Commercial</option></select></div>
+      <div class="f"><textarea rows="3" placeholder="Tell us about your project"></textarea></div>
+      <button type="submit" class="btn btn-orange">Get My Free Estimate</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="flogo"><span class="mark"><i class="fa-solid fa-trowel-bricks"></i></span><span class="n1">Clark's <b>Concrete</b></span></div>
+        <p class="fd">Expert concrete driveways, patios, foundations &amp; decorative concrete for New Braunfels &amp; Central Texas. Licensed, insured &amp; built to last.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Concrete Driveways</a>
+        <a href="#services">Patios &amp; Walkways</a>
+        <a href="#services">Foundations &amp; Slabs</a>
+        <a href="#services">Stamped &amp; Decorative</a>
+        <a href="#services">Commercial Concrete</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#results">Our Results</a>
+        <a href="#why">Why Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="tel:+18306608294"><i class="fa-solid fa-phone"></i> (830) 660-8294</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> New Braunfels, TX</a>
+        <a href="#"><i class="fa-solid fa-clock"></i> Mon–Fri: 8am – 5pm</a>
+        <div class="fsoc" style="margin-top:14px;">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-yelp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Clark's Concrete Contractors · New Braunfels, TX</span>
+      <span>Demo site designed by <a href="https://abdullahrahim.com" target="_blank">Abdullah Rahim — abdullahrahim.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function cn(){ document.getElementById('mnav').classList.remove('open'); }
+  (function(){ var t=document.getElementById('mq'); if(t) t.innerHTML+=t.innerHTML; })();
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -50px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+  (function(){
+    var range=document.getElementById('baRange'), before=document.getElementById('baBefore'), handle=document.getElementById('baHandle');
+    if(!range) return;
+    function set(v){ before.style.clipPath='inset(0 '+(100-v)+'% 0 0)'; handle.style.left=v+'%'; }
+    range.addEventListener('input',function(){ set(this.value); });
+    set(50);
+  })();
+</script>
+</body>
+</html>
