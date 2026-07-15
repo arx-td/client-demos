@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ford's Maintenance Service — Handyman, Demolition & Repairs | New Braunfels, TX</title>
+<meta name="description" content="Ford's Maintenance Service — New Braunfels' handyman, demolition, junk removal, drywall & painting pro. Residential & commercial. Licensed & insured. Free estimates — 210-385-5804.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230d7377'/%3E%3Cpath fill='%23f5b915' d='M6 15l6-9 6 9z'/%3E%3Ccircle cx='12' cy='16' r='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --teal:#0d7377; --teal-d:#0a5e61; --teal-l:#e6f3f3;
+    --yellow:#f5b915; --yellow-d:#dca200; --red:#d9432f;
+    --ink:#17222a; --ink-2:#33434d; --muted:#6a7883;
+    --bg:#f6f7f6; --surface:#ffffff; --line:#e6e9e8;
+    --maxw:1220px; --r:16px; --shadow:0 20px 46px -22px rgba(13,55,58,.4);
+    --ease:cubic-bezier(.4,0,.15,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.02em}
+  section{position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.75rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  .eyebrow.on-dark{color:var(--yellow)}
+  .eyebrow i{color:var(--yellow)}
+  .eyebrow.on-dark i{color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;
+    padding:15px 26px;border-radius:12px;cursor:pointer;border:none;transition:.28s var(--ease);white-space:nowrap;font-family:'Inter'}
+  .btn-yellow{background:var(--yellow);color:#20160a;box-shadow:0 14px 28px -12px rgba(245,185,21,.85)}
+  .btn-yellow:hover{background:var(--yellow-d);transform:translateY(-3px)}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-d);transform:translateY(-3px)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+  .btn-outline{background:#fff;color:var(--teal);border:1.5px solid var(--line)}
+  .btn-outline:hover{border-color:var(--teal);transform:translateY(-3px)}
+
+  /* TOP BAR */
+  .topbar{background:var(--ink);color:#cfe0e0;font-size:.82rem;font-weight:500}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;gap:14px}
+  .topbar .tb-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .topbar .tb-left span{display:inline-flex;align-items:center;gap:7px}
+  .topbar .tb-left i{color:var(--yellow)}
+  .topbar a{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:#fff}
+  .topbar a i{color:var(--yellow)}
+  @media(max-width:720px){.topbar .tb-left span.hide-sm{display:none}}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
+    transition:.3s var(--ease);border-bottom:1px solid transparent}
+  header.nav.solid{box-shadow:0 8px 26px -18px rgba(0,0,0,.4);border-bottom-color:var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mascot{width:50px;height:50px;border-radius:50%;background:#fff;border:2px solid var(--teal);
+    object-fit:cover;box-shadow:0 4px 12px -4px rgba(0,0,0,.25)}
+  .brand .bt{font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.2rem;line-height:1;color:var(--ink)}
+  .brand .bt b{color:var(--teal)}
+  .brand .bs{font-size:.62rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;font-weight:700;margin-top:3px}
+  nav.links{display:flex;align-items:center;gap:30px}
+  nav.links a{font-weight:600;font-size:.93rem;color:var(--ink-2);position:relative;padding:4px 0}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--teal);transition:.3s var(--ease)}
+  nav.links a:hover{color:var(--teal)}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.02rem;color:var(--ink)}
+  .nav-phone i{color:var(--teal)}
+  .burger{display:none;background:none;border:none;color:var(--ink);font-size:1.5rem;cursor:pointer}
+  @media(max-width:960px){nav.links,.nav-cta .btn,.nav-phone span{display:none}.burger{display:block}}
+
+  /* MOBILE MENU */
+  .mmenu{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:#fff;z-index:200;
+    transform:translateX(100%);transition:.4s var(--ease);padding:26px;display:flex;flex-direction:column;gap:4px;
+    box-shadow:-10px 0 40px rgba(0,0,0,.15)}
+  .mmenu.open{transform:translateX(0)}
+  .mmenu .mclose{align-self:flex-end;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer;margin-bottom:10px}
+  .mmenu a{padding:14px 8px;border-bottom:1px solid var(--line);font-weight:600;font-size:1.05rem;color:var(--ink)}
+  .mmenu .btn{margin-top:16px;justify-content:center}
+  .scrim{position:fixed;inset:0;background:rgba(10,30,32,.5);z-index:150;opacity:0;visibility:hidden;transition:.3s}
+  .scrim.open{opacity:1;visibility:visible}
+
+  /* HERO */
+  .hero{background:radial-gradient(1100px 600px at 82% 10%,#14898d,transparent 60%),linear-gradient(160deg,var(--teal) 0%,var(--teal-d) 100%);
+    color:#fff;padding:64px 0 78px;overflow:hidden;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.4px,transparent 1.4px);background-size:22px 22px;opacity:.5}
+  .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center;position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4.2rem);margin:18px 0 20px}
+  .hero h1 .y{color:var(--yellow)}
+  .hero p.lead{font-size:1.13rem;color:#d7ebeb;max-width:520px;margin-bottom:28px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+  .hero .trust{display:flex;gap:22px;flex-wrap:wrap;font-size:.86rem;font-weight:600;color:#cfe6e6}
+  .hero .trust .ti{display:flex;align-items:center;gap:9px}
+  .hero .trust i{color:var(--yellow)}
+  /* mascot stage */
+  .stage{position:relative;display:grid;place-items:center;min-height:340px}
+  .mascot-ring{width:clamp(260px,34vw,380px);aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle at 50% 40%,#fff,#eef6f6);display:grid;place-items:center;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,.5),inset 0 0 0 10px rgba(245,185,21,.25);position:relative}
+  .mascot-ring::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed rgba(255,255,255,.35)}
+  .mascot-ring img{width:82%;height:82%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25))}
+  .badge-float{position:absolute;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:11px;color:var(--ink)}
+  .badge-float i{font-size:1.4rem}
+  .badge-float b{display:block;font-family:'Plus Jakarta Sans';font-size:.98rem;line-height:1.1}
+  .badge-float small{color:var(--muted);font-size:.72rem}
+  .bf1{top:6px;left:-6px;animation:float 4s ease-in-out infinite}
+  .bf1 i{color:var(--teal)}
+  .bf2{bottom:10px;right:-10px;animation:float 4s ease-in-out infinite .8s}
+  .bf2 i{color:var(--yellow-d)}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:40px}.stage{order:-1}
+    .bf1{left:4px}.bf2{right:4px;bottom:2px}}
+  @media(max-width:400px){.badge-float{padding:9px 12px}.badge-float small{display:none}}
+
+  /* TRUST STRIP */
+  .strip{background:var(--ink);color:#fff}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:20px 24px}
+  .strip .s{display:flex;align-items:center;gap:13px;justify-content:center}
+  .strip .s i{font-size:1.5rem;color:var(--yellow)}
+  .strip .s b{font-family:'Plus Jakarta Sans';font-size:.98rem;display:block;line-height:1.1}
+  .strip .s small{color:#9fb2b3;font-size:.76rem}
+  @media(max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr;gap:18px 8px}}
+
+  /* SECTION HEAD */
+  .shead{text-align:center;max-width:680px;margin:0 auto 50px}
+  .shead h2{font-size:clamp(2rem,4.2vw,3rem);margin:12px 0 12px;color:var(--ink)}
+  .shead h2 .t{color:var(--teal)}
+  .shead p{color:var(--muted);font-size:1.05rem}
+
+  /* SERVICES */
+  .services{padding:88px 0}
+  .scards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .scard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+    transition:.35s var(--ease)}
+  .scard:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#cfe3e3}
+  .scard .ph{height:186px;overflow:hidden;position:relative}
+  .scard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .scard:hover .ph img{transform:scale(1.09)}
+  .scard .bd{padding:34px 24px 26px;position:relative}
+  .scard .ic{position:absolute;top:-27px;left:24px;width:54px;height:54px;border-radius:14px;
+    background:var(--teal);display:grid;place-items:center;color:#fff;font-size:1.3rem;
+    box-shadow:0 12px 22px -10px rgba(13,115,119,.9)}
+  .scard:hover .ic{background:var(--yellow);color:#20160a}
+  .scard h3{font-size:1.24rem;margin-bottom:8px;color:var(--ink)}
+  .scard p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+  .scard .more{font-weight:700;font-size:.85rem;color:var(--teal);display:inline-flex;align-items:center;gap:8px;transition:gap .3s}
+  .scard:hover .more{gap:14px}
+  @media(max-width:900px){.scards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.scards{grid-template-columns:1fr}}
+
+  /* HONEY-DO BAND */
+  .honey{padding:84px 0;background:linear-gradient(150deg,var(--ink),#1d3238);color:#fff;position:relative;overflow:hidden}
+  .honey::after{content:"";position:absolute;right:0;top:0;bottom:0;width:42%;
+    background:url('img/tools.jpg') center/cover;opacity:.16;mask-image:linear-gradient(90deg,transparent,#000 55%)}
+  .honey .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative;z-index:2}
+  .honey h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 16px}
+  .honey h2 .y{color:var(--yellow)}
+  .honey p{color:#c6d6d6;margin-bottom:22px;font-size:1.05rem}
+  .honey .quip{font-family:'Plus Jakarta Sans';font-weight:700;font-size:1.15rem;color:#fff;
+    border-left:4px solid var(--yellow);padding-left:16px;margin-bottom:26px;line-height:1.4}
+  .honey .quip .y{color:var(--yellow)}
+  .checklist{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:26px 28px;backdrop-filter:blur(4px)}
+  .checklist h4{font-size:1.05rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .checklist h4 i{color:var(--yellow)}
+  .checklist ul{list-style:none;display:grid;gap:11px}
+  .checklist li{display:flex;align-items:center;gap:13px;font-size:.98rem;color:#e4eeee}
+  .checklist li .ck{width:26px;height:26px;border-radius:8px;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:.8rem;flex:0 0 26px}
+  .checklist li:nth-child(odd) .ck{background:var(--yellow);color:#20160a}
+  @media(max-width:860px){.honey .wrap{grid-template-columns:1fr;gap:34px}.honey::after{display:none}}
+
+  /* WHY US */
+  .why{padding:88px 0}
+  .why .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
+  .why-img{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .why-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.5}
+  .why-img .tag{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:14px;padding:13px 17px;
+    display:flex;align-items:center;gap:12px;box-shadow:0 12px 24px -10px rgba(0,0,0,.3)}
+  .why-img .tag i{color:var(--teal);font-size:1.6rem}
+  .why-img .tag b{display:block;font-family:'Plus Jakarta Sans';font-size:1rem;color:var(--ink)}
+  .why-img .tag small{color:var(--muted)}
+  .why h2{font-size:clamp(1.9rem,3.8vw,2.8rem);margin:14px 0 16px;color:var(--ink)}
+  .why h2 .t{color:var(--teal)}
+  .why > .wrap > div > p.intro{color:var(--muted);margin-bottom:24px;font-size:1.03rem}
+  .reasons{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .reason{display:flex;gap:13px}
+  .reason .ri{flex:0 0 42px;width:42px;height:42px;border-radius:11px;background:var(--teal-l);
+    display:grid;place-items:center;color:var(--teal);font-size:1.1rem}
+  .reason h4{font-size:.98rem;margin-bottom:2px;color:var(--ink)}
+  .reason p{font-size:.85rem;color:var(--muted);line-height:1.5}
+  @media(max-width:900px){.why .wrap{grid-template-columns:1fr;gap:38px}}
+  @media(max-width:520px){.reasons{grid-template-columns:1fr}}
+
+  /* STATS */
+  .stats{padding:0 0 88px}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .stat{text-align:center;padding:30px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--teal),var(--yellow))}
+  .stat .n{font-family:'Plus Jakarta Sans';font-weight:800;font-size:2.8rem;color:var(--ink);line-height:1}
+  .stat .n .u{color:var(--teal)}
+  .stat .l{margin-top:7px;font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  @media(max-width:760px){.stats .grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* GALLERY */
+  .work{padding:88px 0;background:var(--teal-l)}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:38px}
+  .filters button{background:#fff;border:1px solid var(--line);color:var(--ink-2);padding:10px 20px;border-radius:100px;
+    font-weight:600;font-size:.87rem;cursor:pointer;transition:.25s var(--ease)}
+  .filters button:hover{border-color:var(--teal)}
+  .filters button.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gitem{position:relative;overflow:hidden;border-radius:14px;aspect-ratio:1/1;cursor:pointer;background:#fff}
+  .gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gitem:hover img{transform:scale(1.1)}
+  .gitem .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,94,97,.88));
+    opacity:0;transition:.35s var(--ease);display:flex;align-items:flex-end;padding:16px}
+  .gitem:hover .ov{opacity:1}
+  .gitem .ov span{font-weight:700;font-size:.86rem;color:#fff;display:flex;align-items:center;gap:8px}
+  @media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+  /* PROCESS */
+  .process{padding:88px 0}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+  .step{text-align:center;position:relative}
+  .step .num{width:72px;height:72px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;
+    font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.6rem;color:#fff;background:var(--teal);position:relative;z-index:2}
+  .step:nth-child(even) .num{background:var(--yellow);color:#20160a}
+  .step .ic{position:absolute;top:-6px;right:calc(50% - 50px);width:32px;height:32px;border-radius:50%;
+    background:#fff;border:2px solid var(--teal);display:grid;place-items:center;color:var(--teal);font-size:.8rem;z-index:3}
+  .step h4{font-size:1.12rem;margin-bottom:7px;color:var(--ink)}
+  .step p{font-size:.9rem;color:var(--muted)}
+  .steps::before{content:"";position:absolute;top:36px;left:12%;right:12%;height:2px;
+    background:repeating-linear-gradient(90deg,var(--teal) 0 8px,transparent 8px 18px)}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:36px 24px}.steps::before{display:none}}
+  @media(max-width:460px){.steps{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS */
+  .testi{padding:88px 0;background:var(--surface);border-top:1px solid var(--line)}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tcard{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;position:relative}
+  .tcard .q{position:absolute;top:16px;right:22px;font-size:3.2rem;color:var(--teal-l);font-family:Georgia,serif;line-height:1}
+  .tcard .st{color:var(--yellow-d);letter-spacing:2px;margin-bottom:12px}
+  .tcard p{color:var(--ink-2);font-size:.96rem;margin-bottom:18px}
+  .tcard .who{display:flex;align-items:center;gap:12px}
+  .tcard .av{width:44px;height:44px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans'}
+  .tcard .who b{display:block;font-size:.94rem;color:var(--ink)}
+  .tcard .who small{color:var(--muted)}
+  @media(max-width:900px){.tgrid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+
+  /* CTA BAND */
+  .ctaband{padding:66px 0;background:var(--yellow);position:relative;overflow:hidden}
+  .ctaband::after{content:"\f0ad";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;
+    right:-6px;top:50%;transform:translateY(-50%) rotate(-15deg);font-size:15rem;color:rgba(32,22,10,.08)}
+  .ctaband .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
+  .ctaband h2{font-size:clamp(1.8rem,3.8vw,2.7rem);color:#20160a;max-width:640px}
+  .ctaband .cbtns{display:flex;gap:14px;flex-wrap:wrap}
+  .ctaband .btn-dark{background:var(--ink);color:#fff}
+  .ctaband .btn-dark:hover{transform:translateY(-3px);background:#0d1418}
+  .ctaband .btn-wt{background:#fff;color:var(--ink)}
+  .ctaband .btn-wt:hover{transform:translateY(-3px)}
+
+  /* CONTACT */
+  .contact{padding:88px 0}
+  .contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+  .cform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px;box-shadow:var(--shadow)}
+  .cform h3{font-size:1.55rem;margin-bottom:5px;color:var(--ink)}
+  .cform .sub{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:11px;
+    padding:13px 15px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.25s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,115,119,.14);background:#fff}
+  .field textarea{resize:vertical;min-height:96px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .cform .btn{width:100%;justify-content:center;margin-top:6px}
+  .formnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px}
+  .cinfo h3{font-size:1.85rem;margin-bottom:8px;color:var(--ink)}
+  .cinfo h3 .t{color:var(--teal)}
+  .cinfo>p{color:var(--muted);margin-bottom:24px}
+  .iline{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .iline .ii{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:var(--teal-l);display:grid;place-items:center;color:var(--teal);font-size:1.15rem}
+  .iline b{display:block;font-size:1.02rem;color:var(--ink);font-family:'Plus Jakarta Sans'}
+  .iline a,.iline span{color:var(--muted);font-size:.94rem}
+  .iline a:hover{color:var(--teal)}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr;gap:34px}}
+  @media(max-width:460px){.frow{grid-template-columns:1fr}}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#b9c8c9;padding:60px 0 26px}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:38px;margin-bottom:40px}
+  .fcol h5{font-size:.8rem;text-transform:uppercase;letter-spacing:.13em;color:var(--yellow);margin-bottom:16px;font-weight:800;font-family:'Plus Jakarta Sans'}
+  .fcol.about .brand{margin-bottom:14px}
+  .fcol.about .brand .bt{color:#fff}
+  .fcol.about .brand .bt b{color:var(--yellow)}
+  .fcol.about .brand .bs{color:#8ea3a4}
+  .fcol.about p{font-size:.9rem;max-width:300px}
+  .fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .fcol ul a,.fcol ul span{color:#b9c8c9;font-size:.9rem;transition:.2s}
+  .fcol ul a:hover{color:var(--yellow);padding-left:4px}
+  .fcol ul i{color:var(--yellow);width:18px}
+  .fbar{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:.83rem;color:#8ea3a4}
+  .fbar .credit a{color:var(--yellow);font-weight:600}
+  @media(max-width:840px){.fgrid{grid-template-columns:1fr 1fr;gap:30px}}
+  @media(max-width:480px){.fgrid{grid-template-columns:1fr}}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(8,20,22,.94);z-index:300;display:none;align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:90vw;max-height:86vh;border-radius:12px}
+  .lightbox .lx{position:absolute;top:22px;right:28px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none}
+  .lightbox .lnav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:1.8rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);width:52px;height:52px;border-radius:50%;cursor:pointer;transition:.2s}
+  .lightbox .lnav:hover{background:var(--teal)}
+  .lightbox .lprev{left:22px}.lightbox .lnext{right:22px}
+
+  .rv{opacity:0;transform:translateY(28px);transition:.7s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+  .fabcall{position:fixed;right:18px;bottom:18px;z-index:120;background:var(--teal);color:#fff;width:60px;height:60px;
+    border-radius:50%;display:none;place-items:center;font-size:1.4rem;box-shadow:0 14px 30px -8px rgba(13,115,119,.9);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(13,115,119,.55)}70%{box-shadow:0 0 0 16px rgba(13,115,119,0)}100%{box-shadow:0 0 0 0 rgba(13,115,119,0)}}
+  @media(max-width:960px){.fabcall{display:grid}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><i class="fa-solid fa-shield-halved"></i> Licensed &amp; Insured</span>
+      <span class="hide-sm"><i class="fa-solid fa-location-dot"></i> New Braunfels, TX</span>
+      <span class="hide-sm"><i class="fa-solid fa-tag"></i> Free Estimates</span>
+    </div>
+    <a href="tel:+12103855804"><i class="fa-solid fa-phone-volume"></i> 210-385-5804</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <img class="mascot" src="img/logo.jpg" alt="Ford's Maintenance mascot">
+      <div>
+        <div class="bt">Ford's <b>Maintenance</b></div>
+        <div class="bs">Handyman · Demo · Repairs</div>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#work">The Work</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+12103855804" class="nav-phone"><i class="fa-solid fa-phone"></i><span>210-385-5804</span></a>
+      <a href="#contact" class="btn btn-yellow">Free Estimate</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="scrim" id="scrim"></div>
+<div class="mmenu" id="mmenu">
+  <button class="mclose" id="mclose"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#services">Services</a>
+  <a href="#work">The Work</a>
+  <a href="#why">Why Us</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+12103855804" class="btn btn-outline"><i class="fa-solid fa-phone"></i> 210-385-5804</a>
+  <a href="#contact" class="btn btn-yellow">Get Free Estimate</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow on-dark"><i class="fa-solid fa-hammer"></i> New Braunfels Handyman &amp; Maintenance</span>
+      <h1>Your Honey-Do List, <span class="y">Handled.</span></h1>
+      <p class="lead">One trusted local pro for handyman repairs, demolition, junk removal, drywall &amp; painting — residential and commercial. Licensed, insured, and always a free estimate.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-yellow"><i class="fa-solid fa-clipboard-check"></i> Get My Free Estimate</a>
+        <a href="tel:+12103855804" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> 210-385-5804</a>
+      </div>
+      <div class="trust">
+        <div class="ti"><i class="fa-solid fa-check"></i> Licensed &amp; Insured</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> Locally Owned</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> Residential &amp; Commercial</div>
+      </div>
+    </div>
+    <div class="rv d1">
+      <div class="stage">
+        <div class="mascot-ring">
+          <img src="img/logo.png" alt="Ford's Maintenance handyman mascot">
+        </div>
+        <div class="badge-float bf1"><i class="fa-solid fa-star"></i><div><b>5-Star Service</b><small>Neighbors trust us</small></div></div>
+        <div class="badge-float bf2"><i class="fa-solid fa-phone-volume"></i><div><b>One Call</b><small>Handles it all</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="s"><i class="fa-solid fa-shield-halved"></i><div><b>Licensed &amp; Insured</b><small>Work with peace of mind</small></div></div>
+    <div class="s"><i class="fa-solid fa-house-user"></i><div><b>Locally Owned</b><small>By Robert Ford</small></div></div>
+    <div class="s"><i class="fa-solid fa-building"></i><div><b>Res. &amp; Commercial</b><small>Homes &amp; businesses</small></div></div>
+    <div class="s"><i class="fa-solid fa-tag"></i><div><b>Free Estimates</b><small>No obligation</small></div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> What We Do</span>
+      <h2>One Pro For <span class="t">Every Job On Your List</span></h2>
+      <p>From a quick repair to a full demolition — Ford's Maintenance handles it all, so you only have to make one call.</p>
+    </div>
+    <div class="scards">
+      <article class="scard rv">
+        <div class="ph"><img src="img/svc-handyman.jpg" alt="Handyman repairs"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Handyman &amp; Repairs</h3><p>The whole "honey-do" list — fixes, mounting, assembly, odd jobs and everything in between.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d1">
+        <div class="ph"><img src="img/svc-demo.jpg" alt="Demolition"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-hammer"></i></div><h3>Demolition</h3><p>Interior tear-outs, sheds, decks, walls and more — done safely, cleanly and to schedule.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d2">
+        <div class="ph"><img src="img/svc-junk.jpg" alt="Junk removal and disposal"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-truck-ramp-box"></i></div><h3>Junk Removal &amp; Disposal</h3><p>We haul off the debris, junk and clutter — leaving the site clean and clear.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv">
+        <div class="ph"><img src="img/svc-drywall.jpg" alt="Drywall and texture"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-trowel"></i></div><h3>Drywall &amp; Texture</h3><p>Patches, repairs, full sheets and matched texture — walls and ceilings made whole again.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d1">
+        <div class="ph"><img src="img/svc-paint.jpg" alt="Painting"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-paint-roller"></i></div><h3>Painting</h3><p>Interior &amp; exterior painting done neat — the right prep, clean lines, and a finish that lasts.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d2">
+        <div class="ph"><img src="img/svc-install.jpg" alt="Installations and assembly"></div>
+        <div class="bd"><div class="ic"><i class="fa-solid fa-toolbox"></i></div><h3>Installs &amp; Assembly</h3><p>Fixtures, fans, shelving, furniture and more — installed right and built to hold up.</p><span class="more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HONEY-DO BAND -->
+<section class="honey">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow on-dark"><i class="fa-solid fa-list-check"></i> The Ford's Promise</span>
+      <h2>We Handle Your <span class="y">Honey-Do List</span></h2>
+      <p class="quip">"We take care of your <span class="y">HONEY-DO list</span> — so you can spend time with your <span class="y">HONEY.</span>"</p>
+      <p>Tired of that growing list of "I'll get to it" jobs? Hand it to Ford's. One call, one dependable crew, and it all just gets done — done right, and done for a fair price.</p>
+      <a href="#contact" class="btn btn-yellow"><i class="fa-solid fa-clipboard-check"></i> Hand Us Your List</a>
+    </div>
+    <div class="rv d1">
+      <div class="checklist">
+        <h4><i class="fa-solid fa-clipboard-list"></i> Consider it done:</h4>
+        <ul>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> Fix that leaky faucet &amp; squeaky door</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> Patch &amp; repaint the drywall</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> Tear out the old deck or shed</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> Haul off the junk &amp; debris</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> Mount the TV &amp; hang the shelves</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span> …and whatever else is on the list</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-img rv">
+      <img src="img/about.jpg" alt="Ford's Maintenance handyman at work">
+      <div class="tag"><i class="fa-solid fa-user-check"></i><div><b>Robert Ford</b><small>Owner &amp; your handyman</small></div></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow"><i class="fa-solid fa-thumbs-up"></i> Why Ford's Maintenance</span>
+      <h2>A Local Pro You Can <span class="t">Actually Count On</span></h2>
+      <p class="intro">Ford's Maintenance is locally owned and operated right here in New Braunfels. You get one dependable point of contact, honest pricing, and a job done properly — the first time.</p>
+      <div class="reasons">
+        <div class="reason"><div class="ri"><i class="fa-solid fa-shield-halved"></i></div><div><h4>Licensed &amp; Insured</h4><p>Fully covered — you're protected on every job.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-house-user"></i></div><div><h4>Locally Owned</h4><p>A New Braunfels neighbor, not a faceless chain.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-tag"></i></div><div><h4>Free Estimates</h4><p>Clear, honest quotes with no pressure.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-phone-volume"></i></div><div><h4>One Call, Done</h4><p>Handyman to demolition — one number for it all.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-building"></i></div><div><h4>Res. &amp; Commercial</h4><p>Homes, rentals and businesses all welcome.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-broom"></i></div><div><h4>Clean &amp; Reliable</h4><p>On time, tidy, and respectful of your space.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat rv"><div class="n" data-count="10">0</div><div class="l">Years Serving NB</div></div>
+      <div class="stat rv d1"><div class="n" data-count="1500">0</div><div class="l">Jobs Completed</div></div>
+      <div class="stat rv d2"><div class="n">5.0<span class="u">★</span></div><div class="l">Customer Rated</div></div>
+      <div class="stat rv d3"><div class="n" data-count="100">0</div><div class="l">Free Estimates</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-images"></i> The Work We Do</span>
+      <h2>From Small Fixes To <span class="t">Full Tear-Outs</span></h2>
+      <p>A look at the kind of jobs Ford's Maintenance takes on around New Braunfels. Tap any photo to enlarge.</p>
+    </div>
+    <div class="filters rv" id="filters">
+      <button class="active" data-f="all">All</button>
+      <button data-f="repair">Repairs</button>
+      <button data-f="demo">Demolition</button>
+      <button data-f="paint">Painting</button>
+      <button data-f="tools">Tools</button>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-route"></i> How It Works</span>
+      <h2>Easy From <span class="t">Call To Complete</span></h2>
+      <p>No runaround — just a simple path to getting your list handled.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num">1<div class="ic"><i class="fa-solid fa-phone"></i></div></div><h4>Give Us A Call</h4><p>Tell us what's on your list — big or small.</p></div>
+      <div class="step rv d1"><div class="num">2<div class="ic"><i class="fa-solid fa-clipboard-check"></i></div></div><h4>Free Estimate</h4><p>We assess the job and give you an honest quote.</p></div>
+      <div class="step rv d2"><div class="num">3<div class="ic"><i class="fa-solid fa-hammer"></i></div></div><h4>We Handle It</h4><p>We show up on time and get the work done right.</p></div>
+      <div class="step rv d3"><div class="num">4<div class="ic"><i class="fa-solid fa-check"></i></div></div><h4>Job Done</h4><p>We clean up and you enjoy the results.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-comment-dots"></i> What Neighbors Say</span>
+      <h2>Trusted Around <span class="t">New Braunfels</span></h2>
+      <p>A few words from folks whose to-do lists we've cleared.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard rv"><div class="q">"</div><div class="st">★★★★★</div><p>Robert knocked out a whole list of repairs I'd been putting off for months — drywall, a leaky faucet, and mounted my TV. On time, fair price, cleaned up after. Couldn't ask for more.</p><div class="who"><div class="av">KH</div><div><b>Kevin H.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="tcard rv d1"><div class="q">"</div><div class="st">★★★★★</div><p>Hired Ford's to demo an old backyard deck and haul everything off. Fast, professional and no mess left behind. Will absolutely be my first call next time.</p><div class="who"><div class="av">ML</div><div><b>Maria L.</b><small>Canyon Lake, TX</small></div></div></div>
+      <div class="tcard rv d2"><div class="q">"</div><div class="st">★★★★★</div><p>We use Ford's for maintenance on our rental properties. Reliable, honest, and handles everything from painting to repairs. A local pro you can trust.</p><div class="who"><div class="av">DT</div><div><b>Derek T.</b><small>Seguin, TX</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>One Call Handles It All. Let's Knock Out Your List.</h2>
+    <div class="cbtns">
+      <a href="tel:+12103855804" class="btn btn-dark"><i class="fa-solid fa-phone"></i> 210-385-5804</a>
+      <a href="#contact" class="btn btn-wt"><i class="fa-solid fa-clipboard-check"></i> Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cform rv">
+      <h3>Request Your Free Estimate</h3>
+      <p class="sub">Tell us what's on your list — we'll get right back to you.</p>
+      <form id="estForm">
+        <div class="frow">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(210) 000-0000" required></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+        <div class="field"><label>What do you need?</label>
+          <select name="service">
+            <option>Handyman / Repairs</option>
+            <option>Demolition</option>
+            <option>Junk Removal / Disposal</option>
+            <option>Drywall / Texture</option>
+            <option>Painting</option>
+            <option>Installs / Assembly</option>
+            <option>Property Maintenance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Your To-Do List</label><textarea name="msg" placeholder="Tell us about the job(s) — the more detail the better…"></textarea></div>
+        <button type="submit" class="btn btn-teal"><i class="fa-solid fa-paper-plane"></i> Send My Request</button>
+        <p class="formnote">Or call/text us directly at <strong>210-385-5804</strong> — we answer fast.</p>
+      </form>
+    </div>
+    <div class="cinfo rv d1">
+      <h3>Let's Get It <span class="t">Handled</span></h3>
+      <p>Serving New Braunfels and the surrounding area. Reach out any way you like — estimates are always free.</p>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><a href="tel:+12103855804">210-385-5804</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>New Braunfels, TX 78130 &amp; nearby</span></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Call anytime to schedule — Free Estimates</span></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-shield-halved"></i></div><div><b>Peace of Mind</b><span>Licensed &amp; Insured · Locally Owned</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol about">
+        <a href="#home" class="brand">
+          <img class="mascot" src="img/logo.jpg" alt="Ford's Maintenance mascot" style="border-color:var(--yellow)">
+          <div><div class="bt">Ford's <b>Maintenance</b></div><div class="bs">Handyman · Demo · Repairs</div></div>
+        </a>
+        <p>New Braunfels' one-call handyman, demolition and maintenance pro. Residential &amp; commercial. Licensed, insured and locally owned by Robert Ford.</p>
+      </div>
+      <div class="fcol">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Handyman &amp; Repairs</a></li>
+          <li><a href="#services">Demolition</a></li>
+          <li><a href="#services">Junk Removal</a></li>
+          <li><a href="#services">Drywall &amp; Texture</a></li>
+          <li><a href="#services">Painting</a></li>
+          <li><a href="#services">Installs &amp; Assembly</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Service Area</h5>
+        <ul>
+          <li><span>New Braunfels</span></li>
+          <li><span>Canyon Lake</span></li>
+          <li><span>Seguin</span></li>
+          <li><span>Schertz &amp; Cibolo</span></li>
+          <li><span>Bulverde</span></li>
+          <li><span>Spring Branch</span></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:+12103855804"><i class="fa-solid fa-phone"></i> 210-385-5804</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-clipboard-check"></i> Free Estimate</a></li>
+          <li><span><i class="fa-solid fa-location-dot"></i> New Braunfels, TX 78130</span></li>
+          <li><span><i class="fa-solid fa-shield-halved"></i> Licensed &amp; Insured</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Ford's Maintenance Service — New Braunfels, TX. All rights reserved.</span>
+      <span class="credit">Website design concept by <a href="https://abdullahrahim.com" target="_blank" rel="noopener">Abdullah Rahim</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lx" id="lxClose"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lnav lprev" id="lxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lxImg" src="" alt="">
+  <button class="lnav lnext" id="lxNext"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<a href="tel:+12103855804" class="fabcall" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+<script>
+const GAL=[
+  {img:'g-5.jpg',cat:'tools',label:'The Right Tools'},
+  {img:'svc-demo.jpg',cat:'demo',label:'Interior Demolition'},
+  {img:'svc-paint.jpg',cat:'paint',label:'Interior Painting'},
+  {img:'g-1.jpg',cat:'tools',label:'Ready For Anything'},
+  {img:'g-2.jpg',cat:'demo',label:'Tear-Outs & Removal'},
+  {img:'g-4.jpg',cat:'paint',label:'Fresh Coat'},
+  {img:'svc-drywall.jpg',cat:'repair',label:'Drywall & Prep'},
+  {img:'g-6.jpg',cat:'demo',label:'Renovation Demo'},
+  {img:'g-3.jpg',cat:'paint',label:'Exterior Work'},
+  {img:'svc-handyman.jpg',cat:'repair',label:'Handyman Repairs'},
+  {img:'svc-install.jpg',cat:'repair',label:'Installs & Assembly'},
+  {img:'g-7.jpg',cat:'paint',label:'Neat Finishes'},
+];
+const gal=document.getElementById('gal');
+gal.innerHTML=GAL.map((g,i)=>`<div class="gitem" data-cat="${g.cat}" data-i="${i}"><img src="img/${g.img}" alt="${g.label}" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> ${g.label}</span></div></div>`).join('');
+
+document.getElementById('filters').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');const f=b.dataset.f;
+  document.querySelectorAll('.gitem').forEach(it=>{it.style.display=(f==='all'||it.dataset.cat===f)?'':'none';});
+});
+
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lxImg');
+let visible=[],cur=0;
+function openLb(i){visible=[...document.querySelectorAll('.gitem')].filter(x=>x.style.display!=='none');cur=visible.findIndex(x=>+x.dataset.i===i);show();lb.classList.add('open');}
+function show(){const el=visible[cur];if(el)lbImg.src=el.querySelector('img').src;}
+gal.addEventListener('click',e=>{const it=e.target.closest('.gitem');if(it)openLb(+it.dataset.i);});
+document.getElementById('lxClose').onclick=()=>lb.classList.remove('open');
+document.getElementById('lxNext').onclick=()=>{cur=(cur+1)%visible.length;show();};
+document.getElementById('lxPrev').onclick=()=>{cur=(cur-1+visible.length)%visible.length;show();};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowRight')document.getElementById('lxNext').click();if(e.key==='ArrowLeft')document.getElementById('lxPrev').click();});
+
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30));
+const mmenu=document.getElementById('mmenu'),scrim=document.getElementById('scrim');
+const openM=()=>{mmenu.classList.add('open');scrim.classList.add('open');};
+const closeM=()=>{mmenu.classList.remove('open');scrim.classList.remove('open');};
+document.getElementById('burger').onclick=openM;document.getElementById('mclose').onclick=closeM;scrim.onclick=closeM;
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+const cio=new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting)return;const el=en.target,target=+el.dataset.count,suffix=target===100?'%':'+';
+  let n=0;const step=Math.max(1,Math.ceil(target/60));
+  const t=setInterval(()=>{n+=step;if(n>=target){n=target;clearInterval(t);}el.textContent=n.toLocaleString()+suffix;},22);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+document.getElementById('estForm').addEventListener('submit',e=>{
+  e.preventDefault();const btn=e.target.querySelector('button[type=submit]');
+  btn.innerHTML='<i class="fa-solid fa-check"></i> Thanks! We\'ll Be In Touch';btn.style.background='#0a5e61';
+  setTimeout(()=>{e.target.reset();btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send My Request';btn.style.background='';},3500);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
