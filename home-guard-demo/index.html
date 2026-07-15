@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Guard — Fence, Rail & Gate Experts | New Braunfels, TX</title>
+<meta name="description" content="Home Guard builds premium wood privacy fences, ornamental iron, cable railing, ranch rail, custom gates & pergolas across New Braunfels and the Texas Hill Country. Free estimates — 830-221-0114.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d1332e' d='M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5z'/%3E%3Cpath fill='%23fff' d='M11 6h2v5h-2zM11 13h2v2h-2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --ink:#14161a; --ink-2:#0f1115; --surface:#1c1f26; --surface-2:#22262f;
+    --red:#d1332e; --red-2:#b0231f; --cedar:#cf9b63; --cedar-2:#b8863f;
+    --cream:#f5f2ea; --muted:#a4abb8; --line:rgba(255,255,255,.09);
+    --maxw:1220px; --r:16px; --shadow:0 22px 50px -20px rgba(0,0,0,.7);
+    --ease:cubic-bezier(.4,0,.15,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--cream);
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.98}
+  section{position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.74rem;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--cedar)}
+  .eyebrow i{color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;
+    padding:15px 26px;border-radius:11px;cursor:pointer;border:none;transition:.28s var(--ease);white-space:nowrap}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px rgba(209,51,46,.75)}
+  .btn-red:hover{background:var(--red-2);transform:translateY(-3px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(255,255,255,.28)}
+  .btn-ghost:hover{border-color:var(--cream);background:rgba(255,255,255,.06);transform:translateY(-3px)}
+  .btn-dark{background:#191c22;color:#fff;border:1px solid var(--line)}
+  .btn-dark:hover{background:#23272f;transform:translateY(-3px)}
+
+  /* ANNOUNCEMENT BAR */
+  .topbar{background:linear-gradient(90deg,var(--red-2),var(--red));color:#fff;font-size:.82rem;font-weight:600}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:9px;padding-bottom:9px;gap:14px}
+  .topbar .tb-left{display:flex;align-items:center;gap:8px}
+  .topbar a{display:inline-flex;align-items:center;gap:8px;font-weight:800}
+  .topbar .dot{opacity:.5}
+  @media(max-width:720px){.topbar .tb-left span.hide-sm{display:none}}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:100;transition:.35s var(--ease);
+    background:rgba(16,17,21,.0);backdrop-filter:blur(0px)}
+  header.nav.solid{background:rgba(14,15,19,.92);backdrop-filter:blur(14px);
+    box-shadow:0 10px 30px -18px rgba(0,0,0,.9);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .shield{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(150deg,var(--red),var(--red-2));color:#fff;font-size:1.15rem;
+    box-shadow:0 8px 18px -8px rgba(209,51,46,.8)}
+  .brand .bt{font-family:'Anton',sans-serif;font-size:1.5rem;letter-spacing:.02em;line-height:.9;text-transform:uppercase}
+  .brand .bt b{color:var(--red)}
+  .brand .bs{font-size:.6rem;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;font-weight:700}
+  nav.links{display:flex;align-items:center;gap:32px}
+  nav.links a{font-weight:600;font-size:.93rem;color:#d7dbe2;position:relative;padding:4px 0}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--red);transition:.3s var(--ease)}
+  nav.links a:hover{color:#fff}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.02rem}
+  .nav-phone i{color:var(--red)}
+  .burger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+  @media(max-width:960px){
+    nav.links,.nav-cta .btn,.nav-phone span{display:none}
+    .burger{display:block}
+  }
+
+  /* MOBILE MENU */
+  .mmenu{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:var(--ink-2);
+    z-index:200;transform:translateX(100%);transition:.4s var(--ease);padding:26px;
+    display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line)}
+  .mmenu.open{transform:translateX(0)}
+  .mmenu .mclose{align-self:flex-end;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;margin-bottom:10px}
+  .mmenu a{padding:14px 8px;border-bottom:1px solid var(--line);font-weight:600;font-size:1.05rem}
+  .mmenu .btn{margin-top:18px;justify-content:center}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:150;opacity:0;visibility:hidden;transition:.3s}
+  .scrim.open{opacity:1;visibility:visible}
+
+  /* HERO */
+  .hero{background:
+      radial-gradient(1000px 500px at 88% -8%,rgba(209,51,46,.16),transparent 60%),
+      radial-gradient(800px 500px at 0% 100%,rgba(207,155,99,.10),transparent 55%),
+      var(--ink);
+    padding:70px 0 84px;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.9rem,6vw,5rem);margin:20px 0 22px}
+  .hero h1 .r{color:var(--red)}
+  .hero p.lead{font-size:1.13rem;color:#cfd4dd;max-width:520px;margin-bottom:30px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .trust{display:flex;align-items:center;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.86rem;font-weight:600}
+  .trust .ti{display:flex;align-items:center;gap:9px}
+  .trust .stars{color:#f6b73c;letter-spacing:2px}
+  .trust i.chk{color:#5fca7d}
+  /* hero mosaic */
+  .mosaic{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;gap:14px;position:relative}
+  .mosaic figure{overflow:hidden;border-radius:14px;position:relative;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .mosaic figure:hover img{transform:scale(1.08)}
+  .mosaic .m1{grid-row:span 2}
+  .mosaic .m2{grid-row:span 2}
+  .mosaic .m4{grid-column:span 2;grid-row:span 2}
+  .hero-badge{position:absolute;left:-16px;bottom:-16px;background:var(--red);color:#fff;
+    padding:16px 20px;border-radius:14px;box-shadow:0 20px 40px -14px rgba(209,51,46,.8);z-index:3;transform:rotate(-3deg)}
+  .hero-badge b{font-family:'Anton',sans-serif;font-size:1.7rem;display:block;line-height:.9}
+  .hero-badge span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.92}
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px}
+    .mosaic{grid-auto-rows:110px}
+  }
+
+  /* SERVICE-AREA STRIP */
+  .areastrip{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+  .areastrip .wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:center}
+  .areastrip .lab{font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--muted)}
+  .areastrip .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .areastrip .chips span{font-size:.82rem;font-weight:600;color:#cbd0d8;padding:6px 13px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.02)}
+
+  /* STATS */
+  .stats{padding:64px 0;background:var(--ink)}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .stat{text-align:center;padding:30px 16px;background:linear-gradient(180deg,var(--surface),var(--surface-2));
+    border:1px solid var(--line);border-radius:var(--r);position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--red),var(--cedar))}
+  .stat .n{font-family:'Anton',sans-serif;font-size:3rem;color:#fff;line-height:1}
+  .stat .n .u{color:var(--red)}
+  .stat .l{margin-top:8px;font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+  @media(max-width:760px){.stats .grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* SECTION HEAD */
+  .shead{text-align:center;max-width:660px;margin:0 auto 52px}
+  .shead h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin:14px 0 14px}
+  .shead h2 .r{color:var(--red)}
+  .shead p{color:var(--muted);font-size:1.05rem}
+
+  /* SERVICES */
+  .services{padding:92px 0;background:linear-gradient(180deg,var(--ink),var(--ink-2))}
+  .scards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .scard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+    transition:.35s var(--ease);position:relative}
+  .scard:hover{transform:translateY(-8px);border-color:rgba(209,51,46,.5);box-shadow:var(--shadow)}
+  .scard .ph{height:190px;overflow:hidden;position:relative}
+  .scard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .scard:hover .ph img{transform:scale(1.09)}
+  .scard .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(20,22,26,.85))}
+  .scard .ic{position:absolute;bottom:-22px;left:22px;width:52px;height:52px;border-radius:13px;
+    background:var(--red);display:grid;place-items:center;color:#fff;font-size:1.25rem;z-index:2;
+    box-shadow:0 12px 24px -10px rgba(209,51,46,.9)}
+  .scard .bd{padding:34px 24px 26px}
+  .scard h3{font-size:1.28rem;margin-bottom:9px}
+  .scard p{color:var(--muted);font-size:.94rem;margin-bottom:14px}
+  .scard .more{font-weight:700;font-size:.86rem;color:var(--cedar);display:inline-flex;align-items:center;gap:8px;transition:gap .3s}
+  .scard:hover .more{gap:14px;color:var(--red)}
+  @media(max-width:900px){.scards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.scards{grid-template-columns:1fr}}
+
+  /* GALLERY */
+  .work{padding:92px 0;background:var(--ink-2)}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
+  .filters button{background:var(--surface);border:1px solid var(--line);color:#cbd0d8;
+    padding:10px 20px;border-radius:100px;font-weight:600;font-size:.88rem;cursor:pointer;transition:.25s var(--ease)}
+  .filters button:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+  .filters button.active{background:var(--red);color:#fff;border-color:var(--red)}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gitem{position:relative;overflow:hidden;border-radius:13px;aspect-ratio:1/1;cursor:pointer;border:1px solid var(--line)}
+  .gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gitem:hover img{transform:scale(1.11)}
+  .gitem .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(176,35,31,.82));
+    opacity:0;transition:.35s var(--ease);display:flex;align-items:flex-end;padding:16px}
+  .gitem:hover .ov{opacity:1}
+  .gitem .ov span{font-weight:700;font-size:.86rem;color:#fff;display:flex;align-items:center;gap:8px}
+  .gitem .ov i{font-size:1.1rem}
+  @media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+  /* WHY US */
+  .why{padding:92px 0;background:var(--ink)}
+  .why .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+  .why-img{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .why-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+  .why-img .tag{position:absolute;left:20px;bottom:20px;background:rgba(15,17,21,.86);backdrop-filter:blur(6px);
+    border:1px solid var(--line);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:12px}
+  .why-img .tag i{color:var(--red);font-size:1.5rem}
+  .why-img .tag b{display:block;font-size:1.05rem}
+  .why-img .tag small{color:var(--muted)}
+  .why h2{font-size:clamp(2rem,4vw,3rem);margin:16px 0 18px}
+  .why h2 .r{color:var(--red)}
+  .why > .wrap > div > p.intro{color:var(--muted);margin-bottom:26px;font-size:1.04rem}
+  .reasons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .reason{display:flex;gap:14px}
+  .reason .ri{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:rgba(209,51,46,.13);
+    border:1px solid rgba(209,51,46,.3);display:grid;place-items:center;color:var(--red);font-size:1.15rem}
+  .reason h4{font-size:1rem;margin-bottom:3px}
+  .reason p{font-size:.87rem;color:var(--muted);line-height:1.5}
+  @media(max-width:900px){.why .wrap{grid-template-columns:1fr;gap:40px}}
+  @media(max-width:520px){.reasons{grid-template-columns:1fr}}
+
+  /* PROCESS */
+  .process{padding:92px 0;background:var(--ink-2)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+  .step{text-align:center;position:relative;padding:0 8px}
+  .step .num{width:74px;height:74px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;
+    font-family:'Anton',sans-serif;font-size:1.7rem;color:#fff;background:var(--surface);
+    border:2px solid var(--red);position:relative;z-index:2}
+  .step .ic{position:absolute;top:-8px;right:calc(50% - 52px);width:34px;height:34px;border-radius:50%;
+    background:var(--red);display:grid;place-items:center;color:#fff;font-size:.85rem;z-index:3}
+  .step h4{font-size:1.15rem;margin-bottom:8px}
+  .step p{font-size:.9rem;color:var(--muted)}
+  .steps::before{content:"";position:absolute;top:37px;left:12%;right:12%;height:2px;
+    background:repeating-linear-gradient(90deg,var(--red) 0 8px,transparent 8px 18px);z-index:1}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:40px 24px}.steps::before{display:none}}
+  @media(max-width:460px){.steps{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS */
+  .testi{padding:92px 0;background:var(--ink)}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tcard{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--line);
+    border-radius:var(--r);padding:32px 28px;position:relative}
+  .tcard .q{position:absolute;top:20px;right:24px;font-size:3.4rem;color:rgba(209,51,46,.22);font-family:Georgia,serif;line-height:1}
+  .tcard .st{color:#f6b73c;letter-spacing:2px;margin-bottom:14px}
+  .tcard p{color:#dfe3ea;font-size:.97rem;margin-bottom:20px}
+  .tcard .who{display:flex;align-items:center;gap:13px}
+  .tcard .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(140deg,var(--red),var(--cedar));
+    display:grid;place-items:center;font-weight:800;color:#fff;font-size:1rem}
+  .tcard .who b{display:block;font-size:.95rem}
+  .tcard .who small{color:var(--muted)}
+  @media(max-width:900px){.tgrid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+
+  /* CTA BAND */
+  .ctaband{padding:70px 0;background:linear-gradient(120deg,var(--red-2),var(--red));position:relative;overflow:hidden}
+  .ctaband::after{content:"\f3ed";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;
+    right:-10px;top:50%;transform:translateY(-50%);font-size:16rem;color:rgba(255,255,255,.08)}
+  .ctaband .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
+  .ctaband h2{font-size:clamp(1.9rem,4vw,2.9rem);color:#fff;max-width:640px}
+  .ctaband .cbtns{display:flex;gap:14px;flex-wrap:wrap}
+  .ctaband .btn-white{background:#fff;color:var(--red-2)}
+  .ctaband .btn-white:hover{transform:translateY(-3px);box-shadow:0 16px 30px -12px rgba(0,0,0,.4)}
+  .ctaband .btn-out{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+  .ctaband .btn-out:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+
+  /* CONTACT */
+  .contact{padding:92px 0;background:var(--ink-2)}
+  .contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+  .cform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px}
+  .cform h3{font-size:1.6rem;margin-bottom:6px}
+  .cform .sub{color:var(--muted);font-size:.92rem;margin-bottom:24px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;background:var(--ink-2);border:1px solid var(--line);
+    border-radius:11px;padding:13px 15px;color:var(--cream);font-family:inherit;font-size:.95rem;transition:.25s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(209,51,46,.16)}
+  .field textarea{resize:vertical;min-height:100px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cform .btn{width:100%;justify-content:center;margin-top:8px}
+  .formnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:14px}
+  .cinfo h3{font-size:1.9rem;margin-bottom:8px}
+  .cinfo h3 .r{color:var(--red)}
+  .cinfo > p{color:var(--muted);margin-bottom:26px}
+  .iline{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+  .iline .ii{flex:0 0 48px;width:48px;height:48px;border-radius:13px;background:rgba(209,51,46,.12);
+    border:1px solid rgba(209,51,46,.3);display:grid;place-items:center;color:var(--red);font-size:1.2rem}
+  .iline b{display:block;font-size:1.05rem}
+  .iline a,.iline span{color:var(--muted);font-size:.95rem}
+  .iline a:hover{color:var(--red)}
+  .socials{display:flex;gap:12px;margin-top:24px}
+  .socials a{width:46px;height:46px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+    display:grid;place-items:center;color:#cbd0d8;font-size:1.1rem;transition:.25s}
+  .socials a:hover{background:var(--red);color:#fff;transform:translateY(-3px);border-color:var(--red)}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr;gap:36px}}
+  @media(max-width:460px){.frow{grid-template-columns:1fr}}
+
+  /* FOOTER */
+  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:64px 0 28px}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:44px}
+  .fcol h5{font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cedar);margin-bottom:18px;font-weight:800}
+  .fcol.about .brand{margin-bottom:16px}
+  .fcol.about p{color:var(--muted);font-size:.92rem;max-width:300px}
+  .fcol ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .fcol ul a,.fcol ul span{color:var(--muted);font-size:.92rem;transition:.2s}
+  .fcol ul a:hover{color:var(--red);padding-left:4px}
+  .fbar{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+    align-items:center;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.84rem}
+  .fbar .credit{color:#7f8794}
+  .fbar .credit a{color:var(--cedar);font-weight:600}
+  @media(max-width:840px){.fgrid{grid-template-columns:1fr 1fr;gap:32px}}
+  @media(max-width:480px){.fgrid{grid-template-columns:1fr}}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(8,9,12,.94);z-index:300;display:none;
+    align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:90vw;max-height:86vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+  .lightbox .lx{position:absolute;top:24px;right:30px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none}
+  .lightbox .lnav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2rem;
+    background:rgba(255,255,255,.08);border:1px solid var(--line);width:54px;height:54px;border-radius:50%;cursor:pointer;transition:.2s}
+  .lightbox .lnav:hover{background:var(--red)}
+  .lightbox .lprev{left:24px}.lightbox .lnext{right:24px}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(30px);transition:.8s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  /* floating call btn (mobile) */
+  .fabcall{position:fixed;right:18px;bottom:18px;z-index:120;background:var(--red);color:#fff;
+    width:60px;height:60px;border-radius:50%;display:none;place-items:center;font-size:1.4rem;
+    box-shadow:0 14px 30px -8px rgba(209,51,46,.9);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(209,51,46,.6)}70%{box-shadow:0 0 0 16px rgba(209,51,46,0)}100%{box-shadow:0 0 0 0 rgba(209,51,46,0)}}
+  @media(max-width:960px){.fabcall{display:grid}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Serving New Braunfels &amp; the Texas Hill Country</span>
+      <span class="dot hide-sm">•</span>
+      <span class="hide-sm">Free On-Site Estimates</span>
+    </div>
+    <a href="tel:+18302210114"><i class="fa-solid fa-phone-volume"></i> 830-221-0114</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <div class="shield"><i class="fa-solid fa-shield-halved"></i></div>
+      <div>
+        <div class="bt">HOME<b>GUARD</b></div>
+        <div class="bs">Fence • Rail • Gate</div>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+18302210114" class="nav-phone"><i class="fa-solid fa-phone"></i><span>830-221-0114</span></a>
+      <a href="#contact" class="btn btn-red">Free Estimate</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="scrim" id="scrim"></div>
+<div class="mmenu" id="mmenu">
+  <button class="mclose" id="mclose"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#services">Services</a>
+  <a href="#work">Our Work</a>
+  <a href="#why">Why Us</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+18302210114" class="btn btn-dark"><i class="fa-solid fa-phone"></i> 830-221-0114</a>
+  <a href="#contact" class="btn btn-red">Get Free Estimate</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> New Braunfels' Fence &amp; Rail Experts</span>
+      <h1>Fences Built To <span class="r">Guard</span> What Matters Most</h1>
+      <p class="lead">Custom wood privacy fences, ornamental iron, modern cable railing, ranch rail, gates &amp; pergolas — crafted to last through every Texas season. Locally owned, built to code, backed by our workmanship.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-red"><i class="fa-solid fa-ruler-combined"></i> Get My Free Estimate</a>
+        <a href="tel:+18302210114" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> 830-221-0114</a>
+      </div>
+      <div class="trust">
+        <div class="ti"><span class="stars">★★★★★</span> Reviewed on Houzz</div>
+        <div class="ti"><i class="fa-solid fa-check chk"></i> Locally Owned</div>
+        <div class="ti"><i class="fa-solid fa-check chk"></i> Free Estimates</div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <div class="mosaic">
+        <figure class="m1"><img src="img/g-cable-3.jpg" alt="Modern cable railing staircase"></figure>
+        <figure class="m2"><img src="img/hero.jpg" alt="Horizontal cedar privacy fence"></figure>
+        <figure class="m3"><img src="img/g-iron-1.jpg" alt="Ornamental iron fence"></figure>
+        <figure class="m4"><img src="img/g-wood-2.jpg" alt="Cedar horizontal fence"></figure>
+        <div class="hero-badge"><b>830</b><span>221-0114 · Call Today</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA STRIP -->
+<div class="areastrip">
+  <div class="wrap">
+    <span class="lab"><i class="fa-solid fa-map-location-dot" style="color:var(--red)"></i> Proudly Serving</span>
+    <div class="chips">
+      <span>New Braunfels</span><span>Canyon Lake</span><span>Seguin</span>
+      <span>San Marcos</span><span>Spring Branch</span><span>Bulverde</span>
+      <span>Gruene</span><span>Wimberley</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat rv"><div class="n" data-count="1000">0</div><div class="l">Projects Completed</div></div>
+      <div class="stat rv d1"><div class="n" data-count="15">0</div><div class="l">Years of Experience</div></div>
+      <div class="stat rv d2"><div class="n">5.0<span class="u">★</span></div><div class="l">Houzz Reviewed</div></div>
+      <div class="stat rv d3"><div class="n" data-count="100">0</div><div class="l">Free Estimates</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> What We Build</span>
+      <h2>Fencing &amp; Railing, <span class="r">Done Right</span></h2>
+      <p>From privacy fences to designer cable rail — one local crew, premium materials, and clean workmanship on every job.</p>
+    </div>
+    <div class="scards">
+      <article class="scard rv">
+        <div class="ph"><img src="img/svc-wood.jpg" alt="Wood privacy fence"><div class="ic"><i class="fa-solid fa-tree"></i></div></div>
+        <div class="bd"><h3>Wood Privacy Fences</h3><p>Cedar &amp; treated pine privacy fences — vertical or horizontal, board-on-board, stained to last.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d1">
+        <div class="ph"><img src="img/svc-iron.jpg" alt="Ornamental iron fence"><div class="ic"><i class="fa-solid fa-fence"></i></div></div>
+        <div class="bd"><h3>Ornamental Iron</h3><p>Elegant, secure steel &amp; wrought-iron fencing for homes, ranches and commercial properties.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d2">
+        <div class="ph"><img src="img/svc-cable.jpg" alt="Cable railing"><div class="ic"><i class="fa-solid fa-grip-lines"></i></div></div>
+        <div class="bd"><h3>Cable Railing</h3><p>Sleek, modern stainless cable rail for decks, patios &amp; staircases — the view stays open.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv">
+        <div class="ph"><img src="img/svc-ranch.jpg" alt="Ranch rail fence"><div class="ic"><i class="fa-solid fa-horse-head"></i></div></div>
+        <div class="bd"><h3>Ranch &amp; Rail Fencing</h3><p>Pipe, rail and field fencing that defines acreage and keeps livestock secure — Hill Country tough.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d1">
+        <div class="ph"><img src="img/svc-gate.jpg" alt="Custom gate"><div class="ic"><i class="fa-solid fa-door-open"></i></div></div>
+        <div class="bd"><h3>Custom Gates</h3><p>Walk gates, driveway &amp; entry gates — automated options built to match your fence and home.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+      <article class="scard rv d2">
+        <div class="ph"><img src="img/svc-pergola.jpg" alt="Pergola and deck"><div class="ic"><i class="fa-solid fa-umbrella-beach"></i></div></div>
+        <div class="bd"><h3>Pergolas &amp; Decks</h3><p>Custom shade structures, pergolas and outdoor living builds that upgrade your whole backyard.</p><span class="more">See examples <i class="fa-solid fa-arrow-right"></i></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / GALLERY -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-images"></i> Our Recent Work</span>
+      <h2>Real Projects, <span class="r">Real Craftsmanship</span></h2>
+      <p>Every fence and rail below was designed and installed by our own crew across the Hill Country. Tap any photo to enlarge.</p>
+    </div>
+    <div class="filters rv" id="filters">
+      <button class="active" data-f="all">All</button>
+      <button data-f="wood">Wood Privacy</button>
+      <button data-f="iron">Ornamental Iron</button>
+      <button data-f="cable">Cable Rail</button>
+      <button data-f="ranch">Ranch Rail</button>
+      <button data-f="gate">Gates</button>
+      <button data-f="more">Pergola &amp; Rail</button>
+    </div>
+    <div class="gal" id="gal">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-img rv">
+      <img src="img/about.jpg" alt="Home Guard fence and railing project on a modern Texas home">
+      <div class="tag"><i class="fa-solid fa-award"></i><div><b>Built to Last</b><small>Materials &amp; workmanship you can trust</small></div></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Why Home Guard</span>
+      <h2>Your Neighbors' <span class="r">First Call</span> For Fencing</h2>
+      <p class="intro">We're a locally owned New Braunfels crew — not a national franchise. You deal with the people who actually build your fence, from the free estimate to the final walk-through.</p>
+      <div class="reasons">
+        <div class="reason"><div class="ri"><i class="fa-solid fa-house-chimney"></i></div><div><h4>Locally Owned</h4><p>Rooted in New Braunfels &amp; the Hill Country — we know the soil, code and weather.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-clipboard-check"></i></div><div><h4>Free On-Site Estimates</h4><p>Clear, honest quotes with no pressure and no hidden surprises.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-layer-group"></i></div><div><h4>Premium Materials</h4><p>Quality cedar, steel &amp; hardware chosen to stand up to Texas heat and storms.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-people-carry-box"></i></div><div><h4>Clean, On-Time Crews</h4><p>Respectful of your property — we build efficiently and leave the site spotless.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-handshake-angle"></i></div><div><h4>Workmanship You Trust</h4><p>We stand behind every post we set and every panel we hang.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-star"></i></div><div><h4>5-Star Reputation</h4><p>Homeowners across the area recommend us — see our reviews below.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-list-check"></i> How It Works</span>
+      <h2>Simple From <span class="r">Quote To Complete</span></h2>
+      <p>Four easy steps and your new fence is standing tall.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num">1<div class="ic"><i class="fa-solid fa-phone"></i></div></div><h4>Reach Out</h4><p>Call or send a message with what you have in mind.</p></div>
+      <div class="step rv d1"><div class="num">2<div class="ic"><i class="fa-solid fa-ruler-combined"></i></div></div><h4>Free Estimate</h4><p>We visit, measure and give you an honest, detailed quote.</p></div>
+      <div class="step rv d2"><div class="num">3<div class="ic"><i class="fa-solid fa-hammer"></i></div></div><h4>We Build</h4><p>Our crew installs your fence or rail with care and precision.</p></div>
+      <div class="step rv d3"><div class="num">4<div class="ic"><i class="fa-solid fa-thumbs-up"></i></div></div><h4>You Enjoy</h4><p>Walk the finished job with us — then enjoy it for years.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-quote-right"></i> What Homeowners Say</span>
+      <h2>Trusted Across <span class="r">The Hill Country</span></h2>
+      <p>A few words from folks whose properties we've had the privilege to guard.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard rv"><div class="q">"</div><div class="st">★★★★★</div><p>They replaced our old, sagging fence with a beautiful horizontal cedar one. The crew was on time, professional, and the finished work looks incredible. Couldn't be happier.</p><div class="who"><div class="av">JM</div><div><b>Jessica M.</b><small>New Braunfels, TX</small></div></div></div>
+      <div class="tcard rv d1"><div class="q">"</div><div class="st">★★★★★</div><p>Home Guard installed cable railing on our deck and it completely transformed the view. Fair price, great communication, and true craftsmanship. Highly recommend.</p><div class="who"><div class="av">DR</div><div><b>David R.</b><small>Canyon Lake, TX</small></div></div></div>
+      <div class="tcard rv d2"><div class="q">"</div><div class="st">★★★★★</div><p>From the free estimate to the final gate install, everything was smooth. They built a custom driveway gate that matches our ranch fence perfectly. Top-notch local company.</p><div class="who"><div class="av">ST</div><div><b>Sandra T.</b><small>Seguin, TX</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>Ready For A Fence That Guards Your Property?</h2>
+    <div class="cbtns">
+      <a href="tel:+18302210114" class="btn btn-white"><i class="fa-solid fa-phone"></i> 830-221-0114</a>
+      <a href="#contact" class="btn btn-out"><i class="fa-solid fa-ruler-combined"></i> Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cform rv">
+      <h3>Request Your Free Estimate</h3>
+      <p class="sub">Tell us about your project — we'll get right back to you.</p>
+      <form id="estForm">
+        <div class="frow">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(830) 000-0000" required></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+        <div class="field"><label>What do you need?</label>
+          <select name="service">
+            <option>Wood Privacy Fence</option>
+            <option>Ornamental Iron Fence</option>
+            <option>Cable Railing</option>
+            <option>Ranch / Rail Fencing</option>
+            <option>Custom Gate</option>
+            <option>Pergola / Deck</option>
+            <option>Repair / Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Project Details</label><textarea name="msg" placeholder="Approximate length, location, timeframe…"></textarea></div>
+        <button type="submit" class="btn btn-red"><i class="fa-solid fa-paper-plane"></i> Send My Request</button>
+        <p class="formnote">Or call us directly at <strong>830-221-0114</strong> — we answer fast.</p>
+      </form>
+    </div>
+    <div class="cinfo rv d1">
+      <h3>Let's Talk <span class="r">Fencing</span></h3>
+      <p>Serving New Braunfels and the surrounding Hill Country. Reach out any way you like — estimates are always free.</p>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><a href="tel:+18302210114">830-221-0114</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-envelope"></i></div><div><b>Email</b><a href="mailto:info@nbfence.com">info@nbfence.com</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>New Braunfels &amp; the Texas Hill Country</span></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Mon–Sat: 8am – 6pm &nbsp;•&nbsp; Free Estimates</span></div></div>
+      <div class="socials">
+        <a href="https://www.facebook.com/fencingnb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.houzz.com/" target="_blank" rel="noopener" aria-label="Houzz"><i class="fa-brands fa-houzz"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol about">
+        <a href="#home" class="brand">
+          <div class="shield"><i class="fa-solid fa-shield-halved"></i></div>
+          <div><div class="bt">HOME<b>GUARD</b></div><div class="bs">Fence • Rail • Gate</div></div>
+        </a>
+        <p>New Braunfels' trusted fence, rail and gate builders. Locally owned, premium materials, and workmanship that stands the test of Texas weather.</p>
+      </div>
+      <div class="fcol">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Wood Privacy Fences</a></li>
+          <li><a href="#services">Ornamental Iron</a></li>
+          <li><a href="#services">Cable Railing</a></li>
+          <li><a href="#services">Ranch &amp; Rail</a></li>
+          <li><a href="#services">Custom Gates</a></li>
+          <li><a href="#services">Pergolas &amp; Decks</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Service Area</h5>
+        <ul>
+          <li><span>New Braunfels</span></li>
+          <li><span>Canyon Lake</span></li>
+          <li><span>Seguin</span></li>
+          <li><span>San Marcos</span></li>
+          <li><span>Spring Branch</span></li>
+          <li><span>Bulverde</span></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:+18302210114"><i class="fa-solid fa-phone" style="color:var(--red);width:18px"></i> 830-221-0114</a></li>
+          <li><a href="mailto:info@nbfence.com"><i class="fa-solid fa-envelope" style="color:var(--red);width:18px"></i> info@nbfence.com</a></li>
+          <li><a href="https://www.facebook.com/fencingnb" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" style="color:var(--red);width:18px"></i> Facebook</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-ruler-combined" style="color:var(--red);width:18px"></i> Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> Home Guard Fence • Rail • Gate — New Braunfels, TX. All rights reserved.</span>
+      <span class="credit">Website design concept by <a href="https://abdullahrahim.com" target="_blank" rel="noopener">Abdullah Rahim</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lx" id="lxClose"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lnav lprev" id="lxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lxImg" src="" alt="">
+  <button class="lnav lnext" id="lxNext"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- FLOATING CALL -->
+<a href="tel:+18302210114" class="fabcall" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+<script>
+/* ---------- gallery data ---------- */
+const GAL = [
+  {img:'g-wood-1.jpg', cat:'wood', label:'Cedar Privacy Fence'},
+  {img:'g-cable-1.jpg', cat:'cable', label:'Cable Fence'},
+  {img:'g-iron-1.jpg', cat:'iron', label:'Ornamental Iron'},
+  {img:'g-gate-1.jpg', cat:'gate', label:'Custom Gate'},
+  {img:'g-wood-2.jpg', cat:'wood', label:'Horizontal Cedar'},
+  {img:'g-cable-2.jpg', cat:'cable', label:'Cable Railing'},
+  {img:'g-ranch-1.jpg', cat:'ranch', label:'Ranch Rail'},
+  {img:'g-iron-2.jpg', cat:'iron', label:'Iron Fencing'},
+  {img:'g-pergola-1.jpg', cat:'more', label:'Pergola Build'},
+  {img:'g-wood-3.jpg', cat:'wood', label:'Board-on-Board'},
+  {img:'g-cable-3.jpg', cat:'cable', label:'Interior Cable Rail'},
+  {img:'g-gate-2.jpg', cat:'gate', label:'Entry Gate'},
+  {img:'g-iron-3.jpg', cat:'iron', label:'Steel Fence'},
+  {img:'g-rail-1.jpg', cat:'more', label:'Handrail'},
+  {img:'g-ranch-2.jpg', cat:'ranch', label:'Field Fence'},
+  {img:'g-cable-4.jpg', cat:'cable', label:'Deck Rail'},
+  {img:'g-wood-4.jpg', cat:'wood', label:'Cedar Fence'},
+  {img:'g-iron-4.jpg', cat:'iron', label:'Iron & Landscape'},
+  {img:'g-rail-2.jpg', cat:'more', label:'Stair Rail'},
+];
+const gal = document.getElementById('gal');
+gal.innerHTML = GAL.map((g,i)=>`
+  <div class="gitem" data-cat="${g.cat}" data-i="${i}">
+    <img src="img/${g.img}" alt="${g.label}" loading="lazy">
+    <div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> ${g.label}</span></div>
+  </div>`).join('');
+
+/* ---------- filter ---------- */
+document.getElementById('filters').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b)return;
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  const f=b.dataset.f;
+  document.querySelectorAll('.gitem').forEach(it=>{
+    const show = f==='all' || it.dataset.cat===f;
+    it.style.display = show?'':'none';
+  });
+});
+
+/* ---------- lightbox ---------- */
+const lb=document.getElementById('lightbox'), lbImg=document.getElementById('lxImg');
+let visible=[], cur=0;
+function openLb(i){
+  visible=[...document.querySelectorAll('.gitem')].filter(x=>x.style.display!=='none');
+  cur=visible.findIndex(x=>+x.dataset.i===i);
+  show();
+  lb.classList.add('open');
+}
+function show(){ const el=visible[cur]; if(!el)return; lbImg.src=el.querySelector('img').src; }
+gal.addEventListener('click',e=>{const it=e.target.closest('.gitem'); if(it)openLb(+it.dataset.i);});
+document.getElementById('lxClose').onclick=()=>lb.classList.remove('open');
+document.getElementById('lxNext').onclick=()=>{cur=(cur+1)%visible.length;show();};
+document.getElementById('lxPrev').onclick=()=>{cur=(cur-1+visible.length)%visible.length;show();};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')lb.classList.remove('open');
+  if(e.key==='ArrowRight')document.getElementById('lxNext').click();
+  if(e.key==='ArrowLeft')document.getElementById('lxPrev').click();
+});
+
+/* ---------- nav / mobile ---------- */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
+const mmenu=document.getElementById('mmenu'), scrim=document.getElementById('scrim');
+const openM=()=>{mmenu.classList.add('open');scrim.classList.add('open');};
+const closeM=()=>{mmenu.classList.remove('open');scrim.classList.remove('open');};
+document.getElementById('burger').onclick=openM;
+document.getElementById('mclose').onclick=closeM;
+scrim.onclick=closeM;
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
+
+/* ---------- reveal ---------- */
+const io=new IntersectionObserver(es=>es.forEach(en=>{
+  if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ---------- count up ---------- */
+const cio=new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting)return;
+  const el=en.target, target=+el.dataset.count, suffix=target===100?'%':'+';
+  let n=0; const step=Math.max(1,Math.ceil(target/60));
+  const t=setInterval(()=>{n+=step; if(n>=target){n=target;clearInterval(t);} el.textContent=n.toLocaleString()+suffix;},22);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ---------- form ---------- */
+document.getElementById('estForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const btn=e.target.querySelector('button[type=submit]');
+  btn.innerHTML='<i class="fa-solid fa-check"></i> Thank You! We\'ll Be In Touch';
+  btn.style.background='#2e9e57';
+  setTimeout(()=>{e.target.reset();btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send My Request';btn.style.background='';},3500);
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
