@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SATX Junk-a-Haulics — Fast, Friendly Junk Removal | San Antonio, TX</title>
+<meta name="description" content="SATX Junk-a-Haulics — fast, friendly junk removal & hauling across San Antonio, TX. Furniture, appliances, garage & estate cleanouts, construction debris & more. Instant online quotes. Call or text (210) 260-2283.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2314160f'/%3E%3Cpath fill='%238fd11c' d='M3 13h11v4H5a2 2 0 0 1-2-2z'/%3E%3Cpath fill='%231ba0e2' d='M14 9h4l3 4v4h-7z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --lime:#7ec81a; --lime-b:#95e02a; --lime-d:#5fa30f; --lime-l:#f0f8e0;
+    --blue:#1ba0e2; --blue-d:#1583bd;
+    --ink:#14160f; --ink-2:#2d3025; --muted:#6c7060;
+    --bg:#ffffff; --bg-2:#f5f7ef; --line:#e6e9dd;
+    --maxw:1220px; --ease:cubic-bezier(.4,0,.15,1); --shadow:0 24px 50px -22px rgba(20,22,15,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em}
+  section{position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+  .eyebrow i{color:var(--lime-d)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.96rem;padding:15px 26px;border-radius:100px;cursor:pointer;border:none;transition:.28s var(--ease);white-space:nowrap;font-family:'Inter'}
+  .btn-lime{background:var(--lime);color:#14210a;box-shadow:0 14px 28px -12px rgba(126,200,26,.7)}
+  .btn-lime:hover{background:var(--lime-b);transform:translateY(-3px)}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{background:#000;transform:translateY(-3px)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-d);transform:translateY(-3px)}
+  .btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-line:hover{background:var(--ink);color:#fff;transform:translateY(-3px)}
+  .btn-wline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+  .btn-wline:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+
+  /* TOP BAR */
+  .topbar{background:var(--ink);color:#d5d8cc;font-size:.82rem;font-weight:600}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:8px 24px;gap:14px}
+  .topbar .tb-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .topbar .tb-left span{display:inline-flex;align-items:center;gap:7px}
+  .topbar i{color:var(--lime)}
+  .topbar a{font-weight:800;color:#fff;display:inline-flex;align-items:center;gap:8px}
+  @media(max-width:720px){.topbar .hide-sm{display:none}}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s var(--ease)}
+  header.nav.solid{border-bottom-color:var(--line);box-shadow:0 10px 30px -22px rgba(20,22,15,.4)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:52px;width:auto}
+  nav.links{display:flex;align-items:center;gap:30px}
+  nav.links a{font-weight:600;font-size:.92rem;color:var(--ink-2);position:relative;padding:4px 0}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--lime);transition:.3s var(--ease)}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1rem}
+  .nav-phone i{color:var(--blue)}
+  .burger{display:none;background:none;border:none;color:var(--ink);font-size:1.5rem;cursor:pointer}
+  @media(max-width:980px){nav.links,.nav-cta .btn,.nav-phone span{display:none}.burger{display:block}}
+
+  /* MOBILE MENU */
+  .mmenu{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:#fff;z-index:200;transform:translateX(100%);transition:.4s var(--ease);padding:26px;display:flex;flex-direction:column;gap:4px;box-shadow:-16px 0 44px rgba(20,22,15,.18)}
+  .mmenu.open{transform:translateX(0)}
+  .mmenu .mclose{align-self:flex-end;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer;margin-bottom:8px}
+  .mmenu a{padding:14px 8px;border-bottom:1px solid var(--line);font-weight:600;font-size:1.05rem}
+  .mmenu .btn{margin-top:14px;justify-content:center}
+  .scrim{position:fixed;inset:0;background:rgba(20,22,15,.42);z-index:150;opacity:0;visibility:hidden;transition:.3s}
+  .scrim.open{opacity:1;visibility:visible}
+
+  /* HERO — full-bleed video */
+  .hero{position:relative;min-height:90vh;display:flex;align-items:center;padding:96px 0;overflow:hidden;background:var(--ink)}
+  .hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(15,17,10,.94) 0%,rgba(15,17,10,.78) 42%,rgba(15,17,10,.4) 72%,rgba(15,17,10,.62) 100%)}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;z-index:1;background:linear-gradient(180deg,transparent,var(--bg))}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero .content{max-width:640px}
+  .hero h1{font-size:clamp(2.6rem,5.8vw,4.6rem);margin:20px 0 22px;color:#fff}
+  .hero h1 .l{color:var(--lime-b)}
+  .hero h1 .b{color:#5cc3f2}
+  .hero p.lead{font-size:1.14rem;color:#e3e6dc;max-width:540px;margin-bottom:28px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+  .hero .chips{display:flex;gap:22px;flex-wrap:wrap;font-size:.87rem;font-weight:600;color:#e3e6dc}
+  .hero .chips .ti{display:flex;align-items:center;gap:9px}
+  .hero .chips i{color:var(--lime-b)}
+  .hero .chips .st i{color:#ffcb47}
+  .hero .vtag{position:absolute;right:26px;bottom:150px;z-index:2;display:flex;align-items:center;gap:9px;
+    background:rgba(20,22,15,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff;
+    font-size:.78rem;font-weight:600;padding:8px 14px;border-radius:100px}
+  .hero .vtag i{color:var(--lime-b)}
+  @media(max-width:600px){.hero .vtag{display:none}}
+
+  /* MARQUEE */
+  .marq{background:var(--ink);color:#fff;overflow:hidden;padding:14px 0}
+  .marq .track{display:flex;gap:40px;white-space:nowrap;animation:marq 28s linear infinite;font-family:'Space Grotesk';font-weight:700;font-size:1rem;letter-spacing:.03em}
+  .marq .track span{display:inline-flex;align-items:center;gap:14px}
+  .marq i{font-size:.7rem;color:var(--lime)}
+  @keyframes marq{to{transform:translateX(-50%)}}
+
+  /* STATS */
+  .stats{padding:60px 0;background:var(--bg-2)}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .stat{text-align:center}
+  .stat .n{font-family:'Space Grotesk';font-weight:700;font-size:2.8rem;line-height:1;color:var(--ink)}
+  .stat .n .u{color:var(--lime-d)}
+  .stat .l{margin-top:6px;font-size:.82rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  @media(max-width:760px){.stats .grid{grid-template-columns:repeat(2,1fr);gap:30px 22px}}
+
+  /* SECTION HEAD */
+  .shead{text-align:center;max-width:680px;margin:0 auto 50px}
+  .shead .eyebrow{justify-content:center}
+  .shead h2{font-size:clamp(2rem,4.4vw,3.1rem);margin:14px 0 14px}
+  .shead h2 .l{color:var(--lime-d)}.shead h2 .b{color:var(--blue)}
+  .shead p{color:var(--muted);font-size:1.04rem}
+
+  /* SERVICES */
+  .services{padding:92px 0}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .scard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:.32s var(--ease);position:relative;overflow:hidden}
+  .scard:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d6e6b3}
+  .scard .ic{width:52px;height:52px;border-radius:14px;background:var(--lime-l);display:grid;place-items:center;color:var(--lime-d);font-size:1.3rem;margin-bottom:16px;transition:.3s}
+  .scard:nth-child(3n+2) .ic{background:#e4f4fc;color:var(--blue)}
+  .scard:hover .ic{transform:rotate(-6deg) scale(1.05)}
+  .scard h3{font-size:1.14rem;margin-bottom:7px}
+  .scard p{color:var(--muted);font-size:.92rem}
+  @media(max-width:900px){.sgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.sgrid{grid-template-columns:1fr}}
+
+  /* HOW IT WORKS */
+  .how{padding:92px 0;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .how .shead h2{color:#fff}.how .shead p{color:#9ea295}
+  .how .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .hstep{background:#1d2016;border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:34px 28px;position:relative}
+  .hstep .n{font-family:'Space Grotesk';font-weight:700;font-size:2.6rem;color:var(--lime);line-height:1;margin-bottom:14px}
+  .hstep .ic{position:absolute;top:30px;right:28px;font-size:1.6rem;color:rgba(255,255,255,.22)}
+  .hstep h3{font-size:1.3rem;margin-bottom:9px}
+  .hstep p{color:#a7ab9d;font-size:.94rem}
+  @media(max-width:820px){.how .steps{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+
+  /* CHATBOT SHOWCASE */
+  .cbshow{padding:92px 0;background:linear-gradient(120deg,#e9f6fd,var(--lime-l))}
+  .cbshow .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .cbshow h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 16px}
+  .cbshow h2 .b{color:var(--blue)}
+  .cbshow p{color:var(--ink-2);margin-bottom:16px;font-size:1.04rem}
+  .cbfeat{display:grid;gap:12px;margin:22px 0 26px}
+  .cbfeat li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-weight:500}
+  .cbfeat li i{color:var(--lime-d);margin-top:4px}
+  .cbmock{background:#fff;border-radius:24px;box-shadow:var(--shadow);overflow:hidden;max-width:380px;margin:0 auto;border:1px solid var(--line)}
+  .cbmock .top{background:var(--ink);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+  .cbmock .top .av{width:40px;height:40px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#14210a;font-size:1.1rem}
+  .cbmock .top b{font-family:'Space Grotesk';font-size:1rem}
+  .cbmock .top small{color:#9ea295;display:block;font-size:.75rem}
+  .cbmock .top .dot{width:9px;height:9px;border-radius:50%;background:var(--lime);margin-left:auto;box-shadow:0 0 0 3px rgba(126,200,26,.3)}
+  .cbmock .body{padding:20px 18px;display:flex;flex-direction:column;gap:12px;background:var(--bg-2)}
+  .cbmock .bub{max-width:82%;padding:11px 15px;border-radius:16px;font-size:.9rem;line-height:1.45}
+  .cbmock .bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+  .cbmock .usr{background:var(--blue);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+  .cbmock .qr{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-start}
+  .cbmock .qr span{background:var(--lime-l);border:1px solid var(--lime);color:var(--lime-d);font-weight:700;font-size:.8rem;padding:7px 12px;border-radius:100px}
+  @media(max-width:900px){.cbshow .wrap{grid-template-columns:1fr;gap:44px}.cbmock{order:-1}}
+
+  /* GALLERY */
+  .work{padding:92px 0}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+  .gitem{position:relative;overflow:hidden;border-radius:16px;cursor:pointer;border:1px solid var(--line)}
+  .gitem.tall{grid-row:span 2}
+  .gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gitem:hover img{transform:scale(1.09)}
+  .gitem .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,22,15,.8));opacity:0;transition:.35s var(--ease);display:flex;align-items:flex-end;padding:16px}
+  .gitem:hover .ov{opacity:1}
+  .gitem .ov span{font-weight:700;font-size:.85rem;color:#fff;display:flex;align-items:center;gap:8px}
+  @media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+
+  /* SERVICE AREA */
+  .area{padding:92px 0;background:var(--bg-2)}
+  .area .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .area-map{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .area-map img{width:100%;display:block}
+  .area h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 16px}
+  .area h2 .l{color:var(--lime-d)}
+  .area p{color:var(--ink-2);margin-bottom:22px}
+  .area .chips{display:flex;gap:9px;flex-wrap:wrap}
+  .area .chips span{font-size:.83rem;font-weight:600;color:var(--ink-2);padding:8px 15px;border:1px solid var(--line);border-radius:100px;background:#fff}
+  @media(max-width:900px){.area .wrap{grid-template-columns:1fr;gap:40px}}
+
+  /* REVIEWS */
+  .testi{padding:92px 0}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative}
+  .tcard .g{position:absolute;top:22px;right:24px;color:#4285f4;font-size:1.3rem}
+  .tcard .st{color:#f6b73c;letter-spacing:2px;margin-bottom:13px}
+  .tcard p{color:var(--ink-2);font-size:.95rem;margin-bottom:18px}
+  .tcard .who{display:flex;align-items:center;gap:12px}
+  .tcard .av{width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-weight:800;color:#14210a;font-family:'Space Grotesk'}
+  .tcard .who b{display:block;font-size:.93rem}
+  .tcard .who small{color:var(--muted)}
+  @media(max-width:900px){.tgrid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+
+  /* CTA */
+  .ctaband{padding:74px 0;background:var(--lime);position:relative;overflow:hidden}
+  .ctaband::after{content:"\f4df";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:0;top:50%;transform:translateY(-50%) rotate(-8deg);font-size:15rem;color:rgba(20,33,10,.08)}
+  .ctaband .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
+  .ctaband h2{font-size:clamp(1.9rem,4vw,2.9rem);color:#14210a;max-width:640px}
+  .ctaband .cbtns{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* CONTACT */
+  .contact{padding:92px 0}
+  .contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+  .cform{background:#fff;border:1px solid var(--line);border-radius:22px;padding:38px;box-shadow:var(--shadow)}
+  .cform h3{font-size:1.55rem;margin-bottom:6px}
+  .cform .sub{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.25s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lime);background:#fff;box-shadow:0 0 0 3px rgba(126,200,26,.16)}
+  .field textarea{resize:vertical;min-height:96px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .cform .btn{width:100%;justify-content:center;margin-top:6px}
+  .formnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px}
+  .cinfo h3{font-size:1.85rem;margin-bottom:8px}
+  .cinfo h3 .l{color:var(--lime-d)}
+  .cinfo>p{color:var(--muted);margin-bottom:22px}
+  .iline{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .iline .ii{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:var(--lime-l);display:grid;place-items:center;color:var(--lime-d);font-size:1.15rem}
+  .iline:nth-child(3) .ii{background:#e4f4fc;color:var(--blue)}
+  .iline b{display:block;font-size:1rem;font-family:'Space Grotesk'}
+  .iline a,.iline span{color:var(--muted);font-size:.94rem}
+  .iline a:hover{color:var(--lime-d)}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr;gap:34px}}
+  @media(max-width:460px){.frow{grid-template-columns:1fr}}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#b7bbab;padding:58px 0 26px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:38px;margin-bottom:40px}
+  .fcol h5{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--lime);margin-bottom:16px;font-weight:800;font-family:'Space Grotesk'}
+  .fcol.about-f img{height:56px;background:#fff;border-radius:10px;padding:5px;margin-bottom:14px}
+  .fcol.about-f p{font-size:.9rem;max-width:300px}
+  .fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .fcol ul a,.fcol ul span{color:#b7bbab;font-size:.9rem;transition:.2s}
+  .fcol ul a:hover{color:var(--lime)}
+  .fcol ul i{color:var(--lime);width:18px}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:.83rem;color:#82877a}
+  .fbar .credit a{color:var(--lime);font-weight:700}
+  @media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.fgrid{grid-template-columns:1fr}}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(10,12,6,.94);z-index:300;display:none;align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:88vw;max-height:84vh;border-radius:12px}
+  .lightbox .lx{position:absolute;top:22px;right:28px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none}
+  .lightbox .lnav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:1.8rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);width:52px;height:52px;border-radius:50%;cursor:pointer}
+  .lightbox .lnav:hover{background:var(--lime);color:#14210a}
+  .lightbox .lprev{left:22px}.lightbox .lnext{right:22px}
+
+  .rv{opacity:0;transform:translateY(28px);transition:.7s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+  /* ===== CHATBOT WIDGET ===== */
+  #cbBtn{position:fixed;right:20px;bottom:20px;z-index:210;width:64px;height:64px;border-radius:50%;background:var(--lime);color:#14210a;border:none;cursor:pointer;font-size:1.7rem;box-shadow:0 16px 34px -10px rgba(126,200,26,.8);display:grid;place-items:center;transition:.3s var(--ease)}
+  #cbBtn:hover{transform:scale(1.07)}
+  #cbBtn .close-i{display:none}
+  #cbBtn.open .chat-i{display:none}#cbBtn.open .close-i{display:block}
+  #cbBtn .ping{position:absolute;top:-3px;right:-3px;width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:.7rem;font-weight:800;display:grid;place-items:center;border:2px solid #fff}
+  #cbWin{position:fixed;right:20px;bottom:96px;z-index:210;width:min(92vw,370px);height:min(72vh,560px);background:#fff;border-radius:22px;box-shadow:0 30px 70px -18px rgba(20,22,15,.5);display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(16px) scale(.98);transition:.32s var(--ease);border:1px solid var(--line)}
+  #cbWin.open{opacity:1;visibility:visible;transform:none}
+  #cbWin .cbhead{background:var(--ink);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+  #cbWin .cbhead .av{width:42px;height:42px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#14210a;font-size:1.15rem}
+  #cbWin .cbhead b{font-family:'Space Grotesk';font-size:1.02rem;display:block}
+  #cbWin .cbhead small{color:#9ea295;font-size:.75rem}
+  #cbWin .cbhead .live{margin-left:auto;font-size:.72rem;color:var(--lime);display:flex;align-items:center;gap:6px;font-weight:700}
+  #cbWin .cbhead .live i{font-size:.55rem;animation:blink 1.4s infinite}
+  @keyframes blink{50%{opacity:.3}}
+  #cbBody{flex:1;overflow-y:auto;padding:18px;background:var(--bg-2);display:flex;flex-direction:column;gap:10px}
+  #cbBody .bub{max-width:84%;padding:11px 15px;border-radius:16px;font-size:.9rem;line-height:1.45;animation:pop .3s var(--ease)}
+  @keyframes pop{from{opacity:0;transform:translateY(6px)}}
+  #cbBody .bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start}
+  #cbBody .usr{background:var(--blue);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+  #cbBody .qr{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-start;margin-top:2px}
+  #cbBody .qr button{background:#fff;border:1.5px solid var(--lime);color:var(--lime-d);font-weight:700;font-size:.82rem;padding:8px 13px;border-radius:100px;cursor:pointer;transition:.2s}
+  #cbBody .qr button:hover{background:var(--lime);color:#14210a}
+  #cbBody .typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px}
+  #cbBody .typing i{width:7px;height:7px;background:var(--muted);border-radius:50%;display:inline-block;margin:0 1px;animation:ty 1s infinite}
+  #cbBody .typing i:nth-child(2){animation-delay:.2s}#cbBody .typing i:nth-child(3){animation-delay:.4s}
+  @keyframes ty{50%{transform:translateY(-4px);opacity:.5}}
+  #cbForm{padding:12px;background:#fff;border-top:1px solid var(--line);display:none;gap:8px;flex-direction:column}
+  #cbForm.show{display:flex}
+  #cbForm input{border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-family:inherit;font-size:.9rem}
+  #cbForm input:focus{outline:none;border-color:var(--lime)}
+  #cbForm button{background:var(--lime);color:#14210a;border:none;border-radius:10px;padding:12px;font-weight:800;cursor:pointer;font-family:inherit}
+  #cbFoot{padding:9px;text-align:center;font-size:.7rem;color:var(--muted);background:#fff}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><i class="fa-solid fa-truck-fast"></i> Fast &amp; Friendly Junk Removal</span>
+      <span class="hide-sm"><i class="fa-solid fa-location-dot"></i> San Antonio, TX &amp; Surrounding</span>
+      <span class="hide-sm"><i class="fa-solid fa-clock"></i> Mon–Fri 9–5</span>
+    </div>
+    <a href="tel:+12102602283"><i class="fa-solid fa-phone-volume"></i> (210) 260-2283</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand"><img src="img/logo.jpg" alt="SATX Junk-a-Haulics logo"></a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#work">Our Work</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+12102602283" class="nav-phone"><i class="fa-solid fa-phone"></i><span>(210) 260-2283</span></a>
+      <a href="#contact" class="btn btn-lime">Book Online</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="scrim" id="scrim"></div>
+<div class="mmenu" id="mmenu">
+  <button class="mclose" id="mclose"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#services">Services</a>
+  <a href="#how">How It Works</a>
+  <a href="#work">Our Work</a>
+  <a href="#area">Service Area</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+12102602283" class="btn btn-line"><i class="fa-solid fa-phone"></i> (210) 260-2283</a>
+  <a href="#contact" class="btn btn-lime">Book Online</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <video class="hero-vid" autoplay muted loop playsinline poster="img/hero-truck.jpg">
+    <source src="vid/hero.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <div class="content rv in">
+      <span class="eyebrow" style="color:var(--lime-b)"><i class="fa-solid fa-recycle" style="color:#fff"></i> San Antonio's Friendliest Junk Crew</span>
+      <h1>Junk? <span class="l">Gone.</span><br>Space? <span class="b">Yours Again.</span></h1>
+      <p class="lead">Furniture, appliances, garage &amp; estate cleanouts, construction debris — we haul it all away, fast and friendly. Cleaner spaces, safer environment, one honest crew.</p>
+      <div class="cta-row">
+        <button class="btn btn-lime" id="heroQuote"><i class="fa-solid fa-comment-dots"></i> Get an Instant Quote</button>
+        <a href="tel:+12102602283" class="btn btn-wline"><i class="fa-solid fa-phone"></i> (210) 260-2283</a>
+      </div>
+      <div class="chips">
+        <div class="ti st"><i class="fa-solid fa-star"></i> 5-Star Rated</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> Same-Day Available</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> Upfront Pricing</div>
+      </div>
+    </div>
+  </div>
+  <div class="vtag"><i class="fa-solid fa-circle-play"></i> Watch us in action</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq">
+  <div class="track" id="marqTrack">
+    <span><i class="fa-solid fa-star"></i> FURNITURE REMOVAL</span>
+    <span><i class="fa-solid fa-star"></i> APPLIANCE REMOVAL</span>
+    <span><i class="fa-solid fa-star"></i> GARAGE CLEANOUTS</span>
+    <span><i class="fa-solid fa-star"></i> ESTATE CLEANOUTS</span>
+    <span><i class="fa-solid fa-star"></i> CONSTRUCTION DEBRIS</span>
+    <span><i class="fa-solid fa-star"></i> COMMERCIAL JUNK</span>
+    <span><i class="fa-solid fa-star"></i> STORAGE UNITS</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat rv"><div class="n" data-count="2000">0</div><div class="l">Loads Hauled</div></div>
+      <div class="stat rv d1"><div class="n">5.0<span class="u">★</span></div><div class="l">Customer Rated</div></div>
+      <div class="stat rv d2"><div class="n">Same</div><div class="l">Day Service</div></div>
+      <div class="stat rv d3"><div class="n" data-count="100">0</div><div class="l">Free Quotes</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-dumpster"></i> What We Haul</span>
+      <h2>If It's Junk, <span class="l">We'll Take It</span></h2>
+      <p>Residential and commercial — one call and it's out of your life for good.</p>
+    </div>
+    <div class="sgrid">
+      <div class="scard rv"><div class="ic"><i class="fa-solid fa-couch"></i></div><h3>Furniture Removal</h3><p>Old couches, mattresses, tables, dressers — hauled out without a scratch on your walls.</p></div>
+      <div class="scard rv d1"><div class="ic"><i class="fa-solid fa-blender"></i></div><h3>Appliance Removal</h3><p>Fridges, washers, dryers, stoves — heavy lifting handled and disposed of responsibly.</p></div>
+      <div class="scard rv d2"><div class="ic"><i class="fa-solid fa-warehouse"></i></div><h3>Garage &amp; Storage Cleanouts</h3><p>Reclaim your garage or clear out a storage unit — we sort, load and sweep up.</p></div>
+      <div class="scard rv"><div class="ic"><i class="fa-solid fa-house-chimney-window"></i></div><h3>Estate &amp; Home Cleanouts</h3><p>Full-property cleanouts handled with care, respect and total discretion.</p></div>
+      <div class="scard rv d1"><div class="ic"><i class="fa-solid fa-trowel-bricks"></i></div><h3>Construction &amp; Reno Debris</h3><p>Drywall, wood, tile and remodel debris cleared so your crew keeps moving.</p></div>
+      <div class="scard rv d2"><div class="ic"><i class="fa-solid fa-building"></i></div><h3>Commercial Junk</h3><p>Offices, retail, rentals and turnovers — flexible scheduling around your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="color:var(--lime)"><i class="fa-solid fa-list-check" style="color:#fff"></i> Easy As 1-2-3</span>
+      <h2>Junk Gone In <span style="color:var(--lime)">Three Steps</span></h2>
+      <p>No stress, no heavy lifting, no surprises.</p>
+    </div>
+    <div class="steps">
+      <div class="hstep rv"><div class="n">01</div><i class="fa-solid fa-comment-dots ic"></i><h3>Get Your Quote</h3><p>Chat with our bot, book online, or just call/text — you'll get a fast, upfront price.</p></div>
+      <div class="hstep rv d1"><div class="n">02</div><i class="fa-solid fa-truck-fast ic"></i><h3>We Show Up</h3><p>Our friendly crew arrives on time in the big blue truck and does all the lifting.</p></div>
+      <div class="hstep rv d2"><div class="n">03</div><i class="fa-solid fa-broom ic"></i><h3>It's Gone</h3><p>We haul it off, dispose of it responsibly, and leave your space clean. Done.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHATBOT SHOWCASE -->
+<section class="cbshow">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow"><i class="fa-solid fa-robot"></i> 24/7 Instant Quotes</span>
+      <h2>Meet <span class="b">Junkbot</span> — Your Instant Quote Assistant</h2>
+      <p>Customers don't want to wait for a callback. Junkbot answers day and night, captures the job details, and grabs their name &amp; number — so a hot lead never slips away, even at 11pm.</p>
+      <ul class="cbfeat">
+        <li><i class="fa-solid fa-bolt"></i> Instant replies 24/7 — never miss a lead</li>
+        <li><i class="fa-solid fa-clipboard-list"></i> Collects job type, size &amp; contact info</li>
+        <li><i class="fa-solid fa-mobile-screen-button"></i> Sends every lead straight to your phone</li>
+      </ul>
+      <button class="btn btn-blue" id="showBot"><i class="fa-solid fa-comment-dots"></i> Try Junkbot Now</button>
+    </div>
+    <div class="rv d1">
+      <div class="cbmock">
+        <div class="top"><span class="av"><i class="fa-solid fa-robot"></i></span><div><b>Junkbot</b><small>SATX Junk-a-Haulics</small></div><span class="dot"></span></div>
+        <div class="body">
+          <div class="bub bot">👋 Hey! Need something hauled away? I'll get you a fast free quote.</div>
+          <div class="qr"><span>Get a Quote</span><span>See Areas</span></div>
+          <div class="bub usr">Get a Quote</div>
+          <div class="bub bot">Nice! What are we hauling?</div>
+          <div class="qr"><span>Furniture</span><span>Appliances</span><span>Garage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-camera"></i> Recent Hauls</span>
+      <h2>The Messes We <span class="l">Make Disappear</span></h2>
+      <p>Real jobs, real trucks, real San Antonio. Tap any photo to enlarge.</p>
+    </div>
+    <div class="gal" id="gal">
+      <div class="gitem tall" data-i="0"><img src="img/g-4.jpg" alt="Packed garage cleanout" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Garage Cleanout</span></div></div>
+      <div class="gitem" data-i="1"><img src="img/g-2.jpg" alt="Trailer full of junk" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Full Load</span></div></div>
+      <div class="gitem" data-i="2"><img src="img/g-8.jpg" alt="SATX truck" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> The Blue Truck</span></div></div>
+      <div class="gitem" data-i="3"><img src="img/g-5.jpg" alt="Cardboard and boxes" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Cardboard Haul</span></div></div>
+      <div class="gitem tall" data-i="4"><img src="img/g-1.jpg" alt="Driveway junk pile" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Curbside Pile</span></div></div>
+      <div class="gitem" data-i="5"><img src="img/g-6.jpg" alt="Construction debris" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Reno Debris</span></div></div>
+      <div class="gitem" data-i="6"><img src="img/g-3.jpg" alt="Appliance removal" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Appliances</span></div></div>
+      <div class="gitem" data-i="7"><img src="img/g-7.jpg" alt="Commercial cleanout" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Commercial Job</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="area-map rv"><img src="img/map.jpg" alt="SATX Junk-a-Haulics San Antonio service area map"></div>
+    <div class="rv d1">
+      <span class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Where We Serve</span>
+      <h2>All Over <span class="l">San Antonio</span></h2>
+      <p>From downtown to the suburbs and everywhere between — if you're in the greater San Antonio area, we'll come haul it off. Not sure if we reach you? Just ask Junkbot or give us a call.</p>
+      <div class="chips">
+        <span>San Antonio</span><span>Alamo Heights</span><span>Stone Oak</span><span>Helotes</span>
+        <span>Converse</span><span>Schertz</span><span>Live Oak</span><span>Universal City</span>
+        <span>Leon Valley</span><span>Boerne</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow"><i class="fa-solid fa-comment-dots"></i> Happy Customers</span>
+      <h2>San Antonio <span class="b">Loves Us</span></h2>
+      <p>Friendly service, cleaner spaces — here's what folks say.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard rv"><i class="fa-brands fa-google g"></i><div class="st">★★★★★</div><p>These guys were fast, friendly and fairly priced. Cleared out my entire garage in under an hour and swept up after. Couldn't believe how easy they made it.</p><div class="who"><div class="av">CM</div><div><b>Crystal M.</b><small>San Antonio, TX</small></div></div></div>
+      <div class="tcard rv d1"><i class="fa-brands fa-google g"></i><div class="st">★★★★★</div><p>Booked online at night, got a quote right away, and they showed up the next morning. Took an old fridge and a couch no one else would touch. Highly recommend!</p><div class="who"><div class="av">DR</div><div><b>Daniel R.</b><small>Converse, TX</small></div></div></div>
+      <div class="tcard rv d2"><i class="fa-brands fa-google g"></i><div class="st">★★★★★</div><p>Used SATX for a full estate cleanout. Respectful, careful and professional the whole way through. The big blue truck showed up and made it all disappear.</p><div class="who"><div class="av">AT</div><div><b>Angela T.</b><small>Schertz, TX</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>Ready To Get Your Space Back?</h2>
+    <div class="cbtns">
+      <a href="tel:+12102602283" class="btn btn-ink"><i class="fa-solid fa-phone"></i> (210) 260-2283</a>
+      <button class="btn btn-blue" id="ctaQuote"><i class="fa-solid fa-comment-dots"></i> Get Instant Quote</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cform rv">
+      <h3>Book Your Junk Pickup</h3>
+      <p class="sub">Tell us what you've got — we'll send a fast, free quote.</p>
+      <form id="estForm">
+        <div class="frow">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(210) 000-0000" required></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+        <div class="field"><label>What are we hauling?</label>
+          <select name="service">
+            <option>Furniture Removal</option>
+            <option>Appliance Removal</option>
+            <option>Garage / Storage Cleanout</option>
+            <option>Estate / Home Cleanout</option>
+            <option>Construction / Reno Debris</option>
+            <option>Commercial Junk</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label>Details</label><textarea name="msg" placeholder="Roughly how much, any heavy/awkward items, your zip code…"></textarea></div>
+        <button type="submit" class="btn btn-lime"><i class="fa-solid fa-paper-plane"></i> Get My Free Quote</button>
+        <p class="formnote">Or call/text <strong>(210) 260-2283</strong> — we answer fast.</p>
+      </form>
+    </div>
+    <div class="cinfo rv d1">
+      <h3>Get In <span class="l">Touch</span></h3>
+      <p>Fast, friendly junk removal across San Antonio. Free quotes, upfront pricing, no surprises.</p>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><a href="tel:+12102602283">(210) 260-2283</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-envelope"></i></div><div><b>Email</b><a href="mailto:satxjunkahaulics@gmail.com">satxjunkahaulics@gmail.com</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-brands fa-facebook-f"></i></div><div><b>Facebook</b><a href="https://www.facebook.com/SATXjunkahaulics" target="_blank" rel="noopener">@SATXjunkahaulics</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-clock"></i></div><div><b>Hours</b><span>Mon–Fri: 9am – 5pm · Same-day available</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol about-f">
+        <img src="img/logo.jpg" alt="SATX Junk-a-Haulics logo">
+        <p>Fast, friendly junk removal &amp; hauling for San Antonio and surrounding areas. Friendly service, cleaner spaces, safer environment.</p>
+      </div>
+      <div class="fcol">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Furniture Removal</a></li>
+          <li><a href="#services">Appliance Removal</a></li>
+          <li><a href="#services">Garage Cleanouts</a></li>
+          <li><a href="#services">Estate Cleanouts</a></li>
+          <li><a href="#services">Construction Debris</a></li>
+          <li><a href="#services">Commercial Junk</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Service Area</h5>
+        <ul>
+          <li><span>San Antonio</span></li>
+          <li><span>Stone Oak</span></li>
+          <li><span>Converse</span></li>
+          <li><span>Schertz</span></li>
+          <li><span>Helotes</span></li>
+          <li><span>Boerne</span></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:+12102602283"><i class="fa-solid fa-phone"></i> (210) 260-2283</a></li>
+          <li><a href="mailto:satxjunkahaulics@gmail.com"><i class="fa-solid fa-envelope"></i> Email Us</a></li>
+          <li><a href="https://www.facebook.com/SATXjunkahaulics" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-calendar-check"></i> Book Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> SATX Junk-a-Haulics — San Antonio, TX. All rights reserved.</span>
+      <span class="credit">Website design concept by <a href="https://abdullahrahim.com" target="_blank" rel="noopener">Abdullah Rahim</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lx" id="lxClose"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lnav lprev" id="lxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lxImg" src="" alt="">
+  <button class="lnav lnext" id="lxNext"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- CHATBOT -->
+<button id="cbBtn" aria-label="Open chat"><span class="ping">1</span><i class="fa-solid fa-comment-dots chat-i"></i><i class="fa-solid fa-xmark close-i"></i></button>
+<div id="cbWin">
+  <div class="cbhead">
+    <span class="av"><i class="fa-solid fa-robot"></i></span>
+    <div><b>Junkbot</b><small>SATX Junk-a-Haulics</small></div>
+    <span class="live"><i class="fa-solid fa-circle"></i> Online</span>
+  </div>
+  <div id="cbBody"></div>
+  <form id="cbForm">
+    <input type="text" id="cbName" placeholder="Your name" required>
+    <input type="tel" id="cbPhone" placeholder="Your phone number" required>
+    <button type="submit">Send &amp; Get My Quote</button>
+  </form>
+  <div id="cbFoot"><i class="fa-solid fa-bolt" style="color:var(--lime-d)"></i> Instant quotes, 24/7</div>
+</div>
+
+<script>
+/* ---------- gallery + lightbox ---------- */
+const items=[...document.querySelectorAll('.gitem')];
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lxImg');let cur=0;
+function show(){lbImg.src=items[cur].querySelector('img').src;}
+items.forEach((it,i)=>it.addEventListener('click',()=>{cur=i;show();lb.classList.add('open');}));
+document.getElementById('lxClose').onclick=()=>lb.classList.remove('open');
+document.getElementById('lxNext').onclick=()=>{cur=(cur+1)%items.length;show();};
+document.getElementById('lxPrev').onclick=()=>{cur=(cur-1+items.length)%items.length;show();};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
+
+/* ---------- nav / mobile ---------- */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30));
+const mmenu=document.getElementById('mmenu'),scrim=document.getElementById('scrim');
+const openM=()=>{mmenu.classList.add('open');scrim.classList.add('open');};
+const closeM=()=>{mmenu.classList.remove('open');scrim.classList.remove('open');};
+document.getElementById('burger').onclick=openM;document.getElementById('mclose').onclick=closeM;scrim.onclick=closeM;
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
+
+/* ---------- marquee + reveal + count ---------- */
+const mt=document.getElementById('marqTrack');mt.innerHTML+=mt.innerHTML;
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting)return;const el=en.target,target=+el.dataset.count,suf=target===100?'%':'+';
+  let n=0,step=Math.max(1,Math.ceil(target/55));
+  const t=setInterval(()=>{n+=step;if(n>=target){n=target;clearInterval(t);}el.textContent=n.toLocaleString()+suf;},24);cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ---------- contact form ---------- */
+document.getElementById('estForm').addEventListener('submit',e=>{
+  e.preventDefault();const b=e.target.querySelector('button[type=submit]');
+  b.innerHTML='<i class="fa-solid fa-check"></i> Thanks! We\'ll Text You A Quote';
+  setTimeout(()=>{e.target.reset();b.innerHTML='<i class="fa-solid fa-paper-plane"></i> Get My Free Quote';},3500);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ================= JUNKBOT ================= */
+const cbBtn=document.getElementById('cbBtn'),cbWin=document.getElementById('cbWin'),cbBody=document.getElementById('cbBody'),cbForm=document.getElementById('cbForm');
+let started=false, ctx={type:'',size:''};
+function openBot(){cbWin.classList.add('open');cbBtn.classList.add('open');cbBtn.querySelector('.ping').style.display='none';if(!started){started=true;setTimeout(botStart,350);}}
+function closeBot(){cbWin.classList.remove('open');cbBtn.classList.remove('open');}
+cbBtn.onclick=()=>cbWin.classList.contains('open')?closeBot():openBot();
+['heroQuote','showBot','ctaQuote'].forEach(id=>{const el=document.getElementById(id);if(el)el.onclick=openBot;});
+
+function bubble(txt,who){const d=document.createElement('div');d.className='bub '+who;d.innerHTML=txt;cbBody.appendChild(d);cbBody.scrollTop=cbBody.scrollHeight;}
+function typing(){const d=document.createElement('div');d.className='typing';d.id='typing';d.innerHTML='<i></i><i></i><i></i>';cbBody.appendChild(d);cbBody.scrollTop=cbBody.scrollHeight;}
+function untype(){const t=document.getElementById('typing');if(t)t.remove();}
+function quick(opts){const w=document.createElement('div');w.className='qr';opts.forEach(o=>{const b=document.createElement('button');b.textContent=o.label;b.onclick=()=>{[...w.querySelectorAll('button')].forEach(x=>x.disabled=true);w.remove();bubble(o.label,'usr');o.next();};w.appendChild(b);});cbBody.appendChild(w);cbBody.scrollTop=cbBody.scrollHeight;}
+function botSay(txt,cb,delay){typing();setTimeout(()=>{untype();bubble(txt,'bot');if(cb)cb();},delay||900);}
+
+function botStart(){
+  botSay("👋 Hey there! I'm Junkbot. Need something hauled away? I'll get you a fast, free quote — takes 20 seconds.",()=>{
+    quick([
+      {label:'Get a Free Quote',next:askType},
+      {label:'What do you haul?',next:()=>botSay("Furniture, appliances, garage &amp; estate cleanouts, construction debris, commercial junk — pretty much anything! Ready for a quote?",()=>quick([{label:'Yes, quote me!',next:askType}]))},
+      {label:'Service areas?',next:()=>botSay("We cover all of greater San Antonio — Stone Oak, Converse, Schertz, Helotes, Boerne and more. Want a quote?",()=>quick([{label:'Get a Quote',next:askType}]))}
+    ]);
+  });
+}
+function askType(){
+  botSay("Awesome 🙌 What are we hauling?",()=>{
+    quick([
+      {label:'Furniture',next:()=>{ctx.type='Furniture';askSize();}},
+      {label:'Appliances',next:()=>{ctx.type='Appliances';askSize();}},
+      {label:'Garage / Estate',next:()=>{ctx.type='Garage/Estate cleanout';askSize();}},
+      {label:'Construction debris',next:()=>{ctx.type='Construction debris';askSize();}},
+      {label:'Other',next:()=>{ctx.type='Other junk';askSize();}}
+    ]);
+  });
+}
+function askSize(){
+  botSay("Got it — <b>"+ctx.type+"</b>. Roughly how much?",()=>{
+    quick([
+      {label:'A few items',next:()=>{ctx.size='a few items';askContact();}},
+      {label:'About half a truck',next:()=>{ctx.size='about half a truck';askContact();}},
+      {label:'Full truck or more',next:()=>{ctx.size='a full truck+';askContact();}}
+    ]);
+  });
+}
+function askContact(){
+  botSay("Perfect — that's an easy one for us. 🚛 Drop your name &amp; number and SATX will text you a fast free quote:",()=>{
+    cbForm.classList.add('show');document.getElementById('cbName').focus();
+  });
+}
+cbForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const nm=document.getElementById('cbName').value.trim()||'there';
+  bubble("Name: "+nm+" ✔","usr");
+  cbForm.classList.remove('show');cbForm.reset();
+  botSay("🎉 Thanks, "+nm+"! Your quote for <b>"+ctx.type+"</b> ("+ctx.size+") is on its way. We'll text you shortly — or call now for the fastest service:",()=>{
+    bubble('📞 <a href="tel:+12102602283" style="color:var(--blue);font-weight:700">(210) 260-2283</a>','bot');
+  },1000);
+});
+</script>
+</body>
+</html>
