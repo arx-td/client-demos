@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Texas Best Dumpsters — Roll-Off Dumpster Rental | San Antonio, TX</title>
+<meta name="description" content="South Texas Best Dumpsters — fast, affordable roll-off dumpster rental & hauling across San Antonio, TX. 10, 15, 20 & 30-yard bins delivered same-day. Upfront pricing, no hidden fees. Call (210) 254-2039.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2313233b'/%3E%3Cpath fill='%23f26a1b' d='M4 8h16l-1.5 9.5a1 1 0 0 1-1 .5H6.5a1 1 0 0 1-1-.5z'/%3E%3Cpath fill='%23fff' d='M3 6h18v2H3z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --navy:#13233b; --navy-2:#1c3253; --navy-l:#eef2f8;
+    --orange:#f26a1b; --orange-d:#d4531a; --orange-l:#fdeee3;
+    --ink:#1a2231; --muted:#6a7486; --line:#e6e9ef;
+    --bg:#ffffff; --bg-2:#f5f7fa;
+    --maxw:1220px; --ease:cubic-bezier(.4,0,.15,1); --shadow:0 24px 50px -22px rgba(19,35,59,.32);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.06;text-transform:uppercase;letter-spacing:.005em}
+  section{position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.96rem;padding:15px 27px;border-radius:8px;cursor:pointer;border:none;transition:.28s var(--ease);white-space:nowrap;font-family:'Inter'}
+  .btn-orange{background:var(--orange);color:#fff;box-shadow:0 14px 28px -12px rgba(242,106,27,.7)}
+  .btn-orange:hover{background:var(--orange-d);transform:translateY(-3px)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2);transform:translateY(-3px)}
+  .btn-line{background:transparent;color:var(--ink);border:1.5px solid #cfd6e0}
+  .btn-line:hover{border-color:var(--navy);transform:translateY(-3px)}
+  .btn-wline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+  .btn-wline:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+
+  /* TOP BAR */
+  .topbar{background:var(--navy);color:#c3ccda;font-size:.82rem;font-weight:600}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:8px 24px;gap:14px}
+  .topbar .tb-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .topbar .tb-left span{display:inline-flex;align-items:center;gap:7px}
+  .topbar i{color:var(--orange)}
+  .topbar a{font-weight:800;color:#fff;display:inline-flex;align-items:center;gap:8px}
+  @media(max-width:720px){.topbar .hide-sm{display:none}}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s var(--ease)}
+  header.nav.solid{border-bottom-color:var(--line);box-shadow:0 10px 30px -22px rgba(19,35,59,.4)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:13px;padding-bottom:13px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .ico{width:46px;height:46px;border-radius:10px;background:var(--navy);display:grid;place-items:center;color:var(--orange);font-size:1.35rem}
+  .brand .bt{font-family:'Oswald';font-weight:700;font-size:1.16rem;line-height:1;text-transform:uppercase;color:var(--navy)}
+  .brand .bt b{color:var(--orange)}
+  .brand .bs{font-size:.62rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700;margin-top:3px}
+  nav.links{display:flex;align-items:center;gap:28px}
+  nav.links a{font-weight:600;font-size:.92rem;color:var(--ink);position:relative;padding:4px 0}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:2px;background:var(--orange);transition:.3s var(--ease)}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1rem}
+  .nav-phone i{color:var(--orange)}
+  .burger{display:none;background:none;border:none;color:var(--navy);font-size:1.5rem;cursor:pointer}
+  @media(max-width:980px){nav.links,.nav-cta .btn,.nav-phone span{display:none}.burger{display:block}}
+
+  /* MOBILE MENU */
+  .mmenu{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:#fff;z-index:200;transform:translateX(100%);transition:.4s var(--ease);padding:26px;display:flex;flex-direction:column;gap:4px;box-shadow:-16px 0 44px rgba(19,35,59,.2)}
+  .mmenu.open{transform:translateX(0)}
+  .mmenu .mclose{align-self:flex-end;background:none;border:none;color:var(--navy);font-size:1.6rem;cursor:pointer;margin-bottom:8px}
+  .mmenu a{padding:14px 8px;border-bottom:1px solid var(--line);font-weight:600;font-size:1.05rem}
+  .mmenu .btn{margin-top:14px;justify-content:center}
+  .scrim{position:fixed;inset:0;background:rgba(19,35,59,.45);z-index:150;opacity:0;visibility:hidden;transition:.3s}
+  .scrim.open{opacity:1;visibility:visible}
+
+  /* HERO */
+  .hero{padding:64px 0 80px;background:radial-gradient(720px 380px at 90% 0%,var(--orange-l),transparent 55%),var(--bg);overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);margin:20px 0 20px}
+  .hero h1 .o{color:var(--orange)}
+  .hero p.lead{font-size:1.13rem;color:var(--muted);max-width:520px;margin-bottom:28px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+  .hero .chips{display:flex;gap:22px;flex-wrap:wrap;font-size:.87rem;font-weight:600;color:var(--ink)}
+  .hero .chips .ti{display:flex;align-items:center;gap:9px}
+  .hero .chips i{color:var(--orange)}
+  .hero .chips .st i{color:#f6b73c}
+  .hero-img{position:relative;max-width:520px;margin-left:auto}
+  .hero-img .ph{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff}
+  .hero-img .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .hero-img .price{position:absolute;right:-14px;bottom:-18px;background:var(--orange);color:#fff;padding:16px 20px;border-radius:14px;box-shadow:var(--shadow);transform:rotate(-2deg)}
+  .hero-img .price b{font-family:'Oswald';font-size:1.5rem;display:block;line-height:1}
+  .hero-img .price span{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;opacity:.92}
+  .hero-img .tag{position:absolute;left:-16px;top:20px;background:#fff;padding:11px 16px;border-radius:12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;border-left:4px solid var(--navy)}
+  .hero-img .tag i{color:var(--navy);font-size:1.3rem}
+  .hero-img .tag b{font-family:'Oswald';font-size:.95rem;text-transform:uppercase}
+  @media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:46px}.hero-img{margin:0 auto}}
+
+  /* TRUST STRIP */
+  .strip{background:var(--navy);color:#fff}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:22px 24px}
+  .strip .s{display:flex;align-items:center;gap:13px;justify-content:center}
+  .strip .s i{font-size:1.6rem;color:var(--orange)}
+  .strip .s b{font-family:'Oswald';font-size:1rem;display:block;line-height:1.1;text-transform:uppercase}
+  .strip .s small{color:#9fb0c6;font-size:.76rem}
+  @media(max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr;gap:20px 10px}}
+
+  /* SECTION HEAD */
+  .shead{text-align:center;max-width:680px;margin:0 auto 50px}
+  .shead h2{font-size:clamp(2rem,4.4vw,3.2rem);margin:12px 0 12px}
+  .shead h2 .o{color:var(--orange)}
+  .shead p{color:var(--muted);font-size:1.04rem}
+
+  /* SIZES */
+  .sizes{padding:92px 0;background:var(--bg-2)}
+  .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .size{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.32s var(--ease);position:relative}
+  .size:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#d3dbe6}
+  .size.pop{border:2px solid var(--orange)}
+  .size .flag{position:absolute;top:0;right:0;background:var(--orange);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-bottom-left-radius:10px;z-index:2}
+  .size .ph{height:130px;overflow:hidden}
+  .size .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .size:hover .ph img{transform:scale(1.08)}
+  .size .bd{padding:22px 20px 24px}
+  .size .yd{font-family:'Oswald';font-weight:700;font-size:2rem;color:var(--navy);line-height:1}
+  .size .yd small{font-size:.9rem;color:var(--muted);font-family:'Inter';font-weight:600}
+  .size h3{font-size:1.02rem;margin:8px 0 10px;color:var(--ink)}
+  .size ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .size li{font-size:.85rem;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+  .size li i{color:var(--orange);font-size:.75rem;margin-top:5px}
+  .size .book{margin-top:16px;display:block;text-align:center;background:var(--navy-l);color:var(--navy);font-weight:700;font-size:.85rem;padding:10px;border-radius:8px;transition:.2s}
+  .size:hover .book{background:var(--orange);color:#fff}
+  @media(max-width:900px){.sgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.sgrid{grid-template-columns:1fr}}
+
+  /* HOW */
+  .how{padding:92px 0}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+  .hstep{text-align:center;position:relative}
+  .hstep .n{width:72px;height:72px;margin:0 auto 18px;border-radius:14px;display:grid;place-items:center;background:var(--navy);color:#fff;font-family:'Oswald';font-weight:700;font-size:1.7rem;position:relative;z-index:2}
+  .hstep:nth-child(even) .n{background:var(--orange)}
+  .hstep .ic{position:absolute;top:-8px;right:calc(50% - 50px);width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid var(--orange);display:grid;place-items:center;color:var(--orange);font-size:.8rem;z-index:3}
+  .hstep h3{font-size:1.16rem;margin-bottom:8px}
+  .hstep p{font-size:.92rem;color:var(--muted)}
+  .steps::before{content:"";position:absolute;top:36px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 8px,transparent 8px 18px)}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:38px 22px}.steps::before{display:none}}
+  @media(max-width:440px){.steps{grid-template-columns:1fr}}
+
+  /* USE CASES */
+  .uses{padding:92px 0;background:var(--navy);color:#fff}
+  .uses .shead h2{color:#fff}.uses .shead p{color:#9fb0c6}
+  .uses .eyebrow{color:var(--orange)}
+  .ugrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ucard{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:26px 24px;transition:.3s var(--ease)}
+  .ucard:hover{transform:translateY(-6px);border-color:rgba(242,106,27,.5)}
+  .ucard .ic{width:50px;height:50px;border-radius:12px;background:rgba(242,106,27,.15);display:grid;place-items:center;color:var(--orange);font-size:1.25rem;margin-bottom:16px}
+  .ucard h3{font-size:1.12rem;margin-bottom:7px}
+  .ucard p{color:#a7b4c8;font-size:.9rem}
+  @media(max-width:900px){.ugrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.ugrid{grid-template-columns:1fr}}
+
+  /* WHY / FLEET */
+  .why{padding:92px 0}
+  .why .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .why-img{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:relative}
+  .why-img img{width:100%;object-fit:cover;aspect-ratio:4/3}
+  .why-img .badge{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:11px;box-shadow:0 12px 24px -10px rgba(19,35,59,.35)}
+  .why-img .badge i{color:var(--orange);font-size:1.4rem}
+  .why-img .badge b{font-family:'Oswald';font-size:.95rem;text-transform:uppercase;display:block}
+  .why-img .badge small{color:var(--muted)}
+  .why h2{font-size:clamp(2rem,4vw,2.9rem);margin:14px 0 16px}
+  .why h2 .o{color:var(--orange)}
+  .why p.intro{color:var(--muted);margin-bottom:24px;font-size:1.03rem}
+  .reasons{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .reason{display:flex;gap:13px}
+  .reason .ri{flex:0 0 44px;width:44px;height:44px;border-radius:11px;background:var(--orange-l);display:grid;place-items:center;color:var(--orange);font-size:1.1rem}
+  .reason h4{font-size:.98rem;margin-bottom:2px;color:var(--ink);font-family:'Inter';font-weight:700}
+  .reason p{font-size:.86rem;color:var(--muted);line-height:1.5}
+  @media(max-width:900px){.why .wrap{grid-template-columns:1fr;gap:42px}}
+  @media(max-width:520px){.reasons{grid-template-columns:1fr}}
+
+  /* GALLERY */
+  .work{padding:92px 0;background:var(--bg-2)}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gitem{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:1/1;cursor:pointer;border:1px solid var(--line)}
+  .gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gitem:hover img{transform:scale(1.1)}
+  .gitem .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(19,35,59,.82));opacity:0;transition:.35s var(--ease);display:flex;align-items:flex-end;padding:14px}
+  .gitem:hover .ov{opacity:1}
+  .gitem .ov span{font-weight:700;font-size:.82rem;color:#fff;display:flex;align-items:center;gap:8px}
+  @media(max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+
+  /* REVIEWS */
+  .testi{padding:92px 0}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;position:relative}
+  .tcard::before{content:"";position:absolute;top:0;left:0;width:44px;height:4px;background:var(--orange)}
+  .tcard .st{color:#f6b73c;letter-spacing:2px;margin-bottom:13px}
+  .tcard p{color:var(--ink);font-size:.95rem;margin-bottom:18px}
+  .tcard .who{display:flex;align-items:center;gap:12px}
+  .tcard .av{width:44px;height:44px;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-weight:800;color:#fff;font-family:'Oswald'}
+  .tcard .who b{display:block;font-size:.93rem}
+  .tcard .who small{color:var(--muted)}
+  @media(max-width:900px){.tgrid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+
+  /* CTA */
+  .ctaband{padding:72px 0;background:var(--orange);position:relative;overflow:hidden}
+  .ctaband::after{content:"\f1b9";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:13rem;color:rgba(255,255,255,.12)}
+  .ctaband .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
+  .ctaband h2{font-size:clamp(1.9rem,4vw,2.9rem);color:#fff;max-width:640px}
+  .ctaband .cbtns{display:flex;gap:14px;flex-wrap:wrap}
+  .ctaband .btn-wt{background:#fff;color:var(--orange-d)}
+  .ctaband .btn-wt:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
+
+  /* CONTACT */
+  .contact{padding:92px 0;background:var(--bg-2)}
+  .contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+  .cform{background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px;box-shadow:var(--shadow)}
+  .cform h3{font-size:1.55rem;margin-bottom:6px}
+  .cform .sub{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:13px 15px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.25s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(242,106,27,.15)}
+  .field textarea{resize:vertical;min-height:90px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .cform .btn{width:100%;justify-content:center;margin-top:6px}
+  .formnote{text-align:center;font-size:.8rem;color:var(--muted);margin-top:12px}
+  .cinfo h3{font-size:1.85rem;margin-bottom:8px}
+  .cinfo h3 .o{color:var(--orange)}
+  .cinfo>p{color:var(--muted);margin-bottom:22px}
+  .iline{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+  .iline .ii{flex:0 0 46px;width:46px;height:46px;border-radius:11px;background:var(--orange-l);display:grid;place-items:center;color:var(--orange);font-size:1.15rem}
+  .iline b{display:block;font-size:1rem;font-family:'Oswald';text-transform:uppercase}
+  .iline a,.iline span{color:var(--muted);font-size:.94rem}
+  .iline a:hover{color:var(--orange)}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr;gap:34px}}
+  @media(max-width:460px){.frow{grid-template-columns:1fr}}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#a7b4c8;padding:58px 0 26px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:38px;margin-bottom:40px}
+  .fcol h5{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--orange);margin-bottom:16px;font-weight:800;font-family:'Oswald'}
+  .fcol.about-f .brand{margin-bottom:14px}
+  .fcol.about-f .brand .bt{color:#fff}
+  .fcol.about-f .brand .bs{color:#8395ad}
+  .fcol.about-f p{font-size:.9rem;max-width:300px}
+  .fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .fcol ul a,.fcol ul span{color:#a7b4c8;font-size:.9rem;transition:.2s}
+  .fcol ul a:hover{color:var(--orange)}
+  .fcol ul i{color:var(--orange);width:18px}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:.83rem;color:#8395ad}
+  .fbar .credit a{color:var(--orange);font-weight:700}
+  @media(max-width:820px){.fgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.fgrid{grid-template-columns:1fr}}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;background:rgba(10,16,26,.94);z-index:300;display:none;align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:88vw;max-height:84vh;border-radius:10px}
+  .lightbox .lx{position:absolute;top:22px;right:28px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none}
+  .lightbox .lnav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:1.8rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);width:52px;height:52px;border-radius:50%;cursor:pointer}
+  .lightbox .lnav:hover{background:var(--orange)}
+  .lightbox .lprev{left:22px}.lightbox .lnext{right:22px}
+
+  .rv{opacity:0;transform:translateY(28px);transition:.7s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+  .fabcall{position:fixed;right:18px;bottom:18px;z-index:120;background:var(--orange);color:#fff;width:60px;height:60px;border-radius:50%;display:none;place-items:center;font-size:1.4rem;box-shadow:0 14px 30px -8px rgba(242,106,27,.8);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(242,106,27,.55)}70%{box-shadow:0 0 0 16px rgba(242,106,27,0)}100%{box-shadow:0 0 0 0 rgba(242,106,27,0)}}
+  @media(max-width:980px){.fabcall{display:grid}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><i class="fa-solid fa-truck-fast"></i> Same-Day Delivery Available</span>
+      <span class="hide-sm"><i class="fa-solid fa-location-dot"></i> San Antonio, TX &amp; Surrounding</span>
+      <span class="hide-sm"><i class="fa-solid fa-circle-check"></i> Upfront Pricing · No Hidden Fees</span>
+    </div>
+    <a href="tel:+12102542039"><i class="fa-solid fa-phone-volume"></i> (210) 254-2039</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <span class="ico"><i class="fa-solid fa-dumpster"></i></span>
+      <div>
+        <div class="bt">South Texas <b>Best</b> Dumpsters</div>
+        <div class="bs">Roll-Off Rental &amp; Hauling</div>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#sizes">Sizes &amp; Pricing</a>
+      <a href="#how">How It Works</a>
+      <a href="#uses">Uses</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+12102542039" class="nav-phone"><i class="fa-solid fa-phone"></i><span>(210) 254-2039</span></a>
+      <a href="#contact" class="btn btn-orange">Get a Quote</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="scrim" id="scrim"></div>
+<div class="mmenu" id="mmenu">
+  <button class="mclose" id="mclose"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#sizes">Sizes &amp; Pricing</a>
+  <a href="#how">How It Works</a>
+  <a href="#uses">Uses</a>
+  <a href="#why">Why Us</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+12102542039" class="btn btn-line"><i class="fa-solid fa-phone"></i> (210) 254-2039</a>
+  <a href="#contact" class="btn btn-orange">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="rv in">
+      <span class="eyebrow"><i class="fa-solid fa-dumpster"></i> San Antonio Roll-Off Dumpster Rental</span>
+      <h1>The Right Dumpster, <span class="o">Delivered Fast.</span></h1>
+      <p class="lead">Cleaning out, renovating or building? Get the perfect-size roll-off bin dropped at your door — often same-day — with honest, upfront pricing and zero hidden fees.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-orange"><i class="fa-solid fa-clipboard-check"></i> Get My Free Quote</a>
+        <a href="tel:+12102542039" class="btn btn-line"><i class="fa-solid fa-phone"></i> (210) 254-2039</a>
+      </div>
+      <div class="chips">
+        <div class="ti st"><i class="fa-solid fa-star"></i> 5.0-Star Rated</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> Same-Day Available</div>
+        <div class="ti"><i class="fa-solid fa-check"></i> No Hidden Fees</div>
+      </div>
+    </div>
+    <div class="rv d1">
+      <div class="hero-img">
+        <div class="tag"><i class="fa-solid fa-truck-ramp-box"></i><b>We Deliver &amp; Pick&nbsp;Up</b></div>
+        <div class="ph"><img src="img/hero.jpg" alt="Roll-off dumpster delivered in San Antonio"></div>
+        <div class="price"><b>4 Sizes</b><span>10 · 15 · 20 · 30 yd</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="s"><i class="fa-solid fa-bolt"></i><div><b>Fast Delivery</b><small>Often same-day</small></div></div>
+    <div class="s"><i class="fa-solid fa-tag"></i><div><b>Upfront Pricing</b><small>No hidden fees</small></div></div>
+    <div class="s"><i class="fa-solid fa-star"></i><div><b>5.0-Star Rated</b><small>Local reviews</small></div></div>
+    <div class="s"><i class="fa-solid fa-house-user"></i><div><b>Locally Owned</b><small>San Antonio</small></div></div>
+  </div>
+</div>
+
+<!-- SIZES -->
+<section class="sizes" id="sizes">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="justify-content:center;display:flex"><i class="fa-solid fa-ruler-combined"></i> Sizes &amp; Pricing</span>
+      <h2>Pick The <span class="o">Perfect Size</span></h2>
+      <p>Not sure which one you need? Call us — we'll help you get it right the first time so you don't overpay.</p>
+    </div>
+    <div class="sgrid">
+      <div class="size rv">
+        <div class="ph"><img src="img/size-1.jpg" alt="10 yard dumpster"></div>
+        <div class="bd">
+          <div class="yd">10 <small>yard</small></div>
+          <h3>Small Cleanouts</h3>
+          <ul><li><i class="fa-solid fa-check"></i> ~3 pickup loads</li><li><i class="fa-solid fa-check"></i> Garage &amp; small cleanups</li><li><i class="fa-solid fa-check"></i> Heavy debris, dirt, concrete</li></ul>
+          <a href="#contact" class="book">Get Price</a>
+        </div>
+      </div>
+      <div class="size pop rv d1">
+        <div class="flag">Most Popular</div>
+        <div class="ph"><img src="img/size-2.jpg" alt="15 yard dumpster"></div>
+        <div class="bd">
+          <div class="yd">15 <small>yard</small></div>
+          <h3>Medium Projects</h3>
+          <ul><li><i class="fa-solid fa-check"></i> ~4–5 pickup loads</li><li><i class="fa-solid fa-check"></i> Room remodels &amp; cleanouts</li><li><i class="fa-solid fa-check"></i> Great all-rounder</li></ul>
+          <a href="#contact" class="book">Get Price</a>
+        </div>
+      </div>
+      <div class="size rv d2">
+        <div class="ph"><img src="img/size-3.jpg" alt="20 yard dumpster"></div>
+        <div class="bd">
+          <div class="yd">20 <small>yard</small></div>
+          <h3>Big Renovations</h3>
+          <ul><li><i class="fa-solid fa-check"></i> ~6 pickup loads</li><li><i class="fa-solid fa-check"></i> Whole-home cleanouts</li><li><i class="fa-solid fa-check"></i> Roofing &amp; flooring tear-outs</li></ul>
+          <a href="#contact" class="book">Get Price</a>
+        </div>
+      </div>
+      <div class="size rv d3">
+        <div class="ph"><img src="img/size-4.jpg" alt="30 yard dumpster"></div>
+        <div class="bd">
+          <div class="yd">30 <small>yard</small></div>
+          <h3>Major Jobs</h3>
+          <ul><li><i class="fa-solid fa-check"></i> ~9 pickup loads</li><li><i class="fa-solid fa-check"></i> New builds &amp; big demos</li><li><i class="fa-solid fa-check"></i> Commercial projects</li></ul>
+          <a href="#contact" class="book">Get Price</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="justify-content:center;display:flex"><i class="fa-solid fa-list-check"></i> Simple Process</span>
+      <h2>Renting Is <span class="o">Easy As 1-2-3-4</span></h2>
+      <p>No runaround — just a clean bin when you need it, gone when you're done.</p>
+    </div>
+    <div class="steps">
+      <div class="hstep rv"><div class="n">1<div class="ic"><i class="fa-solid fa-ruler"></i></div></div><h3>Pick A Size</h3><p>Call or request a quote — we'll help you choose the right bin.</p></div>
+      <div class="hstep rv d1"><div class="n">2<div class="ic"><i class="fa-solid fa-truck-fast"></i></div></div><h3>We Deliver</h3><p>We drop the dumpster right where you want it — often same-day.</p></div>
+      <div class="hstep rv d2"><div class="n">3<div class="ic"><i class="fa-solid fa-dumpster"></i></div></div><h3>You Fill It</h3><p>Load it on your schedule — take the time you need.</p></div>
+      <div class="hstep rv d3"><div class="n">4<div class="ic"><i class="fa-solid fa-recycle"></i></div></div><h3>We Haul It</h3><p>Give us a call and we pick it up and dispose of it responsibly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="uses" id="uses">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="justify-content:center;display:flex;color:var(--orange)"><i class="fa-solid fa-clipboard-list"></i> Perfect For</span>
+      <h2>Whatever You're <span class="o">Clearing Out</span></h2>
+      <p>Homeowners, contractors and businesses across San Antonio trust our bins.</p>
+    </div>
+    <div class="ugrid">
+      <div class="ucard rv"><div class="ic"><i class="fa-solid fa-house-chimney"></i></div><h3>Home Cleanouts</h3><p>Garages, attics, estates and spring cleanups — clear it all in one go.</p></div>
+      <div class="ucard rv d1"><div class="ic"><i class="fa-solid fa-hammer"></i></div><h3>Renovations</h3><p>Kitchen, bath and whole-home remodels — keep the debris out of your way.</p></div>
+      <div class="ucard rv d2"><div class="ic"><i class="fa-solid fa-helmet-safety"></i></div><h3>Construction</h3><p>New builds, demos and job-site cleanup — reliable bins on your schedule.</p></div>
+      <div class="ucard rv"><div class="ic"><i class="fa-solid fa-house-chimney-window"></i></div><h3>Roofing Jobs</h3><p>Heavy shingle tear-offs handled — sized right for the weight.</p></div>
+      <div class="ucard rv d1"><div class="ic"><i class="fa-solid fa-leaf"></i></div><h3>Yard &amp; Landscaping</h3><p>Brush, dirt, concrete and green waste — cleared out fast.</p></div>
+      <div class="ucard rv d2"><div class="ic"><i class="fa-solid fa-truck-ramp-box"></i></div><h3>Junk Hauling</h3><p>Don't want to load it yourself? Ask about our full-service hauling.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-img rv">
+      <img src="img/fleet.jpg" alt="South Texas Best Dumpsters roll-off fleet">
+      <div class="badge"><i class="fa-solid fa-award"></i><div><b>The Best In South Texas</b><small>5.0-star local service</small></div></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow"><i class="fa-solid fa-thumbs-up"></i> Why Choose Us</span>
+      <h2>Local, Fast &amp; <span class="o">Honestly Priced</span></h2>
+      <p class="intro">We're a locally owned San Antonio company — not a national chain. That means faster answers, friendlier service, and straight pricing with no surprise "fuel" or "environmental" fees at the end.</p>
+      <div class="reasons">
+        <div class="reason"><div class="ri"><i class="fa-solid fa-bolt"></i></div><div><h4>Same-Day Delivery</h4><p>Need it today? Call — we move fast.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-tag"></i></div><div><h4>No Hidden Fees</h4><p>The price we quote is the price you pay.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-house-user"></i></div><div><h4>Locally Owned</h4><p>Real people who answer the phone.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-calendar-days"></i></div><div><h4>Flexible Rentals</h4><p>Keep the bin as long as you need it.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-recycle"></i></div><div><h4>Responsible Disposal</h4><p>We recycle and dispose the right way.</p></div></div>
+        <div class="reason"><div class="ri"><i class="fa-solid fa-star"></i></div><div><h4>5.0-Star Service</h4><p>Rated the best by local customers.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="work">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="justify-content:center;display:flex"><i class="fa-solid fa-images"></i> Our Bins</span>
+      <h2>Clean, Ready-To-Go <span class="o">Dumpsters</span></h2>
+      <p>A look at our roll-off bins and jobs around San Antonio. Tap any photo to enlarge.</p>
+    </div>
+    <div class="gal" id="gal">
+      <div class="gitem" data-i="0"><img src="img/g-1.jpg" alt="Blue roll-off dumpster" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> 20-Yard Bin</span></div></div>
+      <div class="gitem" data-i="1"><img src="img/g-2.jpg" alt="Green roll-off dumpster" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> On Site</span></div></div>
+      <div class="gitem" data-i="2"><img src="img/g-6.jpg" alt="Dumpster fleet" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Our Fleet</span></div></div>
+      <div class="gitem" data-i="3"><img src="img/g-3.jpg" alt="Roll-off in parking lot" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Ready To Drop</span></div></div>
+      <div class="gitem" data-i="4"><img src="img/g-5.jpg" alt="Construction debris load" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Debris Load</span></div></div>
+      <div class="gitem" data-i="5"><img src="img/g-4.jpg" alt="Junk hauling" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Junk Hauled</span></div></div>
+      <div class="gitem" data-i="6"><img src="img/g-7.jpg" alt="Renovation cleanup" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Reno Cleanup</span></div></div>
+      <div class="gitem" data-i="7"><img src="img/g-8.jpg" alt="Hauling truck" loading="lazy"><div class="ov"><span><i class="fa-solid fa-magnifying-glass-plus"></i> Haul-Off</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" style="justify-content:center;display:flex"><i class="fa-solid fa-comment-dots"></i> 5.0 Stars</span>
+      <h2>What San Antonio <span class="o">Says</span></h2>
+      <p>Rated the best in South Texas by the folks who matter — our customers.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tcard rv"><div class="st">★★★★★</div><p>Called in the morning and had a dumpster in my driveway by the afternoon. Fair price, no hidden fees, and they picked it up right when I asked. Couldn't be easier.</p><div class="who"><div class="av">RC</div><div><b>Ray C.</b><small>San Antonio, TX</small></div></div></div>
+      <div class="tcard rv d1"><div class="st">★★★★★</div><p>We use them for all our remodel jobs. Always on time, bins are clean, and the pricing is straight-up. Best dumpster company we've worked with in San Antonio.</p><div class="who"><div class="av">MV</div><div><b>Marcus V.</b><small>Converse, TX</small></div></div></div>
+      <div class="tcard rv d2"><div class="st">★★★★★</div><p>Did a full garage cleanout and they helped me pick the right size so I didn't overpay. Friendly, local and honest. Highly recommend these guys!</p><div class="who"><div class="av">DL</div><div><b>Denise L.</b><small>Schertz, TX</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>Need A Dumpster? Let's Get One Dropped Today.</h2>
+    <div class="cbtns">
+      <a href="tel:+12102542039" class="btn btn-navy"><i class="fa-solid fa-phone"></i> (210) 254-2039</a>
+      <a href="#contact" class="btn btn-wt"><i class="fa-solid fa-clipboard-check"></i> Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cform rv">
+      <h3>Get Your Free Quote</h3>
+      <p class="sub">Tell us about your project — we'll get you a fast, upfront price.</p>
+      <form id="estForm">
+        <div class="frow">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(210) 000-0000" required></div>
+        </div>
+        <div class="field"><label>Dumpster Size</label>
+          <select name="size">
+            <option>Not sure — help me choose</option>
+            <option>10-yard</option><option>15-yard</option><option>20-yard</option><option>30-yard</option>
+            <option>Full-service junk hauling</option>
+          </select>
+        </div>
+        <div class="field"><label>Delivery ZIP / Area</label><input type="text" name="zip" placeholder="e.g. 78201"></div>
+        <div class="field"><label>Project Details</label><textarea name="msg" placeholder="What are you cleaning out, and when do you need it?"></textarea></div>
+        <button type="submit" class="btn btn-orange"><i class="fa-solid fa-paper-plane"></i> Get My Free Quote</button>
+        <p class="formnote">Or call/text <strong>(210) 254-2039</strong> — we answer fast.</p>
+      </form>
+    </div>
+    <div class="cinfo rv d1">
+      <h3>Get In <span class="o">Touch</span></h3>
+      <p>Locally owned dumpster rental &amp; hauling for San Antonio and surrounding areas. Free quotes, upfront pricing.</p>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-phone"></i></div><div><b>Call or Text</b><a href="tel:+12102542039">(210) 254-2039</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-brands fa-facebook-f"></i></div><div><b>Facebook</b><a href="https://www.facebook.com/profile.php?id=100036866750434" target="_blank" rel="noopener">Message us on Facebook</a></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-location-dot"></i></div><div><b>Service Area</b><span>San Antonio, TX &amp; surrounding communities</span></div></div>
+      <div class="iline"><div class="ii"><i class="fa-solid fa-truck-fast"></i></div><div><b>Delivery</b><span>Same-day available · Flexible rental periods</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol about-f">
+        <a href="#home" class="brand">
+          <span class="ico"><i class="fa-solid fa-dumpster"></i></span>
+          <div><div class="bt">South Texas <b style="color:var(--orange)">Best</b> Dumpsters</div><div class="bs">Roll-Off Rental &amp; Hauling</div></div>
+        </a>
+        <p>Fast, affordable roll-off dumpster rental and junk hauling for San Antonio, TX. Locally owned, upfront pricing, 5.0-star service.</p>
+      </div>
+      <div class="fcol">
+        <h5>Dumpster Sizes</h5>
+        <ul>
+          <li><a href="#sizes">10-Yard Dumpster</a></li>
+          <li><a href="#sizes">15-Yard Dumpster</a></li>
+          <li><a href="#sizes">20-Yard Dumpster</a></li>
+          <li><a href="#sizes">30-Yard Dumpster</a></li>
+          <li><a href="#uses">Junk Hauling</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Service Area</h5>
+        <ul>
+          <li><span>San Antonio</span></li>
+          <li><span>Converse</span></li>
+          <li><span>Schertz</span></li>
+          <li><span>Universal City</span></li>
+          <li><span>Live Oak</span></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:+12102542039"><i class="fa-solid fa-phone"></i> (210) 254-2039</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100036866750434" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-clipboard-check"></i> Free Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">
+      <span>© <span id="yr"></span> South Texas Best Dumpsters — San Antonio, TX. All rights reserved.</span>
+      <span class="credit">Website design concept by <a href="https://abdullahrahim.com" target="_blank" rel="noopener">Abdullah Rahim</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lx" id="lxClose"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lnav lprev" id="lxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lxImg" src="" alt="">
+  <button class="lnav lnext" id="lxNext"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<a href="tel:+12102542039" class="fabcall" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+
+<script>
+const items=[...document.querySelectorAll('.gitem')];
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lxImg');let cur=0;
+function show(){lbImg.src=items[cur].querySelector('img').src;}
+items.forEach((it,i)=>it.addEventListener('click',()=>{cur=i;show();lb.classList.add('open');}));
+document.getElementById('lxClose').onclick=()=>lb.classList.remove('open');
+document.getElementById('lxNext').onclick=()=>{cur=(cur+1)%items.length;show();};
+document.getElementById('lxPrev').onclick=()=>{cur=(cur-1+items.length)%items.length;show();};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowRight')document.getElementById('lxNext').click();if(e.key==='ArrowLeft')document.getElementById('lxPrev').click();});
+
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30));
+const mmenu=document.getElementById('mmenu'),scrim=document.getElementById('scrim');
+const openM=()=>{mmenu.classList.add('open');scrim.classList.add('open');};
+const closeM=()=>{mmenu.classList.remove('open');scrim.classList.remove('open');};
+document.getElementById('burger').onclick=openM;document.getElementById('mclose').onclick=closeM;scrim.onclick=closeM;
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+document.getElementById('estForm').addEventListener('submit',e=>{
+  e.preventDefault();const b=e.target.querySelector('button[type=submit]');
+  b.innerHTML='<i class="fa-solid fa-check"></i> Thanks! We\'ll Text You A Quote';
+  setTimeout(()=>{e.target.reset();b.innerHTML='<i class="fa-solid fa-paper-plane"></i> Get My Free Quote';},3500);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
