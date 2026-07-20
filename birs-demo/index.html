@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Term Dates — BIRS</title>
+<meta name="description" content="BIRS 2026–2027 term dates — Autumn, Spring and Summer terms, half terms and breaks.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%231a1d24'/%3E%3Ctext x='12' y='17' font-family='Georgia,serif' font-size='14' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="concept-tag">Concept build — demonstrates the specified layout, accordion behaviour, and content structure</div>
+
+<header class="site-nav">
+  <div class="container">
+    <div class="brand">BIRS<small>British International Ridgefield School</small></div>
+    <nav class="links">
+      <a href="#">Our Values</a>
+      <a href="#">Teaching Method</a>
+      <a href="index.html" class="active">Term Dates</a>
+      <a href="fees.html">Fees Information</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="img/hero-termdates.jpg" alt="Students arriving at the BIRS campus">
+  <div class="hero-content">
+    <div class="inner">
+      <div class="breadcrumb">About <span class="sep">&rarr;</span> Term Dates</div>
+      <h1>Term Dates</h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>2026&ndash;2027 Term Dates</h2>
+      <div class="rule"></div>
+    </div>
+    <p class="lede">An overview of term start and end dates, half terms, and holiday breaks for the 2026&ndash;2027 academic year.</p>
+
+    <div class="accordion">
+
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="true" aria-controls="panel-autumn">
+          <span>Autumn Term 2026</span>
+          <span class="acc-toggle"></span>
+        </button>
+        <div class="acc-panel" id="panel-autumn">
+          <div class="acc-panel-inner">
+            <p class="answer">Monday, 7 September 2026 &ndash; Friday, 11 December 2026</p>
+            <p>Half Term: Monday, 19 October 2026 &ndash; Friday, 30 October 2026</p>
+            <p>Winter Break: Saturday, 12 December 2026 &ndash; Sunday, 3 January 2027</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="panel-spring">
+          <span>Spring Term 2027</span>
+          <span class="acc-toggle"></span>
+        </button>
+        <div class="acc-panel" id="panel-spring">
+          <div class="acc-panel-inner">
+            <p class="answer">Tuesday, 5 January 2027 &ndash; Friday, 26 March 2027</p>
+            <p>Half Term: Monday, 16 February 2027 &ndash; Friday, 20 February 2027</p>
+            <p>Spring Break: Saturday, 27 March 2027 &ndash; Sunday, 11 April 2027</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="panel-summer">
+          <span>Summer Term 2027</span>
+          <span class="acc-toggle"></span>
+        </button>
+        <div class="acc-panel" id="panel-summer">
+          <div class="acc-panel-inner">
+            <p class="answer">Tuesday, 13 April 2027 &ndash; Friday, 2 July 2027</p>
+            <p>Half Term: Monday, 25 May 2027 &ndash; Friday, 5 June 2027</p>
+            <p>Summer Break Begins: Saturday, 3 July 2027</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:56px">
+      <div class="section-heading">
+        <h2 style="font-size:1.2rem">Important Additional Information</h2>
+        <div class="rule"></div>
+      </div>
+      <p class="lede" style="margin-bottom:0">Please note: the school will be closed on all UK Bank &amp; Public Holidays.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-block">
+  <h2>Questions About the Calendar?</h2>
+  <p>Our Admissions Team is happy to help &mdash; call us or get in touch online.</p>
+  <a href="#" class="btn">Contact Admissions &rarr;</a>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 BIRS. Concept layout &mdash; portfolio sample.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.acc-trigger').forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (btn.getAttribute('aria-expanded') === 'true') {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      panel.style.maxHeight = expanded ? '0px' : panel.scrollHeight + 'px';
+    });
+  });
+</script>
+
+</body>
+</html>
