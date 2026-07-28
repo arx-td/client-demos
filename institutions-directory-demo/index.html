@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registered Institutions — Concept Layout</title>
+<meta name="description" content="Concept layout: regionally-grouped, searchable institutions directory with live tally counts, built to match a WordPress form's submission data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231f4d3d'/%3E%3Cpath fill='%23d4a13d' d='M12 4l8 4.2v1.6l-8 4.2-8-4.2V8.2z'/%3E%3Cpath fill='%23d4a13d' d='M6 11.5l6 3.2 6-3.2v3.3l-6 3.2-6-3.2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --ink:#16241e; --muted:#5b6b63; --muted-2:#8ea095; --line:#dde5e0;
+    --bg:#ffffff; --bg-2:#f5f8f6;
+    --green:#1f4d3d; --green-d:#14342a; --green-l:#eaf2ee;
+    --gold:#b8862f; --gold-l:#faf3e6;
+    --maxw:1080px; --ease:cubic-bezier(.4,0,.15,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2{font-family:'Source Serif 4',serif;font-weight:700;color:var(--ink)}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+  .concept-tag{background:var(--gold-l);color:var(--gold);text-align:center;font-size:.78rem;font-weight:700;letter-spacing:.03em;padding:9px 16px}
+  .concept-tag i{margin-right:6px}
+
+  header.page{background:var(--green);color:#fff;padding:38px 0 30px}
+  header.page .eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#a9c9bc;margin-bottom:10px;display:block}
+  header.page h1{font-size:clamp(1.7rem,3vw,2.1rem);color:#fff}
+  header.page p{color:#c7dad2;margin-top:8px;font-size:.94rem;max-width:560px}
+
+  .toolbar{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:22px 0 8px}
+  .search-box{position:relative;flex:1;min-width:260px}
+  .search-box i{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted-2)}
+  .search-box input{width:100%;padding:12px 16px 12px 42px;border:1.5px solid var(--line);border-radius:10px;font-size:.92rem;font-family:'Inter';color:var(--ink);background:var(--bg)}
+  .search-box input:focus{outline:none;border-color:var(--green)}
+  .tally{display:flex;gap:10px;flex-wrap:wrap}
+  .tally .pill{background:var(--green-l);color:var(--green);font-weight:700;font-size:.82rem;padding:9px 16px;border-radius:20px;display:flex;align-items:center;gap:7px;white-space:nowrap}
+  .tally .pill i{font-size:.8rem}
+
+  main{padding:20px 0 70px}
+  .region{margin-bottom:34px}
+  .region.hidden{display:none}
+  .region-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--green)}
+  .region-head h2{font-size:1.12rem}
+  .region-count{background:var(--gold-l);color:var(--gold);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
+
+  table{width:100%;border-collapse:collapse}
+  table th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted-2);font-weight:700;padding:8px 14px}
+  table td{padding:12px 14px;font-size:.9rem;color:var(--ink);border-top:1px solid var(--line)}
+  table tr:hover td{background:var(--bg-2)}
+  table td.type{color:var(--muted)}
+  .type-badge{display:inline-block;background:var(--bg-2);border:1px solid var(--line);color:var(--muted);font-size:.74rem;font-weight:600;padding:3px 10px;border-radius:20px}
+  .no-results{display:none;text-align:center;color:var(--muted);padding:50px 0;font-size:.94rem}
+  .no-results.show{display:block}
+
+  footer{background:var(--bg-2);padding:26px 0;text-align:center;color:var(--muted-2);font-size:.78rem}
+</style>
+</head>
+<body>
+
+<div class="concept-tag"><i class="fa-solid fa-circle-info"></i>Concept layout — sample institution data shown to demonstrate regional grouping, search &amp; tally functionality</div>
+
+<header class="page">
+  <div class="wrap">
+    <span class="eyebrow">Directory</span>
+    <h1>Registered Institutions</h1>
+    <p>Institutions submitted through the registration form, grouped by region. Search by country or institution type below.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search by country or institution type…">
+    </div>
+    <div class="tally">
+      <span class="pill" id="tallyInst"><i class="fa-solid fa-building-columns"></i> 15 Institutions</span>
+      <span class="pill" id="tallyRegion"><i class="fa-solid fa-earth-americas"></i> 6 Regions</span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="mainContent"></main>
+
+<div class="wrap"><div class="no-results" id="noResults">No institutions match your search.</div></div>
+
+<footer>Registered Institutions directory — concept layout built as a portfolio sample.</footer>
+
+<script>
+  const data = {
+    "North America": [
+      { name: "Northfield State University", country: "United States", type: "University" },
+      { name: "Maple Ridge Institute of Technology", country: "Canada", type: "Research Institute" },
+      { name: "Sunridge College", country: "Mexico", type: "College" },
+    ],
+    "South America": [
+      { name: "Rio Verde University", country: "Brazil", type: "University" },
+      { name: "Andes Research Institute", country: "Chile", type: "Research Institute" },
+    ],
+    "Europe": [
+      { name: "Nordholm University", country: "Sweden", type: "University" },
+      { name: "Rhineland Institute of Science", country: "Germany", type: "Research Institute" },
+      { name: "Baltic Coast College", country: "Latvia", type: "College" },
+    ],
+    "Africa": [
+      { name: "Sahara Research Institute", country: "Morocco", type: "Research Institute" },
+      { name: "Nile Valley University", country: "Egypt", type: "University" },
+    ],
+    "Asia": [
+      { name: "Meridian Institute of Technology", country: "India", type: "Research Institute" },
+      { name: "Pacific Rim University", country: "Japan", type: "University" },
+      { name: "Gulf Science College", country: "United Arab Emirates", type: "Other" },
+    ],
+    "Oceania": [
+      { name: "Southern Cross University", country: "Australia", type: "University" },
+      { name: "Pacific Islands Research Centre", country: "Fiji", type: "Research Institute" },
+    ],
+  };
+
+  const main = document.getElementById('mainContent');
+
+  Object.entries(data).forEach(([region, rows])=>{
+    const section = document.createElement('section');
+    section.className = 'region';
+    section.dataset.region = region;
+    section.innerHTML = `
+      <div class="region-head">
+        <h2>${region}</h2>
+        <span class="region-count">${rows.length}</span>
+      </div>
+      <table>
+        <thead><tr><th>Institution Name</th><th>Country</th><th>Institution Type</th></tr></thead>
+        <tbody>
+          ${rows.map(r=>`
+            <tr data-country="${r.country.toLowerCase()}" data-type="${r.type.toLowerCase()}" data-name="${r.name.toLowerCase()}">
+              <td>${r.name}</td>
+              <td>${r.country}</td>
+              <td class="type"><span class="type-badge">${r.type}</span></td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    `;
+    main.appendChild(section);
+  });
+
+  const searchInput = document.getElementById('searchInput');
+  const tallyInst = document.getElementById('tallyInst');
+  const tallyRegion = document.getElementById('tallyRegion');
+  const noResults = document.getElementById('noResults');
+
+  function runSearch(){
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleInst = 0, visibleRegions = 0;
+
+    document.querySelectorAll('.region').forEach(section=>{
+      let regionHasMatch = false;
+      section.querySelectorAll('tbody tr').forEach(row=>{
+        const match = !q || row.dataset.country.includes(q) || row.dataset.type.includes(q) || row.dataset.name.includes(q);
+        row.style.display = match ? '' : 'none';
+        if(match){ regionHasMatch = true; visibleInst++; }
+      });
+      section.classList.toggle('hidden', !regionHasMatch);
+      if(regionHasMatch) visibleRegions++;
+      const countBadge = section.querySelector('.region-count');
+      const visibleRows = [...section.querySelectorAll('tbody tr')].filter(r=>r.style.display!=='none').length;
+      countBadge.textContent = visibleRows;
+    });
+
+    tallyInst.innerHTML = `<i class="fa-solid fa-building-columns"></i> ${visibleInst} Institution${visibleInst!==1?'s':''}`;
+    tallyRegion.innerHTML = `<i class="fa-solid fa-earth-americas"></i> ${visibleRegions} Region${visibleRegions!==1?'s':''}`;
+    noResults.classList.toggle('show', visibleInst===0);
+  }
+
+  searchInput.addEventListener('input', runSearch);
+</script>
+
+</body>
+</html>
