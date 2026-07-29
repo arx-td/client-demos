@@ -134,8 +134,8 @@ nav.links a:hover{color:var(--ink2)} nav.links a:hover:after{width:100%}
 .scard .ph{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--navy)}
 .scard .ph img{width:100%;height:100%;object-fit:cover;transition:.6s var(--spring);opacity:.92}
 .scard:hover .ph img{transform:scale(1.08);opacity:1}
-.scard .ic{position:absolute;left:18px;bottom:-22px;width:52px;height:52px;border-radius:13px;background:linear-gradient(150deg,var(--navy),var(--indigo));display:grid;place-items:center;color:var(--gold);font-size:1.2rem;box-shadow:var(--sh);border:1px solid var(--line-d)}
-.scard .bd{padding:34px 24px 28px}
+.scard .ic{position:absolute;left:18px;top:-26px;width:52px;height:52px;border-radius:13px;background:linear-gradient(150deg,var(--navy),var(--indigo));display:grid;place-items:center;color:var(--gold);font-size:1.2rem;box-shadow:var(--sh);border:1px solid var(--line-d);z-index:2}
+.scard .bd{padding:34px 24px 28px;position:relative}
 .scard h3{font-size:1.4rem;margin-bottom:8px;font-weight:600}
 .scard p{color:var(--muted);font-size:.94rem;margin-bottom:12px}
 .scard ul{list-style:none;display:flex;flex-direction:column;gap:6px}
@@ -377,33 +377,33 @@ footer.ft{background:var(--ink);color:#a3abca;padding:56px 0 26px}
   </div>
   <div class="scards" data-stagger>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-office.jpg" alt="Commercial office cleaning"><div class="ic"><i class="fa-solid fa-building"></i></div></div>
-      <div class="bd"><h3>Commercial &amp; Office</h3><p>Spotless, healthy workspaces your team and clients will notice.</p>
+      <div class="ph"><img src="img/g-office.jpg" alt="Commercial office cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-building"></i></div><h3>Commercial &amp; Office</h3><p>Spotless, healthy workspaces your team and clients will notice.</p>
       <ul><li><i class="fa-solid fa-check"></i> Daily / weekly contracts</li><li><i class="fa-solid fa-check"></i> Desks, floors &amp; washrooms</li><li><i class="fa-solid fa-check"></i> Out-of-hours available</li></ul></div>
     </div>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-airbnb.jpg" alt="Airbnb turnover cleaning"><div class="ic"><i class="fa-solid fa-key"></i></div></div>
-      <div class="bd"><h3>Airbnb Turnovers</h3><p>Guest-ready in a flash — fresh linens, restock and 5-star presentation.</p>
+      <div class="ph"><img src="img/g-airbnb.jpg" alt="Airbnb turnover cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-key"></i></div><h3>Airbnb Turnovers</h3><p>Guest-ready in a flash — fresh linens, restock and 5-star presentation.</p>
       <ul><li><i class="fa-solid fa-check"></i> Linen &amp; towel change</li><li><i class="fa-solid fa-check"></i> Restock essentials</li><li><i class="fa-solid fa-check"></i> Same-day scheduling</li></ul></div>
     </div>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-residential.jpg" alt="Residential cleaning"><div class="ic"><i class="fa-solid fa-house-chimney"></i></div></div>
-      <div class="bd"><h3>Residential</h3><p>Regular or one-off home cleans that keep everything fresh and cared for.</p>
+      <div class="ph"><img src="img/g-residential.jpg" alt="Residential cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-house-chimney"></i></div><h3>Residential</h3><p>Regular or one-off home cleans that keep everything fresh and cared for.</p>
       <ul><li><i class="fa-solid fa-check"></i> Weekly or fortnightly</li><li><i class="fa-solid fa-check"></i> Kitchens &amp; bathrooms</li><li><i class="fa-solid fa-check"></i> To your checklist</li></ul></div>
     </div>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-deep.jpg" alt="Deep cleaning"><div class="ic"><i class="fa-solid fa-soap"></i></div></div>
-      <div class="bd"><h3>Deep Cleaning</h3><p>A thorough, top-to-bottom reset for the build-up regular cleaning misses.</p>
+      <div class="ph"><img src="img/g-deep.jpg" alt="Deep cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-soap"></i></div><h3>Deep Cleaning</h3><p>A thorough, top-to-bottom reset for the build-up regular cleaning misses.</p>
       <ul><li><i class="fa-solid fa-check"></i> Inside appliances</li><li><i class="fa-solid fa-check"></i> Limescale &amp; grout</li><li><i class="fa-solid fa-check"></i> Detailed &amp; documented</li></ul></div>
     </div>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-office.jpg" alt="Communal area cleaning"><div class="ic"><i class="fa-solid fa-stairs"></i></div></div>
-      <div class="bd"><h3>Communal Areas</h3><p>Clean, welcoming shared spaces for blocks, lettings and managing agents.</p>
+      <div class="ph"><img src="img/g-office.jpg" alt="Communal area cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-stairs"></i></div><h3>Communal Areas</h3><p>Clean, welcoming shared spaces for blocks, lettings and managing agents.</p>
       <ul><li><i class="fa-solid fa-check"></i> Hallways &amp; stairwells</li><li><i class="fa-solid fa-check"></i> Entrances &amp; lifts</li><li><i class="fa-solid fa-check"></i> Scheduled visits</li></ul></div>
     </div>
     <div class="scard rv">
-      <div class="ph"><img src="img/g-residential.jpg" alt="End of tenancy cleaning"><div class="ic"><i class="fa-solid fa-box-open"></i></div></div>
-      <div class="bd"><h3>End of Tenancy</h3><p>Deposit-back cleans landlords and tenants can both count on.</p>
+      <div class="ph"><img src="img/g-residential.jpg" alt="End of tenancy cleaning"></div>
+      <div class="bd"><div class="ic"><i class="fa-solid fa-box-open"></i></div><h3>End of Tenancy</h3><p>Deposit-back cleans landlords and tenants can both count on.</p>
       <ul><li><i class="fa-solid fa-check"></i> Full property clean</li><li><i class="fa-solid fa-check"></i> Cupboards in &amp; out</li><li><i class="fa-solid fa-check"></i> Move-in ready</li></ul></div>
     </div>
   </div>
